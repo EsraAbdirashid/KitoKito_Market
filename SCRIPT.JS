@@ -1,5 +1,10 @@
+/* =========================
+   MOBILE MENU
+========================= */
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
+
 
 menuToggle.addEventListener("click", () => {
 
@@ -7,12 +12,81 @@ menuToggle.addEventListener("click", () => {
 
     const icon = menuToggle.querySelector("i");
 
+
     if (navMenu.classList.contains("show")) {
+
         icon.classList.remove("fa-bars");
+
         icon.classList.add("fa-xmark");
+
     } else {
+
         icon.classList.remove("fa-xmark");
+
         icon.classList.add("fa-bars");
+
     }
+
+});
+
+
+/* =========================
+   ALL CATEGORIES DROPDOWN
+========================= */
+
+const categoryBtn = document.querySelector(".category-btn");
+
+const categoryDropdown =
+    document.querySelector(".category-dropdown");
+
+
+categoryBtn.addEventListener("click", (event) => {
+
+    event.stopPropagation();
+
+    categoryDropdown.classList.toggle("show");
+
+});
+
+
+/* =========================
+   CLOSE DROPDOWN
+========================= */
+
+document.addEventListener("click", (event) => {
+
+    if (
+        !categoryDropdown.contains(event.target) &&
+        !categoryBtn.contains(event.target)
+    ) {
+
+        categoryDropdown.classList.remove("show");
+
+    }
+
+});
+
+
+/* =========================
+   CATEGORY SELECTION
+========================= */
+
+const categoryItems =
+    document.querySelectorAll(".category-dropdown button");
+
+
+categoryItems.forEach((item) => {
+
+    item.addEventListener("click", () => {
+
+        const selectedCategory = item.textContent.trim();
+
+        categoryBtn.innerHTML =
+            `${selectedCategory}
+             <i class="fa-solid fa-chevron-down"></i>`;
+
+        categoryDropdown.classList.remove("show");
+
+    });
 
 });
