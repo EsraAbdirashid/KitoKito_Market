@@ -564,7 +564,7 @@ input {
 
 
 .hero-slider {
-    position: relative;
+     position: relative;
 
     width: 100%;
 
@@ -573,6 +573,8 @@ input {
     overflow: hidden;
 
     background: #fcfdf9;
+
+    z-index: 1;
 }
 
 
@@ -675,8 +677,7 @@ input {
 
 .hero-content h1 span {
     display: block;
-
-    color: #fcb316;
+    color: #27316c;
 }
 
 
@@ -766,28 +767,22 @@ input {
 ========================= */
 
 .slider-arrow {
-    .slider-arrow {
     position: absolute;
 
     top: 50%;
-
     transform: translateY(-50%);
 
     width: 46px;
     height: 46px;
 
     border: none;
-
     border-radius: 50%;
 
     background: #fcfdf9;
-
     color: #27316c;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     cursor: pointer;
@@ -796,8 +791,6 @@ input {
 
     transition: 0.3s;
 }
-}
-
 
 .slider-arrow:hover {
     background: #27316c;
