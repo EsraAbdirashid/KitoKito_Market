@@ -760,6 +760,7 @@ input {
 ========================= */
 
 .slider-arrow {
+    .slider-arrow {
     position: absolute;
 
     top: 50%;
@@ -767,10 +768,9 @@ input {
     transform: translateY(-50%);
 
     width: 46px;
-
     height: 46px;
 
-    border: 2px solid #27316c;
+    border: none;
 
     border-radius: 50%;
 
@@ -789,6 +789,7 @@ input {
     z-index: 20;
 
     transition: 0.3s;
+}
 }
 
 
