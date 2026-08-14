@@ -54,7 +54,6 @@ input {
     background: var(--blue);
 
     position: sticky;
-
     top: 0;
 
     z-index: 1000;
@@ -552,30 +551,23 @@ input {
    HERO SLIDER
 ========================= */
 
+/* =========================
+   HERO
+========================= */
+
 .hero {
     width: 100%;
     background: #fcfdf9;
-
     position: relative;
     z-index: 1;
-
-    margin-top: 0;
 }
-
 
 .hero-slider {
-    .hero-slider {
     position: relative;
-
     width: 100%;
-    min-height: 560px;
-
+    height: 560px;
     overflow: hidden;
-
     background: #fcfdf9;
-
-    z-index: 1;
-}
 }
 
 
@@ -585,60 +577,46 @@ input {
 
 .hero-slide {
     position: absolute;
-
     inset: 0;
 
     width: 100%;
-    min-height: 560px;
+    height: 100%;
 
     display: flex;
     align-items: center;
 
-    padding: 55px 8%;
+    padding: 45px 8% 70px;
 
     background: #fcfdf9;
 
     opacity: 0;
     visibility: hidden;
 
-    transform: translateX(30px);
-
     transition:
         opacity 0.6s ease,
-        transform 0.6s ease,
         visibility 0.6s ease;
 }
 
-
 .hero-slide.active {
-    position: relative;
-
     opacity: 1;
     visibility: visible;
-
-    transform: translateX(0);
 }
 
 
 /* =========================
-   HERO CONTENT
+   CONTENT
 ========================= */
 
 .hero-content {
     width: 45%;
-
     max-width: 580px;
 
+    position: relative;
     z-index: 2;
 }
 
-
-/* =========================
-   KITOKITO MARKET LABEL
-========================= */
-
 .hero-small-title {
-     display: inline-block;
+    display: inline-block;
 
     margin-bottom: 18px;
 
@@ -653,16 +631,14 @@ input {
     color: #27316c;
 
     font-size: 14px;
-
     font-weight: 700;
 
     letter-spacing: 1.5px;
-
 }
 
 
 /* =========================
-   HERO TITLE
+   TITLE
 ========================= */
 
 .hero-content h1 {
@@ -670,20 +646,15 @@ input {
 
     color: #27316c;
 
-    font-size: clamp(42px, 5vw, 68px);
+    font-size: 48px;
+    font-weight: 700;
 
-    line-height: 1.05;
-}
-
-
-.hero-content h1 span {
-    display: block;
-    color: #27316c;
+    line-height: 1.15;
 }
 
 
 /* =========================
-   HERO PARAGRAPH
+   PARAGRAPH
 ========================= */
 
 .hero-content p {
@@ -700,20 +671,18 @@ input {
 
 
 /* =========================
-   SHOP NOW
+   SHOP BUTTON
 ========================= */
 
 .hero-btn {
     display: inline-flex;
 
     align-items: center;
-
     gap: 10px;
 
     padding: 14px 25px;
 
     background: #27316c;
-
     color: #fcfdf9;
 
     border-radius: 6px;
@@ -723,10 +692,8 @@ input {
     transition: 0.3s;
 }
 
-
 .hero-btn:hover {
     background: #fcb316;
-
     color: #27316c;
 }
 
@@ -737,34 +704,28 @@ input {
 
 .hero-image {
     width: 55%;
-
-    height: 470px;
+    height: 450px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
+    position: relative;
     z-index: 1;
 }
 
-
 .hero-image img {
     width: 100%;
-
     height: 100%;
 
     object-fit: contain;
 
     display: block;
-
-    transform: scale(1.08);
 }
 
 
 /* =========================
-   SLIDER ARROWS
+   ARROWS
 ========================= */
 
 .slider-arrow {
@@ -777,6 +738,7 @@ input {
     height: 46px;
 
     border: none;
+
     border-radius: 50%;
 
     background: #fcfdf9;
@@ -798,15 +760,9 @@ input {
     color: #fcfdf9;
 }
 
-
-/* LEFT ARROW */
-
 .slider-arrow.prev {
     left: 22px;
 }
-
-
-/* RIGHT ARROW */
 
 .slider-arrow.next {
     right: 22px;
@@ -814,37 +770,32 @@ input {
 
 
 /* =========================
-   SLIDER DOTS
+   DOTS
 ========================= */
 
 .slider-dots {
     position: absolute;
 
     left: 50%;
-
-    bottom: 22px;
+    bottom: 18px;
 
     transform: translateX(-50%);
 
     display: flex;
-
     align-items: center;
 
     gap: 9px;
 
-    z-index: 20;
+    z-index: 30;
 }
-
 
 .dot {
     width: 9px;
-
     height: 9px;
 
     padding: 0;
 
     border: none;
-
     border-radius: 50%;
 
     background: rgba(39, 49, 108, 0.35);
@@ -853,7 +804,6 @@ input {
 
     transition: 0.3s;
 }
-
 
 .dot.active {
     width: 25px;
@@ -870,25 +820,26 @@ input {
 
 @media (max-width: 900px) {
 
+    .hero-slider {
+        height: 520px;
+    }
+
     .hero-slide {
-        padding: 45px 7%;
+        padding-left: 7%;
+        padding-right: 7%;
     }
 
     .hero-content {
         width: 48%;
     }
 
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
     .hero-image {
         width: 52%;
         height: 390px;
-    }
-
-    .hero-image img {
-        transform: scale(1.05);
-    }
-
-    .hero-content h1 {
-        font-size: 45px;
     }
 }
 
@@ -900,14 +851,13 @@ input {
 @media (max-width: 768px) {
 
     .hero-slider {
-        min-height: 650px;
+        height: 680px;
     }
 
-
     .hero-slide {
-        min-height: 650px;
+        height: 680px;
 
-        padding: 45px 7% 80px;
+        padding: 35px 7% 65px;
 
         flex-direction: column;
 
@@ -916,70 +866,52 @@ input {
         text-align: center;
     }
 
-
     .hero-content {
         width: 100%;
-
-        max-width: 600px;
     }
 
-
     .hero-small-title {
-        margin-bottom: 15px;
+        margin-bottom: 14px;
 
         padding: 7px 15px;
 
         font-size: 12px;
     }
 
-
     .hero-content h1 {
-        font-size: 38px;
+        font-size: 32px;
+        line-height: 1.2;
     }
-
 
     .hero-content p {
         margin-left: auto;
-
         margin-right: auto;
 
         font-size: 15px;
     }
 
-
     .hero-image {
         width: 90%;
+        height: 270px;
 
-        height: 280px;
-
-        margin-top: 15px;
+        margin-top: 10px;
     }
-
-
-    .hero-image img {
-        transform: scale(1);
-    }
-
 
     .slider-arrow {
         width: 38px;
-
         height: 38px;
     }
-
 
     .slider-arrow.prev {
         left: 10px;
     }
 
-
     .slider-arrow.next {
         right: 10px;
     }
 
-
     .slider-dots {
-        bottom: 18px;
+        bottom: 15px;
     }
 }
 
@@ -991,30 +923,32 @@ input {
 @media (max-width: 480px) {
 
     .hero-slider {
-        min-height: 620px;
+        height: 630px;
     }
-
 
     .hero-slide {
-        min-height: 620px;
+        height: 630px;
     }
-
 
     .hero-content h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
-
 
     .hero-image {
         width: 92%;
-
-        height: 230px;
+        height: 220px;
     }
-
 
     .slider-arrow {
         width: 34px;
-
         height: 34px;
     }
+}
+
+/* Prevent unwanted page scrolling */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
