@@ -580,7 +580,7 @@ input {
 
     padding: 60px 8%;
 
-    background: #fcb316;
+    background: #fcfdf9;
 
     opacity: 0;
     visibility: hidden;
@@ -624,6 +624,14 @@ input {
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
+}
+
+.hero-content span{
+        background: #fcb316;
+        color: #27316c;
+        width: 400px;
+        height: 100px;
+        border-radius: 10px;
 }
 
 .hero-content h1 {
@@ -674,8 +682,8 @@ input {
 }
 
 .hero-btn:hover {
-    background: #fcfdf9;
-    color: #27316c;
+    background: #27316c;
+    color: #fcfdf9;
 }
 
 
