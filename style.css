@@ -546,3 +546,331 @@ input {
         font-size: 21px;
     }
 }
+
+/* =========================
+   HERO SLIDER
+========================= */
+
+.hero {
+    width: 100%;
+    background: #fcfdf9;
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   SLIDES
+========================= */
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+
+    background: #fcb316;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        visibility 0.6s ease;
+}
+
+.hero-slide.active {
+    position: relative;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(0);
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    width: 50%;
+    max-width: 600px;
+
+    z-index: 2;
+}
+
+.hero-small-title {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #27316c;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    margin-bottom: 18px;
+
+    color: #27316c;
+
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.05;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #fcfdf9;
+}
+
+.hero-content p {
+    max-width: 500px;
+
+    margin-bottom: 28px;
+
+    color: #27316c;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SHOP NOW BUTTON
+========================= */
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background: #27316c;
+    color: #fcfdf9;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #fcfdf9;
+    color: #27316c;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    width: 50%;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================
+   SLIDER ARROWS
+========================= */
+
+.slider-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 46px;
+    height: 46px;
+
+    border: 2px solid #27316c;
+    border-radius: 50%;
+
+    background: rgba(252, 253, 249, 0.9);
+    color: #27316c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+.slider-arrow:hover {
+    background: #27316c;
+    color: #fcfdf9;
+}
+
+.slider-arrow.prev {
+    left: 25px;
+}
+
+.slider-arrow.next {
+    right: 25px;
+}
+
+
+/* =========================
+   SLIDER DOTS
+========================= */
+
+.slider-dots {
+    position: absolute;
+
+    left: 50%;
+    bottom: 22px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    z-index: 10;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(39, 49, 108, 0.4);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.dot.active {
+    width: 25px;
+
+    border-radius: 10px;
+
+    background: #27316c;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-slide {
+        padding: 50px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-image {
+        height: 330px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero-slider {
+        min-height: 650px;
+    }
+
+    .hero-slide {
+        min-height: 650px;
+
+        padding: 50px 7% 80px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 15px;
+    }
+
+    .hero-image {
+        width: 85%;
+        height: 240px;
+
+        margin-top: 20px;
+    }
+
+    .slider-arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .slider-arrow.prev {
+        left: 12px;
+    }
+
+    .slider-arrow.next {
+        right: 12px;
+    }
+
+    .slider-dots {
+        bottom: 18px;
+    }
+}
