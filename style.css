@@ -173,6 +173,11 @@ body {
     border-bottom: 1px solid rgba(252, 253, 249, 0.25);
 }
 
+.nav-menu a {
+    text-decoration: none;
+    border-bottom: none;
+}
+
 /* WISHLIST & CART */
 
 .nav-actions {
