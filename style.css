@@ -553,7 +553,12 @@ input {
 
 .hero {
     width: 100%;
+
     background: #fcfdf9;
+
+    position: relative;
+
+    z-index: 1;
 }
 
 
