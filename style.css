@@ -556,11 +556,17 @@ input {
     background: #fcfdf9;
 }
 
+
 .hero-slider {
     position: relative;
+
     width: 100%;
-    min-height: 500px;
+
+    min-height: 560px;
+
     overflow: hidden;
+
+    background: #fcfdf9;
 }
 
 
@@ -570,15 +576,16 @@ input {
 
 .hero-slide {
     position: absolute;
+
     inset: 0;
 
     width: 100%;
-    min-height: 500px;
+    min-height: 560px;
 
     display: flex;
     align-items: center;
 
-    padding: 60px 8%;
+    padding: 55px 8%;
 
     background: #fcfdf9;
 
@@ -592,6 +599,7 @@ input {
         transform 0.6s ease,
         visibility 0.6s ease;
 }
+
 
 .hero-slide.active {
     position: relative;
@@ -608,38 +616,66 @@ input {
 ========================= */
 
 .hero-content {
-    width: 50%;
-    max-width: 600px;
+    width: 45%;
+
+    max-width: 580px;
 
     z-index: 2;
 }
 
+
+/* =========================
+   KITOKITO MARKET LABEL
+========================= */
+
 .hero-small-title {
     display: inline-block;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+
+    padding: 8px 18px;
+
+    background: #fcb316;
+
+    border: 2px solid #27316c;
+
+    border-radius: 25px;
 
     color: #27316c;
 
     font-size: 14px;
+
     font-weight: 700;
-    letter-spacing: 2px;
+
+    letter-spacing: 1.5px;
 }
 
+
+/* =========================
+   HERO TITLE
+========================= */
 
 .hero-content h1 {
     margin-bottom: 18px;
 
     color: #27316c;
 
-    font-size: clamp(40px, 5vw, 68px);
+    font-size: clamp(42px, 5vw, 68px);
+
     line-height: 1.05;
 }
 
+
 .hero-content h1 span {
     display: block;
-    color: #fcfdf9;
+
+    color: #fcb316;
 }
+
+
+/* =========================
+   HERO PARAGRAPH
+========================= */
 
 .hero-content p {
     max-width: 500px;
@@ -649,23 +685,27 @@ input {
     color: #27316c;
 
     font-size: 17px;
+
     line-height: 1.7;
 }
 
 
 /* =========================
-   SHOP NOW BUTTON
+   SHOP NOW
 ========================= */
 
 .hero-btn {
     display: inline-flex;
+
     align-items: center;
+
     gap: 10px;
 
     padding: 14px 25px;
 
-    background: #fcb316;
-    color: #27316c;
+    background: #27316c;
+
+    color: #fcfdf9;
 
     border-radius: 6px;
 
@@ -674,9 +714,11 @@ input {
     transition: 0.3s;
 }
 
+
 .hero-btn:hover {
-    background: #27316c;
-    color: #fcfdf9;
+    background: #fcb316;
+
+    color: #27316c;
 }
 
 
@@ -685,23 +727,30 @@ input {
 ========================= */
 
 .hero-image {
-    width: 50%;
-    height: 400px;
+    width: 55%;
+
+    height: 470px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     z-index: 1;
 }
 
+
 .hero-image img {
     width: 100%;
+
     height: 100%;
 
     object-fit: contain;
 
     display: block;
+
+    transform: scale(1.08);
 }
 
 
@@ -713,39 +762,53 @@ input {
     position: absolute;
 
     top: 50%;
+
     transform: translateY(-50%);
 
     width: 46px;
+
     height: 46px;
 
     border: 2px solid #27316c;
+
     border-radius: 50%;
 
-    background: rgba(252, 253, 249, 0.9);
+    background: #fcfdf9;
+
     color: #27316c;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     cursor: pointer;
 
-    z-index: 10;
+    z-index: 20;
 
     transition: 0.3s;
 }
 
+
 .slider-arrow:hover {
     background: #27316c;
+
     color: #fcfdf9;
 }
 
+
+/* LEFT ARROW */
+
 .slider-arrow.prev {
-    left: 25px;
+    left: 22px;
 }
 
+
+/* RIGHT ARROW */
+
 .slider-arrow.next {
-    right: 25px;
+    right: 22px;
 }
 
 
@@ -757,33 +820,39 @@ input {
     position: absolute;
 
     left: 50%;
+
     bottom: 22px;
 
     transform: translateX(-50%);
 
     display: flex;
+
     align-items: center;
 
     gap: 9px;
 
-    z-index: 10;
+    z-index: 20;
 }
+
 
 .dot {
     width: 9px;
+
     height: 9px;
 
     padding: 0;
 
     border: none;
+
     border-radius: 50%;
 
-    background: rgba(39, 49, 108, 0.4);
+    background: rgba(39, 49, 108, 0.35);
 
     cursor: pointer;
 
     transition: 0.3s;
 }
+
 
 .dot.active {
     width: 25px;
@@ -801,15 +870,24 @@ input {
 @media (max-width: 900px) {
 
     .hero-slide {
-        padding: 50px 7%;
+        padding: 45px 7%;
+    }
+
+    .hero-content {
+        width: 48%;
+    }
+
+    .hero-image {
+        width: 52%;
+        height: 390px;
+    }
+
+    .hero-image img {
+        transform: scale(1.05);
     }
 
     .hero-content h1 {
         font-size: 45px;
-    }
-
-    .hero-image {
-        height: 330px;
     }
 }
 
@@ -824,10 +902,11 @@ input {
         min-height: 650px;
     }
 
+
     .hero-slide {
         min-height: 650px;
 
-        padding: 50px 7% 80px;
+        padding: 45px 7% 80px;
 
         flex-direction: column;
 
@@ -836,42 +915,105 @@ input {
         text-align: center;
     }
 
+
     .hero-content {
         width: 100%;
+
+        max-width: 600px;
     }
+
+
+    .hero-small-title {
+        margin-bottom: 15px;
+
+        padding: 7px 15px;
+
+        font-size: 12px;
+    }
+
 
     .hero-content h1 {
         font-size: 38px;
     }
 
+
     .hero-content p {
         margin-left: auto;
+
         margin-right: auto;
 
         font-size: 15px;
     }
 
-    .hero-image {
-        width: 85%;
-        height: 240px;
 
-        margin-top: 20px;
+    .hero-image {
+        width: 90%;
+
+        height: 280px;
+
+        margin-top: 15px;
     }
+
+
+    .hero-image img {
+        transform: scale(1);
+    }
+
 
     .slider-arrow {
         width: 38px;
+
         height: 38px;
     }
 
+
     .slider-arrow.prev {
-        left: 12px;
+        left: 10px;
     }
 
+
     .slider-arrow.next {
-        right: 12px;
+        right: 10px;
     }
+
 
     .slider-dots {
         bottom: 18px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .hero-slider {
+        min-height: 620px;
+    }
+
+
+    .hero-slide {
+        min-height: 620px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+
+    .hero-image {
+        width: 92%;
+
+        height: 230px;
+    }
+
+
+    .slider-arrow {
+        width: 34px;
+
+        height: 34px;
     }
 }
