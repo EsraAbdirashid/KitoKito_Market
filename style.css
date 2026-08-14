@@ -554,20 +554,20 @@ input {
 
 .hero {
     width: 100%;
-
     background: #fcfdf9;
 
     position: relative;
-
     z-index: 1;
+
+    margin-top: 0;
 }
 
 
 .hero-slider {
-     position: relative;
+    .hero-slider {
+    position: relative;
 
     width: 100%;
-
     min-height: 560px;
 
     overflow: hidden;
@@ -575,6 +575,7 @@ input {
     background: #fcfdf9;
 
     z-index: 1;
+}
 }
 
 
