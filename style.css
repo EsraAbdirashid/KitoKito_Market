@@ -64,13 +64,61 @@ body {
 
 /* SEARCH */
 
-.search-box {
+/* =========================
+   SEARCH AREA
+========================= */
+
+.search-area {
     flex: 1;
     max-width: 700px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   ALL CATEGORIES BUTTON
+========================= */
+
+.category-btn {
+    height: 46px;
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: var(--yellow);
+    color: var(--blue);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-btn i {
+    font-size: 12px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+    flex: 1;
     height: 46px;
 
     display: flex;
-    margin: auto;
 
     background: var(--white);
     border-radius: 6px;
@@ -111,7 +159,6 @@ body {
 .search-box button:hover {
     background: #e6a000;
 }
-
 
 /* WISHLIST & CART */
 
