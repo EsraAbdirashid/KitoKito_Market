@@ -90,3 +90,31 @@ categoryItems.forEach((item) => {
     });
 
 });
+
+/* =========================
+   ACTIVE NAV LINK
+========================= */
+
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+navLinks.forEach((link) => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        link.classList.add("active");
+
+        // Close mobile menu after selecting a link
+        navMenu.classList.remove("show");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    });
+
+});
