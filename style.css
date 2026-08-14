@@ -160,6 +160,19 @@ body {
     background: #e6a000;
 }
 
+.nav-top {
+    width: 92%;
+    max-width: 1400px;
+    min-height: 84px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    border-bottom: 1px solid rgba(252, 253, 249, 0.25);
+}
+
 /* WISHLIST & CART */
 
 .nav-actions {
