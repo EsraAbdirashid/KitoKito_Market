@@ -214,8 +214,8 @@ dots.forEach((dot, index) => {
    AUTOMATIC SLIDER
 ========================= */
 
-setInterval(() => {
+// setInterval(() => {
 
-    nextSlide();
+//     nextSlide();
 
-}, 5000);
+// }, 5000);
