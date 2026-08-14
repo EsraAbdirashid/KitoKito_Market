@@ -7,92 +7,178 @@
     <title>Kitokito Market</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
     <header class="navbar">
 
+        <!-- TOP NAVBAR -->
         <div class="nav-top">
 
-            <!-- Logo -->
+            <!-- LOGO -->
             <a href="#home" class="logo">
                 <img src="images/logo.png" alt="Kitokito Market">
             </a>
 
-            <!-- Search -->
-           
-<div class="search-area">
 
-    <button class="category-btn" type="button">
-        All Categories
-        <i class="fa-solid fa-chevron-down"></i>
-    </button>
+            <!-- SEARCH BOX -->
+            <div class="search-box">
 
-    <div class="search-box">
-        <input type="text" placeholder="Search for products...">
-
-        <button type="button">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-    </div>
-
-</div>
-            <!-- Wishlist & Cart -->
-            <div class="nav-actions">
-
-                <button class="nav-action" type="button">
-                    <i class="fa-regular fa-heart"></i>
-                    <span>Wishlist</span>
-                    <b>0</b>
+                <!-- ALL CATEGORIES -->
+                <button class="category-btn" type="button">
+                    All Categories
+                    <i class="fa-solid fa-chevron-down"></i>
                 </button>
 
-                <button class="nav-action" type="button">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span>Cart</span>
-                    <b>0</b>
+
+                <!-- CATEGORY DROPDOWN -->
+                <div class="category-dropdown">
+
+                    <button type="button">
+                        Home & Kitchen
+                    </button>
+
+                    <button type="button">
+                        Car Accessories
+                    </button>
+
+                    <button type="button">
+                        Stationery
+                    </button>
+
+                    <button type="button">
+                        Electronics
+                    </button>
+
+                </div>
+
+
+                <!-- SEARCH INPUT -->
+                <input
+                    type="text"
+                    placeholder="Search for products..."
+                >
+
+
+                <!-- SEARCH BUTTON -->
+                <button class="search-btn" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
 
             </div>
 
-            <!-- Mobile menu -->
+
+            <!-- WISHLIST & CART -->
+            <div class="nav-actions">
+
+                <!-- Wishlist -->
+                <button class="nav-action" type="button">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <span>Wishlist</span>
+
+                    <b>0</b>
+
+                </button>
+
+
+                <!-- Cart -->
+                <button class="nav-action" type="button">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span>Cart</span>
+
+                    <b>0</b>
+
+                </button>
+
+            </div>
+
+
+            <!-- MOBILE MENU -->
             <button class="menu-toggle" type="button">
+
                 <i class="fa-solid fa-bars"></i>
+
             </button>
 
         </div>
 
 
-        <!-- Navigation -->
+        <!-- LINE BETWEEN NAVBARS -->
+        <div class="nav-divider"></div>
+
+
+        <!-- BOTTOM NAVIGATION -->
         <nav class="nav-menu">
 
-            <a href="#home" class="active">Home</a>
+            <a href="#home" class="active">
+                Home
+            </a>
 
-            <a href="#categories">Categories</a>
+            <a href="#categories">
+                Categories
+            </a>
 
-            <a href="#footer">Contact Us</a>
+            <a href="#footer">
+                Contact Us
+            </a>
 
         </nav>
 
     </header>
 
-    <!-- Temporary sections -->
+
+    <!-- =========================
+         HERO
+    ========================== -->
     <main>
 
-        <section id="home"></section>
+        <section id="home" class="hero">
 
-        <section id="categories"></section>
+            <!-- Hero will be added next -->
+
+        </section>
+
+
+        <!-- =========================
+             CATEGORIES
+        ========================== -->
+
+        <section id="categories" class="categories">
+
+            <!-- Categories will be added next -->
+
+        </section>
 
     </main>
 
-    <footer id="footer"></footer>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer id="footer" class="footer">
+
+        <!-- Footer will be added later -->
+
+    </footer>
 
 
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
