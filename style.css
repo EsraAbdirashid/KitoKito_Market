@@ -626,13 +626,6 @@ input {
     letter-spacing: 2px;
 }
 
-.hero-content span{
-        background: #fcb316;
-        color: #27316c;
-        width: 400px;
-        height: 100px;
-        border-radius: 10px;
-}
 
 .hero-content h1 {
     margin-bottom: 18px;
