@@ -178,6 +178,13 @@ body {
     border-bottom: none;
 }
 
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: var(--yellow);
+    color: var(--blue);
+}
+
+
 /* WISHLIST & CART */
 
 .nav-actions {
