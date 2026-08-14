@@ -623,7 +623,7 @@ input {
 
     margin-bottom: 18px;
 
-    padding: 8px 18px;
+    padding: 8px 38px;
 
     background: #fcb316;
 
@@ -685,8 +685,8 @@ input {
 
     padding: 14px 25px;
 
-    background: #27316c;
-    color: #fcfdf9;
+    background: #fcb316;
+    color: #27316c;
 
     border-radius: 6px;
 
@@ -696,8 +696,8 @@ input {
 }
 
 .hero-btn:hover {
-    background: #fcb316;
-    color: #27316c;
+    background: #27316c;
+    color: #fcfdf9;
 }
 
 
