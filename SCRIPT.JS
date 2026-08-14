@@ -118,3 +118,104 @@ navLinks.forEach((link) => {
     });
 
 });
+
+/* =========================
+   HERO SLIDER
+========================= */
+
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".dot");
+
+const prevButton = document.querySelector(".slider-arrow.prev");
+const nextButton = document.querySelector(".slider-arrow.next");
+
+let currentSlide = 0;
+
+
+/* =========================
+   SHOW SLIDE
+========================= */
+
+function showSlide(index) {
+
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach((dot) => {
+        dot.classList.remove("active");
+    });
+
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+
+    currentSlide = index;
+}
+
+
+/* =========================
+   NEXT SLIDE
+========================= */
+
+function nextSlide() {
+
+    let nextIndex = currentSlide + 1;
+
+    if (nextIndex >= slides.length) {
+        nextIndex = 0;
+    }
+
+    showSlide(nextIndex);
+}
+
+
+/* =========================
+   PREVIOUS SLIDE
+========================= */
+
+function previousSlide() {
+
+    let previousIndex = currentSlide - 1;
+
+    if (previousIndex < 0) {
+        previousIndex = slides.length - 1;
+    }
+
+    showSlide(previousIndex);
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+nextButton.addEventListener("click", nextSlide);
+
+prevButton.addEventListener("click", previousSlide);
+
+
+/* =========================
+   DOTS
+========================= */
+
+dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        showSlide(index);
+
+    });
+
+});
+
+
+/* =========================
+   AUTOMATIC SLIDER
+========================= */
+
+setInterval(() => {
+
+    nextSlide();
+
+}, 5000);
