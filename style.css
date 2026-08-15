@@ -890,6 +890,31 @@ body {
         text-align: center;
 
         padding: 30px 8% 100px;
+
+        @media (max-width: 768px) {
+
+    .nav-top {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .mobile-search {
+        margin-left: auto;
+        margin-right: 18px;
+    }
+
+    .nav-actions {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        margin-left: 12px;
+    }
+}
     }
 
 
