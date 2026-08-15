@@ -565,6 +565,10 @@ input {
     cursor: pointer;
 }
 
+.mobile-search {
+    display: block;
+}
+
 /* =========================
    HERO SLIDER
 ========================= */
