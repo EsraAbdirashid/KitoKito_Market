@@ -219,3 +219,15 @@ dots.forEach((dot, index) => {
 //     nextSlide();
 
 // }, 5000);
+
+
+/* =========================
+   MOBILE SEARCH
+========================= */
+
+const mobileSearch = document.querySelector(".mobile-search");
+const searchBox = document.querySelector(".search-box");
+
+mobileSearch.addEventListener("click", () => {
+    searchBox.classList.toggle("mobile-search-open");
+});
