@@ -549,6 +549,23 @@ input {
 }
 
 /* =========================
+   MOBILE SEARCH
+========================= */
+
+.mobile-search {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: var(--white);
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+/* =========================
    HERO SLIDER
 ========================= */
 
