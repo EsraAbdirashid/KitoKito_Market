@@ -822,3 +822,132 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+/* =========================
+   HERO MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    .hero-slider {
+        height: 680px;
+        overflow: hidden;
+    }
+
+    .hero-slide {
+        width: 100%;
+        height: 680px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 30px 8% 100px;
+    }
+
+
+    /* =========================
+       HERO CONTENT
+    ========================= */
+
+    .hero-content {
+        width: 100%;
+        max-width: 500px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-small-title {
+        margin-bottom: 15px;
+
+        padding: 8px 28px;
+
+        font-size: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        width: 100%;
+        max-width: 420px;
+
+        margin-bottom: 22px;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .hero-btn {
+        padding: 12px 21px;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .hero-image {
+        width: 90%;
+
+        height: 250px;
+
+        margin-top: 18px;
+
+        flex-shrink: 0;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+    }
+
+
+    /* =========================
+       ARROWS
+    ========================= */
+
+    .slider-arrow {
+        width: 36px;
+        height: 36px;
+
+        font-size: 14px;
+    }
+
+    .slider-arrow.prev {
+        left: 8px;
+    }
+
+    .slider-arrow.next {
+        right: 8px;
+    }
+
+
+    /* =========================
+       DOTS
+    ========================= */
+
+    .slider-dots {
+        bottom: 70px;
+    }
+}
