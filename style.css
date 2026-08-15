@@ -1019,12 +1019,12 @@ body {
 
 
 /* =========================
-   CATEGORIES SECTION
+   CATEGORIES
 ========================= */
 
 .categories {
     width: 100%;
-    padding: 65px 7% 75px;
+    padding: 12px 5% 14px;
     background: #fcfdf9;
 }
 
@@ -1035,43 +1035,25 @@ body {
 
 .section-title {
     text-align: center;
-    margin-bottom: 38px;
-}
-
-.section-title span {
-    display: inline-block;
-
-    margin-bottom: 8px;
-
-    color: #fcb316;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    letter-spacing: 1.4px;
+    margin-bottom: 10px;
 }
 
 .section-title h2 {
-    margin: 0 0 10px;
+    margin: 0;
 
     color: #27316c;
 
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 700;
-
-    line-height: 1.2;
 }
 
-.section-title p {
-    margin: 0 auto;
+.title-line {
+    width: 52px;
+    height: 3px;
 
-    max-width: 600px;
+    margin: 5px auto 0;
 
-    color: #777;
-
-    font-size: 15px;
-
-    line-height: 1.6;
+    background: #fcb316;
 }
 
 
@@ -1086,7 +1068,7 @@ body {
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 20px;
+    gap: 14px;
 }
 
 
@@ -1095,30 +1077,49 @@ body {
 ========================= */
 
 .category-card {
+    height: 190px;
+
     position: relative;
-
-    display: block;
-
-    height: 330px;
 
     overflow: hidden;
 
-    border-radius: 8px;
+    display: block;
 
-    background: #27316c;
+    border-radius: 8px;
 
     text-decoration: none;
 
-    box-shadow: 0 6px 18px rgba(39, 49, 108, 0.10);
+    box-shadow: 0 2px 8px rgba(39, 49, 108, 0.08);
 
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease;
 }
 
 .category-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 
-    box-shadow: 0 12px 25px rgba(39, 49, 108, 0.18);
+    box-shadow: 0 7px 18px rgba(39, 49, 108, 0.14);
+}
+
+
+/* =========================
+   CARD BACKGROUNDS
+========================= */
+
+.home-card {
+    background: #fff3d8;
+}
+
+.car-card {
+    background: #e5edf9;
+}
+
+.stationery-card {
+    background: #eee5f8;
+}
+
+.electronics-card {
+    background: #e3f3ee;
 }
 
 
@@ -1127,49 +1128,51 @@ body {
 ========================= */
 
 .category-image {
-    position: absolute;
-
-    inset: 0;
-
     width: 100%;
-    height: 100%;
+    height: 125px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 
     overflow: hidden;
 }
 
 .category-image img {
-    width: 100%;
+    width: 85%;
     height: 100%;
 
     display: block;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
 .category-card:hover .category-image img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 
 /* =========================
-   IMAGE OVERLAY
+   BOTTOM AREA
 ========================= */
 
-.category-image::after {
-    content: "";
-
+.category-bottom {
     position: absolute;
 
-    inset: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-    background: linear-gradient(
-        to top,
-        rgba(39, 49, 108, 0.92) 0%,
-        rgba(39, 49, 108, 0.55) 40%,
-        rgba(39, 49, 108, 0.05) 75%
-    );
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 22px;
 }
 
 
@@ -1178,40 +1181,33 @@ body {
 ========================= */
 
 .category-info {
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 22px;
-
-    z-index: 2;
+    margin-left: 0;
 }
 
 .category-info h3 {
     margin: 0 0 8px;
 
-    color: #ffffff;
+    color: #27316c;
 
-    font-size: 21px;
+    font-size: 15px;
     font-weight: 700;
 }
 
 .category-info span {
-    display: inline-flex;
+    display: flex;
 
     align-items: center;
 
-    gap: 8px;
+    gap: 9px;
 
-    color: #fcb316;
+    color: #27316c;
 
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 14px;
 }
 
 .category-info span i {
+    font-size: 13px;
+
     transition: transform 0.3s ease;
 }
 
