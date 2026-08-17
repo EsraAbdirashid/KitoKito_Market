@@ -440,3 +440,144 @@ const productsData = {
     ]
 
 };
+
+/* =========================
+   CATEGORY PRODUCTS
+========================= */
+
+const categoryProducts =
+    document.querySelector("#category-products");
+
+const categoryProductsTitle =
+    document.querySelector("#category-products-title");
+
+const categoryProductsGrid =
+    document.querySelector("#category-products-grid");
+
+const shopCategoryButtons =
+    document.querySelectorAll(".shop-category-btn");
+
+
+/* =========================
+   CATEGORY NAMES
+========================= */
+
+const categoryNames = {
+
+    home: "Home & Kitchen",
+
+    car: "Car Accessories",
+
+    stationery: "Stationery",
+
+    electronics: "Electronics"
+
+};
+
+
+/* =========================
+   SHOW CATEGORY PRODUCTS
+========================= */
+
+function showCategoryProducts(category) {
+
+    const products = productsData[category];
+
+    if (!products) {
+        return;
+    }
+
+
+    /* CATEGORY TITLE */
+
+    categoryProductsTitle.textContent =
+        categoryNames[category];
+
+
+    /* CLEAR OLD PRODUCTS */
+
+    categoryProductsGrid.innerHTML = "";
+
+
+    /* CREATE PRODUCT CARDS */
+
+    products.forEach((product) => {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "category-product-card";
+
+
+        card.innerHTML = `
+
+            <div class="category-product-image">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+            </div>
+
+
+            <div class="category-product-info">
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+                <button
+                    class="view-products-btn"
+                    type="button"
+                >
+                    View Products
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        `;
+
+
+        categoryProductsGrid.appendChild(card);
+
+    });
+
+
+    /* SHOW SECTION */
+
+    categoryProducts.classList.add("show");
+
+
+    /* SCROLL TO PRODUCTS */
+
+    setTimeout(() => {
+
+        categoryProducts.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+
+}
+
+
+/* =========================
+   SHOP NOW BUTTONS
+========================= */
+
+shopCategoryButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const category =
+            button.dataset.category;
+
+        showCategoryProducts(category);
+
+    });
+
+});
