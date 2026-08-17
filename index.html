@@ -302,7 +302,11 @@
 
 </section>
 
-          <!-- CATEGORIES -->
+         
+
+                <!-- =========================
+     CATEGORIES
+========================= -->
 
 <section id="categories" class="categories">
 
@@ -318,11 +322,12 @@
     <div class="category-grid">
 
         <!-- HOME & KITCHEN -->
-        <a href="#" class="category-card home-card">
+
+        <div class="category-card">
 
             <div class="category-image">
                 <img
-                    src="images/Weel.png"
+                    src="images/home-kitchen.jpg"
                     alt="Home & Kitchen"
                 >
             </div>
@@ -333,24 +338,29 @@
 
                     <h3>HOME & KITCHEN</h3>
 
-                    <span>
+                    <button
+                        class="shop-category-btn"
+                        data-category="home"
+                        type="button"
+                    >
                         Shop Now
                         <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                    </button>
 
                 </div>
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- CAR ACCESSORIES -->
-        <a href="#" class="category-card car-card">
+
+        <div class="category-card">
 
             <div class="category-image">
                 <img
-                    src="images/car-accesories.png"
+                    src="images/car-accessories.jpg"
                     alt="Car Accessories"
                 >
             </div>
@@ -361,24 +371,29 @@
 
                     <h3>CAR ACCESSORIES</h3>
 
-                    <span>
+                    <button
+                        class="shop-category-btn"
+                        data-category="car"
+                        type="button"
+                    >
                         Shop Now
                         <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                    </button>
 
                 </div>
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- STATIONERY -->
-        <a href="#" class="category-card stationery-card">
+
+        <div class="category-card">
 
             <div class="category-image">
                 <img
-                    src="images/stationary.png"
+                    src="images/stationery.jpg"
                     alt="Stationery"
                 >
             </div>
@@ -389,24 +404,29 @@
 
                     <h3>STATIONERY</h3>
 
-                    <span>
+                    <button
+                        class="shop-category-btn"
+                        data-category="stationery"
+                        type="button"
+                    >
                         Shop Now
                         <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                    </button>
 
                 </div>
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- ELECTRONICS -->
-        <a href="#" class="category-card electronics-card">
+
+        <div class="category-card">
 
             <div class="category-image">
                 <img
-                    src="images/electronuic.png"
+                    src="images/electronics.jpg"
                     alt="Electronics"
                 >
             </div>
@@ -417,70 +437,54 @@
 
                     <h3>ELECTRONICS</h3>
 
-                    <span>
+                    <button
+                        class="shop-category-btn"
+                        data-category="electronics"
+                        type="button"
+                    >
                         Shop Now
                         <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+                    </button>
 
                 </div>
 
             </div>
 
-        </a>
-
-    </div>
-
-</section>
-
-                 <!-- =========================
-     PRODUCTS SECTION
-========================= -->
-
-<section id="products" class="products">
-
-    <div class="products-header">
-
-        <span>OUR PRODUCTS</span>
-
-        <h2 id="products-title">Home & Kitchen</h2>
-
-        <div class="products-line"></div>
-
-        <p>
-            Explore our products and find what you need.
-        </p>
+        </div>
 
     </div>
 
 
-    <!-- CATEGORY FILTERS -->
+    <!-- =========================
+         CATEGORY PRODUCTS
+    ========================== -->
 
-    <div class="product-filters">
+    <div
+        id="category-products"
+        class="category-products"
+    >
 
-        <button class="product-filter active" data-category="home">
-            Home & Kitchen
-        </button>
+        <div class="category-products-header">
 
-        <button class="product-filter" data-category="car">
-            Car Accessories
-        </button>
+            <span>EXPLORE CATEGORY</span>
 
-        <button class="product-filter" data-category="stationery">
-            Stationery
-        </button>
+            <h2 id="category-products-title">
+                Home & Kitchen
+            </h2>
 
-        <button class="product-filter" data-category="electronics">
-            Electronics
-        </button>
+            <div class="products-line"></div>
 
-    </div>
+        </div>
 
 
-    <!-- PRODUCTS -->
+        <div
+            id="category-products-grid"
+            class="category-products-grid"
+        >
 
-    <div id="products-grid" class="products-grid">
+            <!-- JavaScript ayaa subcategories-ka gelinaya -->
 
-        <!-- JavaScript ayaa Products-ka halkan gelinaya -->
+        </div>
 
     </div>
 
