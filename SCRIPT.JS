@@ -221,3 +221,222 @@ const searchBox = document.querySelector(".search-box");
 mobileSearch.addEventListener("click", () => {
     searchBox.classList.toggle("mobile-search-open");
 });
+
+/* =========================
+   PRODUCTS DATA
+========================= */
+
+const productsData = {
+
+    /* =========================
+       HOME & KITCHEN
+    ========================= */
+
+    home: [
+        {
+            name: "Cooking Tools",
+            image: "images/products/cooking-tools.jpg"
+        },
+        {
+            name: "Plates, Bowls & Cutlery",
+            image: "images/products/plates-bowls-cutlery.jpg"
+        },
+        {
+            name: "Cups, Mugs & Water Bottles",
+            image: "images/products/cups-mugs-water-bottles.jpg"
+        },
+        {
+            name: "Food Storage & Containers",
+            image: "images/products/food-storage-containers.jpg"
+        },
+        {
+            name: "Spice & Kitchen Organizers",
+            image: "images/products/spice-kitchen-organizers.jpg"
+        },
+        {
+            name: "Cleaning & Laundry",
+            image: "images/products/cleaning-laundry.jpg"
+        },
+        {
+            name: "Bathroom Accessories",
+            image: "images/products/bathroom-accessories.jpg"
+        },
+        {
+            name: "Home Storage & Organization",
+            image: "images/products/home-storage-organization.jpg"
+        },
+        {
+            name: "Home Lighting",
+            image: "images/products/home-lighting.jpg"
+        },
+        {
+            name: "Home Decoration",
+            image: "images/products/home-decoration.jpg"
+        }
+    ],
+
+
+    /* =========================
+       CAR ACCESSORIES
+    ========================= */
+
+    car: [
+        {
+            name: "Jump Starters",
+            image: "images/products/jump-starters.jpg"
+        },
+        {
+            name: "Car Phone Holders",
+            image: "images/products/car-phone-holders.jpg"
+        },
+        {
+            name: "Car Chargers & USB Adapters",
+            image: "images/products/car-chargers-usb-adapters.jpg"
+        },
+        {
+            name: "Tire Repair & Inflation Tools",
+            image: "images/products/tire-repair-inflation-tools.jpg"
+        },
+        {
+            name: "Emergency & Safety Tools",
+            image: "images/products/emergency-safety-tools.jpg"
+        },
+        {
+            name: "Car Cleaning Tools",
+            image: "images/products/car-cleaning-tools.jpg"
+        },
+        {
+            name: "Car Air Fresheners",
+            image: "images/products/car-air-fresheners.jpg"
+        },
+        {
+            name: "Sun Shades",
+            image: "images/products/sun-shades.jpg"
+        },
+        {
+            name: "Seat & Steering Wheel Covers",
+            image: "images/products/seat-steering-wheel-covers.jpg"
+        },
+        {
+            name: "Car LED Lights & Lighting Accessories",
+            image: "images/products/car-led-lights.jpg"
+        }
+    ],
+
+
+    /* =========================
+       STATIONERY
+    ========================= */
+
+    stationery: [
+        {
+            name: "Notebooks",
+            image: "images/products/notebooks.jpg"
+        },
+        {
+            name: "Pens",
+            image: "images/products/pens.jpg"
+        },
+        {
+            name: "Pencils",
+            image: "images/products/pencils.jpg"
+        },
+        {
+            name: "Markers",
+            image: "images/products/markers.jpg"
+        },
+        {
+            name: "Highlighters",
+            image: "images/products/highlighters.jpg"
+        },
+        {
+            name: "Erasers & Sharpeners",
+            image: "images/products/erasers-sharpeners.jpg"
+        },
+        {
+            name: "Rulers & Geometry Sets",
+            image: "images/products/rulers-geometry-sets.jpg"
+        },
+        {
+            name: "Files & Folders",
+            image: "images/products/files-folders.jpg"
+        },
+        {
+            name: "Sticky Notes",
+            image: "images/products/sticky-notes.jpg"
+        },
+        {
+            name: "Printer Paper, Ink & Toner",
+            image: "images/products/printer-paper-ink-toner.jpg"
+        },
+        {
+            name: "Riso",
+            image: "images/products/riso.jpg"
+        },
+        {
+            name: "Konica",
+            image: "images/products/konica.jpg"
+        },
+        {
+            name: "HP Copier",
+            image: "images/products/hp-copier.jpg"
+        },
+        {
+            name: "Canon Copier",
+            image: "images/products/canon-copier.jpg"
+        }
+    ],
+
+
+    /* =========================
+       ELECTRONICS
+    ========================= */
+
+    electronics: [
+        {
+            name: "Smartphones — iPhone, Samsung",
+            image: "images/products/smartphones.jpg"
+        },
+        {
+            name: "Earphones & Headphones",
+            image: "images/products/earphones-headphones.jpg"
+        },
+        {
+            name: "Bluetooth Speakers",
+            image: "images/products/bluetooth-speakers.jpg"
+        },
+        {
+            name: "Smart Watches",
+            image: "images/products/smart-watches.jpg"
+        },
+        {
+            name: "Power Banks",
+            image: "images/products/power-banks.jpg"
+        },
+        {
+            name: "Chargers & Adapters",
+            image: "images/products/chargers-adapters.jpg"
+        },
+        {
+            name: "USB Cables",
+            image: "images/products/usb-cables.jpg"
+        },
+        {
+            name: "USB Flash Drives",
+            image: "images/products/usb-flash-drives.jpg"
+        },
+        {
+            name: "Phone Cases & Screen Protectors",
+            image: "images/products/phone-cases-screen-protectors.jpg"
+        },
+        {
+            name: "Power Strips & Extension Cables",
+            image: "images/products/power-strips-extension-cables.jpg"
+        },
+        {
+            name: "Laptops",
+            image: "images/products/laptops.jpg"
+        }
+    ]
+
+};
