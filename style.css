@@ -1126,3 +1126,331 @@ body {
     transform: translateX(5px);
 }
 
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.products {
+    width: 100%;
+    padding: 55px 5% 70px;
+    background: #fcfdf9;
+}
+
+
+/* =========================
+   PRODUCTS HEADER
+========================= */
+
+.products-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.products-header span {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: #fcb316;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.products-header h2 {
+    margin: 0;
+
+    color: #27316c;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.products-line {
+    width: 52px;
+    height: 3px;
+
+    margin: 7px auto 10px;
+
+    background: #fcb316;
+}
+
+.products-header p {
+    margin: 0 auto;
+
+    max-width: 600px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PRODUCT FILTERS
+========================= */
+
+.product-filters {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.product-filter {
+    padding: 9px 18px;
+
+    border: 1px solid #e1e3ec;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #27316c;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.product-filter:hover {
+    border-color: #fcb316;
+
+    color: #fcb316;
+}
+
+.product-filter.active {
+    border-color: #fcb316;
+
+    background: #fcb316;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+
+.products-grid {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 12px rgba(39, 49, 108, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 9px 22px rgba(39, 49, 108, 0.13);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+    position: relative;
+
+    width: 100%;
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f7f7;
+
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 90%;
+    height: 90%;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   WISHLIST
+========================= */
+
+.wishlist-btn {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    z-index: 3;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #27316c;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s ease;
+}
+
+.wishlist-btn:hover {
+    background: #fcb316;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info {
+    padding: 16px 17px 18px;
+}
+
+.product-category {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #888;
+
+    font-size: 11px;
+}
+
+.product-info h3 {
+    min-height: 38px;
+
+    margin: 0 0 14px;
+
+    color: #27316c;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+/* =========================
+   PRODUCT BOTTOM
+========================= */
+
+.product-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-bottom strong {
+    color: #fcb316;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+.add-cart-btn {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #27316c;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.add-cart-btn:hover {
+    background: #fcb316;
+
+    transform: translateY(-2px);
+}

@@ -440,3 +440,132 @@ const productsData = {
     ]
 
 };
+
+/* =========================
+   DISPLAY PRODUCTS
+========================= */
+
+const productsGrid = document.querySelector("#products-grid");
+const productsTitle = document.querySelector("#products-title");
+
+const productFilters =
+    document.querySelectorAll(".product-filter");
+
+
+function displayProducts(category) {
+
+    const products = productsData[category];
+
+    productsGrid.innerHTML = "";
+
+    products.forEach((product) => {
+
+        const productCard = document.createElement("div");
+
+        productCard.className = "product-card";
+
+        productCard.innerHTML = `
+
+            <div class="product-image">
+
+                <button
+                    class="wishlist-btn"
+                    type="button"
+                    aria-label="Add to wishlist"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    ${product.name}
+                </span>
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Price
+                    </strong>
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        aria-label="Add to cart"
+                    >
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+        productsGrid.appendChild(productCard);
+
+    });
+
+}
+
+/* =========================
+   PRODUCT CATEGORY FILTER
+========================= */
+
+productFilters.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        productFilters.forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+
+        const selectedCategory =
+            button.dataset.category;
+
+
+        const categoryNames = {
+
+            home: "Home & Kitchen",
+
+            car: "Car Accessories",
+
+            stationery: "Stationery",
+
+            electronics: "Electronics"
+
+        };
+
+
+        productsTitle.textContent =
+            categoryNames[selectedCategory];
+
+
+        displayProducts(selectedCategory);
+
+    });
+
+});
+
+/* =========================
+   INITIAL PRODUCTS
+========================= */
+
+displayProducts("home");
+
