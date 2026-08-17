@@ -566,6 +566,135 @@ function showCategoryProducts(category) {
 
 
 /* =========================
+   INDIVIDUAL PRODUCTS DATA
+========================= */
+
+/*
+   Product kasta wuxuu yeelan karaa:
+
+   name
+   image
+   price
+
+   Hadda waxaan ka dhigaynaa
+   products: [] ilaa macmiilku
+   bixiyo individual product names.
+*/
+
+const individualProducts = {
+
+    /* =========================
+       HOME & KITCHEN
+    ========================= */
+
+    "Cooking Tools": [],
+
+    "Plates, Bowls & Cutlery": [],
+
+    "Cups, Mugs & Water Bottles": [],
+
+    "Food Storage & Containers": [],
+
+    "Spice & Kitchen Organizers": [],
+
+    "Cleaning & Laundry": [],
+
+    "Bathroom Accessories": [],
+
+    "Home Storage & Organization": [],
+
+    "Home Lighting": [],
+
+    "Home Decoration": [],
+
+
+    /* =========================
+       CAR ACCESSORIES
+    ========================= */
+
+    "Jump Starters": [],
+
+    "Car Phone Holders": [],
+
+    "Car Chargers & USB Adapters": [],
+
+    "Tire Repair & Inflation Tools": [],
+
+    "Emergency & Safety Tools": [],
+
+    "Car Cleaning Tools": [],
+
+    "Car Air Fresheners": [],
+
+    "Sun Shades": [],
+
+    "Seat & Steering Wheel Covers": [],
+
+    "Car LED Lights & Lighting Accessories": [],
+
+
+    /* =========================
+       STATIONERY
+    ========================= */
+
+    "Notebooks": [],
+
+    "Pens": [],
+
+    "Pencils": [],
+
+    "Markers": [],
+
+    "Highlighters": [],
+
+    "Erasers & Sharpeners": [],
+
+    "Rulers & Geometry Sets": [],
+
+    "Files & Folders": [],
+
+    "Sticky Notes": [],
+
+    "Printer Paper, Ink & Toner": [],
+
+    "Riso": [],
+
+    "Konica": [],
+
+    "HP Copier": [],
+
+    "Canon Copier": [],
+
+
+    /* =========================
+       ELECTRONICS
+    ========================= */
+
+    "Smartphones — iPhone, Samsung": [],
+
+    "Earphones & Headphones": [],
+
+    "Bluetooth Speakers": [],
+
+    "Smart Watches": [],
+
+    "Power Banks": [],
+
+    "Chargers & Adapters": [],
+
+    "USB Cables": [],
+
+    "USB Flash Drives": [],
+
+    "Phone Cases & Screen Protectors": [],
+
+    "Power Strips & Extension Cables": [],
+
+    "Laptops": []
+
+};
+
+/* =========================
    SHOP NOW BUTTONS
 ========================= */
 
