@@ -695,6 +695,229 @@ const individualProducts = {
 };
 
 /* =========================
+   INDIVIDUAL PRODUCTS
+========================= */
+
+function showIndividualProducts(subcategory) {
+
+    const products =
+        individualProducts[subcategory];
+
+    if (!products) {
+        return;
+    }
+
+
+    /* Find / create individual products area */
+
+    let individualSection =
+        document.querySelector("#individual-products");
+
+
+    if (!individualSection) {
+
+        individualSection =
+            document.createElement("section");
+
+        individualSection.id =
+            "individual-products";
+
+        individualSection.className =
+            "individual-products";
+
+
+        categoryProducts.after(
+            individualSection
+        );
+
+    }
+
+
+    /* Empty previous content */
+
+    individualSection.innerHTML = "";
+
+
+    /* Header */
+
+    const header =
+        document.createElement("div");
+
+    header.className =
+        "individual-products-header";
+
+
+    header.innerHTML = `
+
+        <span>PRODUCTS</span>
+
+        <h2>${subcategory}</h2>
+
+        <div class="products-line"></div>
+
+    `;
+
+
+    individualSection.appendChild(header);
+
+
+    /* Product grid */
+
+    const grid =
+        document.createElement("div");
+
+    grid.className =
+        "individual-products-grid";
+
+
+    /* No products yet */
+
+    if (products.length === 0) {
+
+        grid.innerHTML = `
+
+            <div class="products-coming-soon">
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <h3>Products Coming Soon</h3>
+
+                <p>
+                    Products for this category
+                    will be available soon.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* Products */
+
+    products.forEach((product) => {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "individual-product-card";
+
+
+        card.innerHTML = `
+
+            <div class="individual-product-image">
+
+                <button
+                    class="individual-wishlist-btn"
+                    type="button"
+                    aria-label="Add to wishlist"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+            </div>
+
+
+            <div class="individual-product-info">
+
+                <span class="individual-product-category">
+                    ${subcategory}
+                </span>
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+
+                <div class="individual-product-bottom">
+
+                    <strong>
+                        ${product.price}
+                    </strong>
+
+                    <button
+                        class="individual-cart-btn"
+                        type="button"
+                        aria-label="Add to cart"
+                    >
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        grid.appendChild(card);
+
+    });
+
+
+    individualSection.appendChild(grid);
+
+
+    /* Show section */
+
+    individualSection.classList.add("show");
+
+
+    /* Scroll */
+
+    setTimeout(() => {
+
+        individualSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+
+}
+
+/* =========================
+   VIEW PRODUCTS BUTTONS
+========================= */
+
+document.addEventListener("click", (event) => {
+
+    const button =
+        event.target.closest(".view-products-btn");
+
+
+    if (!button) {
+        return;
+    }
+
+
+    const card =
+        button.closest(".category-product-card");
+
+
+    if (!card) {
+        return;
+    }
+
+
+    const subcategory =
+        card.querySelector(
+            ".category-product-info h3"
+        ).textContent.trim();
+
+
+    showIndividualProducts(subcategory);
+
+});
+
+/* =========================
    SHOP NOW BUTTONS
 ========================= */
 
