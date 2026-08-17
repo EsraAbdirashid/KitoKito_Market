@@ -170,9 +170,7 @@ function nextSlide() {
 }
 
 
-/* =========================
-   PREVIOUS SLIDE
-========================= */
+/* ====PREVIOUS SLIDE */
 
 function previousSlide() {
 
@@ -186,18 +184,14 @@ function previousSlide() {
 }
 
 
-/* =========================
-   ARROWS
-========================= */
+/* ARROWS */
 
 nextButton.addEventListener("click", nextSlide);
 
 prevButton.addEventListener("click", previousSlide);
 
 
-/* =========================
-   DOTS
-========================= */
+/* DOTS */
 
 dots.forEach((dot, index) => {
 
@@ -210,9 +204,7 @@ dots.forEach((dot, index) => {
 });
 
 
-/* =========================
-   AUTOMATIC SLIDER
-========================= */
+/*  AUTOMATIC SLIDER */
 
 // setInterval(() => {
 
@@ -221,9 +213,7 @@ dots.forEach((dot, index) => {
 // }, 5000);
 
 
-/* =========================
-   MOBILE SEARCH
-========================= */
+/* MOBILE SEARCH */
 
 const mobileSearch = document.querySelector(".mobile-search");
 const searchBox = document.querySelector(".search-box");
