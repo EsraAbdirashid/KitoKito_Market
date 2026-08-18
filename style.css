@@ -2495,3 +2495,108 @@ body {
 .place-order-btn:hover {
     background: #fcb316;
 }
+
+/* =========================
+   WISHLIST PANEL
+========================= */
+
+.wishlist-panel {
+    position: fixed;
+
+    top: 0;
+    right: -400px;
+
+    width: 380px;
+    height: 100vh;
+
+    background: #fff;
+
+    z-index: 10001;
+
+    box-shadow:
+        -5px 0 20px rgba(0,0,0,.15);
+
+    transition: .3s ease;
+}
+
+.wishlist-panel.show {
+    right: 0;
+}
+
+.wishlist-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.wishlist-header h3 {
+    margin: 0;
+
+    color: #27316c;
+}
+
+.wishlist-header button {
+    border: none;
+
+    background: none;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.wishlist-items {
+    padding: 15px 20px;
+}
+
+.wishlist-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.wishlist-item img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+}
+
+.wishlist-info {
+    flex: 1;
+}
+
+.wishlist-info h4 {
+    margin: 0 0 6px;
+
+    color: #27316c;
+
+    font-size: 14px;
+}
+
+.wishlist-info strong {
+    color: #fcb316;
+
+    font-size: 14px;
+}
+
+.wishlist-item > button {
+    border: none;
+
+    background: none;
+
+    color: #e53935;
+
+    cursor: pointer;
+}
