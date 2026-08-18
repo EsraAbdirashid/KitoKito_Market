@@ -938,3 +938,89 @@ function removeFromCart(index) {
 
     updateCart();
 }
+
+/* =========================
+   CHECKOUT
+========================= */
+
+const checkoutPanel =
+    document.querySelector("#checkout-panel");
+
+const checkoutItems =
+    document.querySelector("#checkout-items");
+
+const checkoutTotal =
+    document.querySelector("#checkout-total");
+
+
+document.querySelector(".checkout-btn").addEventListener("click", () => {
+
+    if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
+
+    checkoutItems.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach((product) => {
+
+        const price =
+            parseFloat(product.price.replace("$", ""));
+
+        total += price;
+
+        checkoutItems.innerHTML += `
+            <div class="checkout-item">
+
+                <span>${product.name}</span>
+
+                <strong>${product.price}</strong>
+
+            </div>
+        `;
+
+    });
+
+    checkoutTotal.textContent =
+        `$${total.toFixed(2)}`;
+
+    checkoutPanel.classList.add("show");
+
+});
+
+
+document.querySelector("#close-checkout").addEventListener("click", () => {
+
+    checkoutPanel.classList.remove("show");
+
+});
+
+
+document.querySelector("#place-order").addEventListener("click", () => {
+
+    const name =
+        document.querySelector("#customer-name").value.trim();
+
+    const phone =
+        document.querySelector("#customer-phone").value.trim();
+
+    const address =
+        document.querySelector("#customer-address").value.trim();
+
+
+    if (!name || !phone || !address) {
+
+        alert("Please fill in all customer information.");
+
+        return;
+
+    }
+
+
+    alert(
+        "Order ready! Backend will be connected later."
+    );
+
+});
