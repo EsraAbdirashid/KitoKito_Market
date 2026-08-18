@@ -22,6 +22,28 @@ if (menuToggle && navMenu) {
 }
 
 /* =========================================================
+   MOBILE SEARCH
+========================================================= */
+
+const mobileSearchButton =
+    document.querySelector(".mobile-search");
+
+const searchBox =
+    document.querySelector(".search-box");
+
+
+if (mobileSearchButton && searchBox) {
+
+    mobileSearchButton.addEventListener("click", () => {
+
+        searchBox.classList.toggle("mobile-show");
+
+    });
+
+}
+
+
+/* =========================================================
    ALL CATEGORIES DROPDOWN
 ========================================================= */
 

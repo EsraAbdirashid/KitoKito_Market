@@ -467,12 +467,23 @@ input {
 
     /* Mobile search icon */
 
-    .mobile-search {
-        display: flex;
+    .search-box.mobile-show {
+    display: flex;
 
-        margin-left: 0;
-        margin-right: 18px;
-    }
+    position: absolute;
+
+    top: 70px;
+    left: 3%;
+
+    width: 94%;
+    max-width: none;
+
+    height: 46px;
+
+    margin: 0;
+
+    z-index: 1005;
+}
 
 
     .nav-actions {
