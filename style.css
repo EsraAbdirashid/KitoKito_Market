@@ -2340,3 +2340,158 @@ body {
 
     cursor: pointer;
 }
+
+/* =========================
+   CHECKOUT
+========================= */
+
+.checkout-panel {
+    position: fixed;
+
+    top: 0;
+    right: -420px;
+
+    width: 400px;
+    height: 100vh;
+
+    background: #fff;
+
+    z-index: 10000;
+
+    box-shadow: -5px 0 20px rgba(0,0,0,.15);
+
+    transition: .3s ease;
+}
+
+.checkout-panel.show {
+    right: 0;
+}
+
+.checkout-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-header h3 {
+    margin: 0;
+
+    color: #27316c;
+}
+
+.checkout-header button {
+    border: none;
+
+    background: none;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.checkout-content {
+    padding: 20px;
+
+    overflow-y: auto;
+
+    height: calc(100vh - 75px);
+}
+
+.checkout-content h4 {
+    margin: 0 0 12px;
+
+    color: #27316c;
+}
+
+.checkout-content input,
+.checkout-content textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-bottom: 12px;
+
+    padding: 11px 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+.checkout-content textarea {
+    height: 90px;
+
+    resize: none;
+}
+
+.checkout-content input:focus,
+.checkout-content textarea:focus {
+    border-color: #27316c;
+}
+
+.checkout-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+.checkout-item strong {
+    color: #fcb316;
+}
+
+.checkout-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 20px 0;
+
+    font-size: 17px;
+}
+
+.checkout-total strong {
+    color: #fcb316;
+}
+
+.place-order-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #27316c;
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.place-order-btn:hover {
+    background: #fcb316;
+}
