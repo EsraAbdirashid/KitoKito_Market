@@ -2,7 +2,6 @@
    KITOKITO MARKET - JAVASCRIPT
 ========================================================= */
 
-
 /* =========================================================
    MOBILE MENU
 ========================================================= */
@@ -11,633 +10,488 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
 if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
 
-    menuToggle.addEventListener("click", () => {
+    const icon = menuToggle.querySelector("i");
 
-        navMenu.classList.toggle("show");
-
-        const icon = menuToggle.querySelector("i");
-
-        if (navMenu.classList.contains("show")) {
-
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
-
-        } else {
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
-
-    });
-
+    if (navMenu.classList.contains("show")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
 }
-
 
 /* =========================================================
    ALL CATEGORIES DROPDOWN
 ========================================================= */
 
-const categoryBtn =
-    document.querySelector(".category-btn");
+const categoryBtn = document.querySelector(".category-btn");
 
-const categoryDropdown =
-    document.querySelector(".category-dropdown");
-
+const categoryDropdown = document.querySelector(".category-dropdown");
 
 if (categoryBtn && categoryDropdown) {
+  categoryBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
 
-    categoryBtn.addEventListener("click", (event) => {
+    categoryDropdown.classList.toggle("show");
+  });
 
-        event.stopPropagation();
+  document.addEventListener("click", (event) => {
+    if (
+      !categoryDropdown.contains(event.target) &&
+      !categoryBtn.contains(event.target)
+    ) {
+      categoryDropdown.classList.remove("show");
+    }
+  });
 
-        categoryDropdown.classList.toggle("show");
+  const categoryItems = document.querySelectorAll(".category-dropdown button");
 
-    });
+  categoryItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const selectedCategory = item.textContent.trim();
 
-
-    document.addEventListener("click", (event) => {
-
-        if (
-            !categoryDropdown.contains(event.target) &&
-            !categoryBtn.contains(event.target)
-        ) {
-
-            categoryDropdown.classList.remove("show");
-
-        }
-
-    });
-
-
-    const categoryItems =
-        document.querySelectorAll(
-            ".category-dropdown button"
-        );
-
-
-    categoryItems.forEach((item) => {
-
-        item.addEventListener("click", () => {
-
-            const selectedCategory =
-                item.textContent.trim();
-
-            categoryBtn.innerHTML =
-                `${selectedCategory}
+      categoryBtn.innerHTML = `${selectedCategory}
                  <i class="fa-solid fa-chevron-down"></i>`;
 
-            categoryDropdown.classList.remove("show");
-
-        });
-
+      categoryDropdown.classList.remove("show");
     });
-
+  });
 }
-
 
 /* =========================================================
    ACTIVE NAV LINK
 ========================================================= */
 
-const navLinks =
-    document.querySelectorAll(".nav-menu a");
-
+const navLinks = document.querySelectorAll(".nav-menu a");
 
 navLinks.forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.forEach((item) => {
-            item.classList.remove("active");
-        });
-
-        link.classList.add("active");
-
-
-        /* Close mobile menu */
-
-        if (navMenu) {
-
-            navMenu.classList.remove("show");
-
-        }
-
-
-        if (menuToggle) {
-
-            const icon =
-                menuToggle.querySelector("i");
-
-            if (icon) {
-
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
-
-            }
-
-        }
-
+  link.addEventListener("click", () => {
+    navLinks.forEach((item) => {
+      item.classList.remove("active");
     });
 
-});
+    link.classList.add("active");
 
+    /* Close mobile menu */
+
+    if (navMenu) {
+      navMenu.classList.remove("show");
+    }
+
+    if (menuToggle) {
+      const icon = menuToggle.querySelector("i");
+
+      if (icon) {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    }
+  });
+});
 
 /* =========================================================
    HERO SLIDER
 ========================================================= */
 
-const slides =
-    document.querySelectorAll(".hero-slide");
+const slides = document.querySelectorAll(".hero-slide");
 
-const dots =
-    document.querySelectorAll(".dot");
+const dots = document.querySelectorAll(".dot");
 
-const prevButton =
-    document.querySelector(".slider-arrow.prev");
+const prevButton = document.querySelector(".slider-arrow.prev");
 
-const nextButton =
-    document.querySelector(".slider-arrow.next");
-
+const nextButton = document.querySelector(".slider-arrow.next");
 
 let currentSlide = 0;
 
-
 function showSlide(index) {
+  if (!slides.length) {
+    return;
+  }
 
-    if (!slides.length) {
-        return;
-    }
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
 
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
 
-    slides.forEach((slide) => {
+  slides[index].classList.add("active");
 
-        slide.classList.remove("active");
+  if (dots[index]) {
+    dots[index].classList.add("active");
+  }
 
-    });
-
-
-    dots.forEach((dot) => {
-
-        dot.classList.remove("active");
-
-    });
-
-
-    slides[index].classList.add("active");
-
-
-    if (dots[index]) {
-
-        dots[index].classList.add("active");
-
-    }
-
-
-    currentSlide = index;
-
+  currentSlide = index;
 }
-
 
 function nextSlide() {
+  let nextIndex = currentSlide + 1;
 
-    let nextIndex =
-        currentSlide + 1;
+  if (nextIndex >= slides.length) {
+    nextIndex = 0;
+  }
 
-
-    if (nextIndex >= slides.length) {
-
-        nextIndex = 0;
-
-    }
-
-
-    showSlide(nextIndex);
-
+  showSlide(nextIndex);
 }
-
 
 function previousSlide() {
+  let previousIndex = currentSlide - 1;
 
-    let previousIndex =
-        currentSlide - 1;
+  if (previousIndex < 0) {
+    previousIndex = slides.length - 1;
+  }
 
-
-    if (previousIndex < 0) {
-
-        previousIndex =
-            slides.length - 1;
-
-    }
-
-
-    showSlide(previousIndex);
-
+  showSlide(previousIndex);
 }
-
 
 if (nextButton) {
-
-    nextButton.addEventListener(
-        "click",
-        nextSlide
-    );
-
+  nextButton.addEventListener("click", nextSlide);
 }
-
 
 if (prevButton) {
-
-    prevButton.addEventListener(
-        "click",
-        previousSlide
-    );
-
+  prevButton.addEventListener("click", previousSlide);
 }
 
-
 dots.forEach((dot, index) => {
-
-    dot.addEventListener("click", () => {
-
-        showSlide(index);
-
-    });
-
+  dot.addEventListener("click", () => {
+    showSlide(index);
+  });
 });
-
 
 /* =========================================================
    PRODUCT / SUBCATEGORY DATA
 ========================================================= */
 
 const productsData = {
-
-
-    /* =====================================================
+  /* =====================================================
        HOME & KITCHEN
     ===================================================== */
 
-    home: [
+  home: [
+    {
+      name: "Cooking Tools",
+      image: "images/products/cooking-tools.jpg",
+    },
 
-        {
-            name: "Cooking Tools",
-            image: "images/products/cooking-tools.jpg"
-        },
+    {
+      name: "Plates, Bowls & Cutlery",
+      image: "images/products/plates-bowls-cutlery.jpg",
+    },
 
-        {
-            name: "Plates, Bowls & Cutlery",
-            image: "images/products/plates-bowls-cutlery.jpg"
-        },
+    {
+      name: "Cups, Mugs & Water Bottles",
+      image: "images/products/cups-mugs-water-bottles.jpg",
+    },
 
-        {
-            name: "Cups, Mugs & Water Bottles",
-            image: "images/products/cups-mugs-water-bottles.jpg"
-        },
+    {
+      name: "Food Storage & Containers",
+      image: "images/products/food-storage-containers.jpg",
+    },
 
-        {
-            name: "Food Storage & Containers",
-            image: "images/products/food-storage-containers.jpg"
-        },
+    {
+      name: "Spice & Kitchen Organizers",
+      image: "images/products/spice-kitchen-organizers.jpg",
+    },
 
-        {
-            name: "Spice & Kitchen Organizers",
-            image: "images/products/spice-kitchen-organizers.jpg"
-        },
+    {
+      name: "Cleaning & Laundry",
+      image: "images/products/cleaning-laundry.jpg",
+    },
 
-        {
-            name: "Cleaning & Laundry",
-            image: "images/products/cleaning-laundry.jpg"
-        },
+    {
+      name: "Bathroom Accessories",
+      image: "images/products/bathroom-accessories.jpg",
+    },
 
-        {
-            name: "Bathroom Accessories",
-            image: "images/products/bathroom-accessories.jpg"
-        },
+    {
+      name: "Home Storage & Organization",
+      image: "images/products/home-storage-organization.jpg",
+    },
 
-        {
-            name: "Home Storage & Organization",
-            image: "images/products/home-storage-organization.jpg"
-        },
+    {
+      name: "Home Lighting",
+      image: "images/products/home-lighting.jpg",
+    },
 
-        {
-            name: "Home Lighting",
-            image: "images/products/home-lighting.jpg"
-        },
+    {
+      name: "Home Decoration",
+      image: "images/products/home-decoration.jpg",
+    },
+  ],
 
-        {
-            name: "Home Decoration",
-            image: "images/products/home-decoration.jpg"
-        }
-
-    ],
-
-
-    /* =====================================================
+  /* =====================================================
        CAR ACCESSORIES
     ===================================================== */
 
-    car: [
+  car: [
+    {
+      name: "Jump Starters",
+      image: "images/products/jump-starters.jpg",
+    },
 
-        {
-            name: "Jump Starters",
-            image: "images/products/jump-starters.jpg"
-        },
+    {
+      name: "Car Phone Holders",
+      image: "images/products/car-phone-holders.jpg",
+    },
 
-        {
-            name: "Car Phone Holders",
-            image: "images/products/car-phone-holders.jpg"
-        },
+    {
+      name: "Car Chargers & USB Adapters",
+      image: "images/products/car-chargers-usb-adapters.jpg",
+    },
 
-        {
-            name: "Car Chargers & USB Adapters",
-            image: "images/products/car-chargers-usb-adapters.jpg"
-        },
+    {
+      name: "Tire Repair & Inflation Tools",
+      image: "images/products/tire-repair-inflation-tools.jpg",
+    },
 
-        {
-            name: "Tire Repair & Inflation Tools",
-            image: "images/products/tire-repair-inflation-tools.jpg"
-        },
+    {
+      name: "Emergency & Safety Tools",
+      image: "images/products/emergency-safety-tools.jpg",
+    },
 
-        {
-            name: "Emergency & Safety Tools",
-            image: "images/products/emergency-safety-tools.jpg"
-        },
+    {
+      name: "Car Cleaning Tools",
+      image: "images/products/car-cleaning-tools.jpg",
+    },
 
-        {
-            name: "Car Cleaning Tools",
-            image: "images/products/car-cleaning-tools.jpg"
-        },
+    {
+      name: "Car Air Fresheners",
+      image: "images/products/car-air-fresheners.jpg",
+    },
 
-        {
-            name: "Car Air Fresheners",
-            image: "images/products/car-air-fresheners.jpg"
-        },
+    {
+      name: "Sun Shades",
+      image: "images/products/sun-shades.jpg",
+    },
 
-        {
-            name: "Sun Shades",
-            image: "images/products/sun-shades.jpg"
-        },
+    {
+      name: "Seat & Steering Wheel Covers",
+      image: "images/products/seat-steering-wheel-covers.jpg",
+    },
 
-        {
-            name: "Seat & Steering Wheel Covers",
-            image: "images/products/seat-steering-wheel-covers.jpg"
-        },
+    {
+      name: "Car LED Lights & Lighting Accessories",
+      image: "images/products/car-led-lights.jpg",
+    },
+  ],
 
-        {
-            name: "Car LED Lights & Lighting Accessories",
-            image: "images/products/car-led-lights.jpg"
-        }
-
-    ],
-
-
-    /* =====================================================
+  /* =====================================================
        STATIONERY
     ===================================================== */
 
-    stationery: [
+  stationery: [
+    {
+      name: "Notebooks",
+      image: "images/products/notebooks.jpg",
+    },
 
-        {
-            name: "Notebooks",
-            image: "images/products/notebooks.jpg"
-        },
+    {
+      name: "Pens",
+      image: "images/products/pens.jpg",
+    },
 
-        {
-            name: "Pens",
-            image: "images/products/pens.jpg"
-        },
+    {
+      name: "Pencils",
+      image: "images/products/pencils.jpg",
+    },
 
-        {
-            name: "Pencils",
-            image: "images/products/pencils.jpg"
-        },
+    {
+      name: "Markers",
+      image: "images/products/markers.jpg",
+    },
 
-        {
-            name: "Markers",
-            image: "images/products/markers.jpg"
-        },
+    {
+      name: "Highlighters",
+      image: "images/products/highlighters.jpg",
+    },
 
-        {
-            name: "Highlighters",
-            image: "images/products/highlighters.jpg"
-        },
+    {
+      name: "Erasers & Sharpeners",
+      image: "images/products/erasers-sharpeners.jpg",
+    },
 
-        {
-            name: "Erasers & Sharpeners",
-            image: "images/products/erasers-sharpeners.jpg"
-        },
+    {
+      name: "Rulers & Geometry Sets",
+      image: "images/products/rulers-geometry-sets.jpg",
+    },
 
-        {
-            name: "Rulers & Geometry Sets",
-            image: "images/products/rulers-geometry-sets.jpg"
-        },
+    {
+      name: "Files & Folders",
+      image: "images/products/files-folders.jpg",
+    },
 
-        {
-            name: "Files & Folders",
-            image: "images/products/files-folders.jpg"
-        },
+    {
+      name: "Sticky Notes",
+      image: "images/products/sticky-notes.jpg",
+    },
 
-        {
-            name: "Sticky Notes",
-            image: "images/products/sticky-notes.jpg"
-        },
+    {
+      name: "Printer Paper, Ink & Toner",
+      image: "images/products/printer-paper-ink-toner.jpg",
+    },
 
-        {
-            name: "Printer Paper, Ink & Toner",
-            image: "images/products/printer-paper-ink-toner.jpg"
-        },
+    {
+      name: "Riso",
+      image: "images/products/riso.jpg",
+    },
 
-        {
-            name: "Riso",
-            image: "images/products/riso.jpg"
-        },
+    {
+      name: "Konica",
+      image: "images/products/konica.jpg",
+    },
 
-        {
-            name: "Konica",
-            image: "images/products/konica.jpg"
-        },
+    {
+      name: "HP Copier",
+      image: "images/products/hp-copier.jpg",
+    },
 
-        {
-            name: "HP Copier",
-            image: "images/products/hp-copier.jpg"
-        },
+    {
+      name: "Canon Copier",
+      image: "images/products/canon-copier.jpg",
+    },
+  ],
 
-        {
-            name: "Canon Copier",
-            image: "images/products/canon-copier.jpg"
-        }
-
-    ],
-
-
-    /* =====================================================
+  /* =====================================================
        ELECTRONICS
     ===================================================== */
 
-    electronics: [
+  electronics: [
+    {
+      name: "Smartphones — iPhone, Samsung",
+      image: "images/products/smartphones.jpg",
+    },
 
-        {
-            name: "Smartphones — iPhone, Samsung",
-            image: "images/products/smartphones.jpg"
-        },
+    {
+      name: "Earphones & Headphones",
+      image: "images/products/earphones-headphones.jpg",
+    },
 
-        {
-            name: "Earphones & Headphones",
-            image: "images/products/earphones-headphones.jpg"
-        },
+    {
+      name: "Bluetooth Speakers",
+      image: "images/products/bluetooth-speakers.jpg",
+    },
 
-        {
-            name: "Bluetooth Speakers",
-            image: "images/products/bluetooth-speakers.jpg"
-        },
+    {
+      name: "Smart Watches",
+      image: "images/products/smart-watches.jpg",
+    },
 
-        {
-            name: "Smart Watches",
-            image: "images/products/smart-watches.jpg"
-        },
+    {
+      name: "Power Banks",
+      image: "images/products/power-banks.jpg",
+    },
 
-        {
-            name: "Power Banks",
-            image: "images/products/power-banks.jpg"
-        },
+    {
+      name: "Chargers & Adapters",
+      image: "images/products/chargers-adapters.jpg",
+    },
 
-        {
-            name: "Chargers & Adapters",
-            image: "images/products/chargers-adapters.jpg"
-        },
+    {
+      name: "USB Cables",
+      image: "images/products/usb-cables.jpg",
+    },
 
-        {
-            name: "USB Cables",
-            image: "images/products/usb-cables.jpg"
-        },
+    {
+      name: "USB Flash Drives",
+      image: "images/products/usb-flash-drives.jpg",
+    },
 
-        {
-            name: "USB Flash Drives",
-            image: "images/products/usb-flash-drives.jpg"
-        },
+    {
+      name: "Phone Cases & Screen Protectors",
+      image: "images/products/phone-cases-screen-protectors.jpg",
+    },
 
-        {
-            name: "Phone Cases & Screen Protectors",
-            image: "images/products/phone-cases-screen-protectors.jpg"
-        },
+    {
+      name: "Power Strips & Extension Cables",
+      image: "images/products/power-strips-extension-cables.jpg",
+    },
 
-        {
-            name: "Power Strips & Extension Cables",
-            image: "images/products/power-strips-extension-cables.jpg"
-        },
-
-        {
-            name: "Laptops",
-            image: "images/products/laptops.jpg"
-        }
-
-    ]
-
+    {
+      name: "Laptops",
+      image: "images/products/laptops.jpg",
+    },
+  ],
 };
-
 
 /* =========================================================
    CATEGORY NAMES
 ========================================================= */
 
 const categoryNames = {
+  home: "Home & Kitchen",
 
-    home: "Home & Kitchen",
+  car: "Car Accessories",
 
-    car: "Car Accessories",
+  stationery: "Stationery",
 
-    stationery: "Stationery",
-
-    electronics: "Electronics"
-
+  electronics: "Electronics",
 };
-
 
 /* =========================================================
    GET CATEGORY ELEMENTS
 ========================================================= */
 
-const mainCategories =
-    document.querySelector("#main-categories");
+const mainCategories = document.querySelector("#main-categories");
 
-const subcategoriesView =
-    document.querySelector("#subcategories-view");
+const subcategoriesView = document.querySelector("#subcategories-view");
 
-const subcategoriesGrid =
-    document.querySelector("#subcategories-grid");
+const subcategoriesGrid = document.querySelector("#subcategories-grid");
 
-const subcategoryTitle =
-    document.querySelector("#subcategory-title");
+const subcategoryTitle = document.querySelector("#subcategory-title");
 
-const productsView =
-    document.querySelector("#products-view");
+const productsView = document.querySelector("#products-view");
 
-const productsGrid =
-    document.querySelector("#products-grid");
+const productsGrid = document.querySelector("#products-grid");
 
-const productsTitle =
-    document.querySelector("#products-title");
+const productsTitle = document.querySelector("#products-title");
 
-const backToCategories =
-    document.querySelector("#back-to-categories");
+const backToCategories = document.querySelector("#back-to-categories");
 
-const backToSubcategories =
-    document.querySelector("#back-to-subcategories");
+const backToSubcategories = document.querySelector("#back-to-subcategories");
 
-const shopCategoryButtons =
-    document.querySelectorAll(".shop-category-btn");
-
+const shopCategoryButtons = document.querySelectorAll(".shop-category-btn");
 
 /* =========================================================
    OPEN CATEGORY
 ========================================================= */
 
 function openCategory(category) {
+  const subcategories = productsData[category];
 
-    const subcategories =
-        productsData[category];
+  if (!subcategories) {
+    return;
+  }
 
+  /* Hide main categories */
 
-    if (!subcategories) {
-        return;
-    }
+  mainCategories.classList.add("hidden");
 
+  /* Hide products view */
 
-    /* Hide main categories */
+  productsView.classList.remove("show");
 
-    mainCategories.classList.add("hidden");
+  /* Set title */
 
+  subcategoryTitle.textContent = categoryNames[category];
 
-    /* Hide products view */
+  /* Clear old subcategories */
 
-    productsView.classList.remove("show");
+  subcategoriesGrid.innerHTML = "";
 
+  /* Create subcategory cards */
 
-    /* Set title */
+  subcategories.forEach((subcategory) => {
+    const card = document.createElement("div");
 
-    subcategoryTitle.textContent =
-        categoryNames[category];
+    card.className = "subcategory-card";
 
-
-    /* Clear old subcategories */
-
-    subcategoriesGrid.innerHTML = "";
-
-
-    /* Create subcategory cards */
-
-    subcategories.forEach((subcategory) => {
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "subcategory-card";
-
-
-        card.innerHTML = `
+    card.innerHTML = `
 
             <div class="subcategory-image">
 
@@ -668,48 +522,34 @@ function openCategory(category) {
 
         `;
 
+    subcategoriesGrid.appendChild(card);
+  });
 
-        subcategoriesGrid.appendChild(card);
+  /* Show subcategories */
 
+  subcategoriesView.classList.add("show");
+
+  /* Scroll to categories section */
+
+  setTimeout(() => {
+    subcategoriesView.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
     });
-
-
-    /* Show subcategories */
-
-    subcategoriesView.classList.add("show");
-
-
-    /* Scroll to categories section */
-
-    setTimeout(() => {
-
-        subcategoriesView.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
-    }, 100);
-
+  }, 100);
 }
-
 
 /* =========================================================
    SHOP NOW BUTTONS
 ========================================================= */
 
 shopCategoryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const category = button.dataset.category;
 
-    button.addEventListener("click", () => {
-
-        const category =
-            button.dataset.category;
-
-        openCategory(category);
-
-    });
-
+    openCategory(category);
+  });
 });
-
 
 /* =========================================================
    INDIVIDUAL PRODUCTS DATA
@@ -731,138 +571,150 @@ shopCategoryButtons.forEach((button) => {
 */
 
 const individualProducts = {
+  "Cooking Tools": ["Cooking Tools": [
 
-    "Cooking Tools": [],
+    {
+        name: "Kitchen Knife Set",
+        image: "images/products/kitchen-knife-set.jpg",
+        price: "$15.00"
+    },
 
-    "Plates, Bowls & Cutlery": [],
+    {
+        name: "Kitchen Utensil Set",
+        image: "images/products/kitchen-utensil-set.jpg",
+        price: "$12.00"
+    },
 
-    "Cups, Mugs & Water Bottles": [],
+    {
+        name: "Vegetable Peeler",
+        image: "images/products/vegetable-peeler.jpg",
+        price: "$5.00"
+    },
 
-    "Food Storage & Containers": [],
+    {
+        name: "Cutting Board",
+        image: "images/products/cutting-board.jpg",
+        price: "$8.00"
+    }
 
-    "Spice & Kitchen Organizers": [],
+],],
 
-    "Cleaning & Laundry": [],
+  "Plates, Bowls & Cutlery": [],
 
-    "Bathroom Accessories": [],
+  "Cups, Mugs & Water Bottles": [],
 
-    "Home Storage & Organization": [],
+  "Food Storage & Containers": [],
 
-    "Home Lighting": [],
+  "Spice & Kitchen Organizers": [],
 
-    "Home Decoration": [],
+  "Cleaning & Laundry": [],
 
+  "Bathroom Accessories": [],
 
-    "Jump Starters": [],
+  "Home Storage & Organization": [],
 
-    "Car Phone Holders": [],
+  "Home Lighting": [],
 
-    "Car Chargers & USB Adapters": [],
+  "Home Decoration": [],
 
-    "Tire Repair & Inflation Tools": [],
+  "Jump Starters": [],
 
-    "Emergency & Safety Tools": [],
+  "Car Phone Holders": [],
 
-    "Car Cleaning Tools": [],
+  "Car Chargers & USB Adapters": [],
 
-    "Car Air Fresheners": [],
+  "Tire Repair & Inflation Tools": [],
 
-    "Sun Shades": [],
+  "Emergency & Safety Tools": [],
 
-    "Seat & Steering Wheel Covers": [],
+  "Car Cleaning Tools": [],
 
-    "Car LED Lights & Lighting Accessories": [],
+  "Car Air Fresheners": [],
 
+  "Sun Shades": [],
 
-    "Notebooks": [],
+  "Seat & Steering Wheel Covers": [],
 
-    "Pens": [],
+  "Car LED Lights & Lighting Accessories": [],
 
-    "Pencils": [],
+  Notebooks: [],
 
-    "Markers": [],
+  Pens: [],
 
-    "Highlighters": [],
+  Pencils: [],
 
-    "Erasers & Sharpeners": [],
+  Markers: [],
 
-    "Rulers & Geometry Sets": [],
+  Highlighters: [],
 
-    "Files & Folders": [],
+  "Erasers & Sharpeners": [],
 
-    "Sticky Notes": [],
+  "Rulers & Geometry Sets": [],
 
-    "Printer Paper, Ink & Toner": [],
+  "Files & Folders": [],
 
-    "Riso": [],
+  "Sticky Notes": [],
 
-    "Konica": [],
+  "Printer Paper, Ink & Toner": [],
 
-    "HP Copier": [],
+  Riso: [],
 
-    "Canon Copier": [],
+  Konica: [],
 
+  "HP Copier": [],
 
-    "Smartphones — iPhone, Samsung": [],
+  "Canon Copier": [],
 
-    "Earphones & Headphones": [],
+  "Smartphones — iPhone, Samsung": [],
 
-    "Bluetooth Speakers": [],
+  "Earphones & Headphones": [],
 
-    "Smart Watches": [],
+  "Bluetooth Speakers": [],
 
-    "Power Banks": [],
+  "Smart Watches": [],
 
-    "Chargers & Adapters": [],
+  "Power Banks": [],
 
-    "USB Cables": [],
+  "Chargers & Adapters": [],
 
-    "USB Flash Drives": [],
+  "USB Cables": [],
 
-    "Phone Cases & Screen Protectors": [],
+  "USB Flash Drives": [],
 
-    "Power Strips & Extension Cables": [],
+  "Phone Cases & Screen Protectors": [],
 
-    "Laptops": []
+  "Power Strips & Extension Cables": [],
 
+  Laptops: [],
 };
-
 
 /* =========================================================
    OPEN INDIVIDUAL PRODUCTS
 ========================================================= */
 
 function openProducts(subcategory) {
+  const products = individualProducts[subcategory];
 
-    const products =
-        individualProducts[subcategory];
+  if (!products) {
+    return;
+  }
 
-    if (!products) {
-        return;
-    }
+  /* Hide subcategories */
 
+  subcategoriesView.classList.remove("show");
 
-    /* Hide subcategories */
+  /* Product title */
 
-    subcategoriesView.classList.remove("show");
+  productsTitle.textContent = subcategory;
 
+  /* Clear old products */
 
-    /* Product title */
+  productsGrid.innerHTML = "";
 
-    productsTitle.textContent =
-        subcategory;
+  /* No products */
 
-
-    /* Clear old products */
-
-    productsGrid.innerHTML = "";
-
-
-    /* No products */
-
-    if (products.length === 0) {
-
-        productsGrid.innerHTML = `
+  if (products.length === 0) {
+    productsGrid.innerHTML = `
 
             <div class="products-empty">
 
@@ -879,22 +731,16 @@ function openProducts(subcategory) {
             </div>
 
         `;
+  }
 
-    }
+  /* Create product cards */
 
+  products.forEach((product) => {
+    const card = document.createElement("div");
 
-    /* Create product cards */
+    card.className = "individual-product-card";
 
-    products.forEach((product) => {
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "individual-product-card";
-
-
-        card.innerHTML = `
+    card.innerHTML = `
 
             <div class="individual-product-image">
 
@@ -949,110 +795,77 @@ function openProducts(subcategory) {
 
         `;
 
+    productsGrid.appendChild(card);
+  });
 
-        productsGrid.appendChild(card);
+  /* Show products */
 
+  productsView.classList.add("show");
+
+  /* Scroll to products */
+
+  setTimeout(() => {
+    productsView.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
     });
-
-
-    /* Show products */
-
-    productsView.classList.add("show");
-
-
-    /* Scroll to products */
-
-    setTimeout(() => {
-
-        productsView.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
-    }, 100);
-
+  }, 100);
 }
-
 
 /* =========================================================
    VIEW PRODUCTS
 ========================================================= */
 
 document.addEventListener("click", (event) => {
+  const button = event.target.closest(".view-products-btn");
 
-    const button =
-        event.target.closest(".view-products-btn");
+  if (!button) {
+    return;
+  }
 
+  const subcategory = button.dataset.subcategory;
 
-    if (!button) {
-        return;
-    }
-
-
-    const subcategory =
-        button.dataset.subcategory;
-
-
-    if (subcategory) {
-
-        openProducts(subcategory);
-
-    }
-
+  if (subcategory) {
+    openProducts(subcategory);
+  }
 });
-
 
 /* =========================================================
    BACK TO CATEGORIES
 ========================================================= */
 
 if (backToCategories) {
+  backToCategories.addEventListener("click", () => {
+    subcategoriesView.classList.remove("show");
 
-    backToCategories.addEventListener("click", () => {
+    productsView.classList.remove("show");
 
-        subcategoriesView.classList.remove("show");
+    mainCategories.classList.remove("hidden");
 
-        productsView.classList.remove("show");
-
-        mainCategories.classList.remove("hidden");
-
-
-        setTimeout(() => {
-
-            mainCategories.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }, 100);
-
-    });
-
+    setTimeout(() => {
+      mainCategories.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  });
 }
-
 
 /* =========================================================
    BACK TO SUBCATEGORIES
 ========================================================= */
 
 if (backToSubcategories) {
+  backToSubcategories.addEventListener("click", () => {
+    productsView.classList.remove("show");
 
-    backToSubcategories.addEventListener("click", () => {
+    subcategoriesView.classList.add("show");
 
-        productsView.classList.remove("show");
-
-        subcategoriesView.classList.add("show");
-
-
-        setTimeout(() => {
-
-            subcategoriesView.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }, 100);
-
-    });
-
+    setTimeout(() => {
+      subcategoriesView.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  });
 }
