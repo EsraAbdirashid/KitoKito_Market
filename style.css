@@ -1425,28 +1425,31 @@ body {
    ADD TO CART
 ========================= */
 
-.add-cart-btn {
+.individual-product-bottom .add-cart-btn {
     width: 38px;
     height: 38px;
 
-    display: flex;
+    padding: 0;
 
+    display: flex;
     align-items: center;
     justify-content: center;
 
     border: none;
-
     border-radius: 5px;
 
     background: #27316c;
-
     color: #ffffff;
 
     font-size: 14px;
 
     cursor: pointer;
 
-    transition: 0.3s ease;
+    transition: .3s ease;
+}
+
+.individual-product-bottom .add-cart-btn:hover {
+    background: #fcb316;
 }
 
 .add-cart-btn:hover {
