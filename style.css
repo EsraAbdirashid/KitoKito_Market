@@ -519,58 +519,6 @@ input {
 }
 
 
-/* SMALL MOBILE */
-
-@media (max-width: 480px) {
-
-    .logo img {
-        width: 120px;
-    }
-
-
-    .nav-action i {
-        font-size: 19px;
-    }
-
-
-    .menu-toggle {
-        font-size: 21px;
-    }
-}
-
-/*  MOBILE SEARCH */
-
-.mobile-search {
-    display: none;
-    border: none;
-    background: transparent;
-    color: var(--white);
-    font-size: 21px;
-    cursor: pointer;
-}
-
-.mobile-search {
-    display: block;
-}
-
-@media (max-width: 768px) {
-
-    .search-box.mobile-search-open {
-        display: flex;
-
-        position: absolute;
-
-        top: 70px;
-        left: 3%;
-
-        width: 94%;
-        max-width: none;
-
-        z-index: 1002;
-    }
-
-}
-
 
 /* HERO */
 
