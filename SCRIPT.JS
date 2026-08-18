@@ -1024,3 +1024,127 @@ document.querySelector("#place-order").addEventListener("click", () => {
     );
 
 });
+
+/* =========================
+   WISHLIST
+========================= */
+
+let wishlist = [];
+
+const wishlistPanel =
+    document.querySelector("#wishlist-panel");
+
+const wishlistItems =
+    document.querySelector("#wishlist-items");
+
+const wishlistCount =
+    document.querySelector("#wishlist-count");
+
+
+/* Open Wishlist */
+
+document
+    .querySelector(".wishlist-nav-btn")
+    .addEventListener("click", () => {
+
+        wishlistPanel.classList.add("show");
+
+    });
+
+
+/* Close Wishlist */
+
+document
+    .querySelector("#close-wishlist")
+    .addEventListener("click", () => {
+
+        wishlistPanel.classList.remove("show");
+
+    });
+
+
+/* Add / Remove Wishlist */
+
+function toggleWishlist(product) {
+
+    const existingIndex =
+        wishlist.findIndex(
+            item => item.name === product.name
+        );
+
+
+    if (existingIndex !== -1) {
+
+        wishlist.splice(existingIndex, 1);
+
+    } else {
+
+        wishlist.push(product);
+
+    }
+
+
+    updateWishlist();
+
+}
+
+
+/* Update Wishlist */
+
+function updateWishlist() {
+
+    wishlistItems.innerHTML = "";
+
+    wishlistCount.textContent =
+        wishlist.length;
+
+
+    wishlist.forEach((product, index) => {
+
+        wishlistItems.innerHTML += `
+
+            <div class="wishlist-item">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+                <div class="wishlist-info">
+
+                    <h4>
+                        ${product.name}
+                    </h4>
+
+                    <strong>
+                        ${product.price}
+                    </strong>
+
+                </div>
+
+
+                <button
+                    onclick="removeFromWishlist(${index})"
+                    type="button"
+                >
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* Remove */
+
+function removeFromWishlist(index) {
+
+    wishlist.splice(index, 1);
+
+    updateWishlist();
+
+}
