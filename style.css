@@ -460,9 +460,9 @@ input {
 
     /* Hide desktop search */
 
-    /* .search-box {
+    .search-box {
         display: none;
-    } */
+    }
 
 .search-box {
     display: none;

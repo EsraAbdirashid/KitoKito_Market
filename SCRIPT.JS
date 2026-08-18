@@ -25,16 +25,12 @@ if (menuToggle && navMenu) {
    MOBILE SEARCH
 ========================================================= */
 
-const mobileSearchButton =
-    document.querySelector(".mobile-search");
-
-const searchBox =
-    document.querySelector(".search-box");
-
+const mobileSearchButton = document.querySelector(".mobile-search");
+const searchBox = document.querySelector(".search-box");
 
 if (mobileSearchButton && searchBox) {
 
-    mobileSearchButton.addEventListener("click", () => {
+    mobileSearchButton.addEventListener("click", function () {
 
         searchBox.classList.toggle("mobile-show");
 
