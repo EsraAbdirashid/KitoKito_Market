@@ -460,29 +460,28 @@ input {
 
     /* Hide desktop search */
 
-    .search-box {
+    /* .search-box {
         display: none;
-    }
+    } */
 
+.search-box {
+    display: none;
+}
 
-    /* Mobile search icon */
-
-    .search-box.mobile-show {
-    display: flex;
+.search-box.mobile-show {
+    display: flex !important;
 
     position: absolute;
-
     top: 70px;
     left: 3%;
 
     width: 94%;
     max-width: none;
 
-    height: 46px;
-
     margin: 0;
 
-    z-index: 1005;
+    z-index: 9999;
+}
 }
 
 
