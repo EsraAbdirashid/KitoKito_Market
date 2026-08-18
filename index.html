@@ -156,6 +156,63 @@
     </div>
 
 </div>
+
+<!-- CHECKOUT -->
+
+<div class="checkout-panel" id="checkout-panel">
+
+    <div class="checkout-header">
+        <h3>Checkout</h3>
+
+        <button id="close-checkout" type="button">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+
+    <div class="checkout-content">
+
+        <h4>Customer Information</h4>
+
+        <input
+            type="text"
+            id="customer-name"
+            placeholder="Full Name"
+        >
+
+        <input
+            type="tel"
+            id="customer-phone"
+            placeholder="Phone Number"
+        >
+
+        <textarea
+            id="customer-address"
+            placeholder="Delivery Address"
+        ></textarea>
+
+
+        <h4>Order Summary</h4>
+
+        <div id="checkout-items"></div>
+
+        <div class="checkout-total">
+            Total:
+            <strong id="checkout-total">$0.00</strong>
+        </div>
+
+
+        <button
+            class="place-order-btn"
+            id="place-order"
+            type="button"
+        >
+            Place Order
+        </button>
+
+    </div>
+
+</div>
            
     </header>
 
