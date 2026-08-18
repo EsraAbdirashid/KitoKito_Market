@@ -301,10 +301,8 @@
 
 
 </section>
-
-         
-
-                <!-- =========================
+                  
+<!-- =========================
      CATEGORIES
 ========================= -->
 
@@ -319,7 +317,11 @@
     </div>
 
 
-    <div class="category-grid">
+    <!-- =========================
+         MAIN CATEGORIES
+    ========================== -->
+
+    <div id="main-categories" class="category-grid">
 
         <!-- HOME & KITCHEN -->
 
@@ -456,41 +458,94 @@
 
 
     <!-- =========================
-         CATEGORY PRODUCTS
+         SUBCATEGORIES VIEW
     ========================== -->
 
     <div
-        id="category-products"
-        class="category-products"
+        id="subcategories-view"
+        class="subcategories-view"
     >
 
-        <div class="category-products-header">
+        <button
+            id="back-to-categories"
+            class="back-btn"
+            type="button"
+        >
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Categories
+        </button>
+
+
+        <div class="subcategory-header">
 
             <span>EXPLORE CATEGORY</span>
 
-            <h2 id="category-products-title">
+            <h2 id="subcategory-title">
                 Home & Kitchen
             </h2>
 
-            <div class="products-line"></div>
+            <div class="title-line"></div>
 
         </div>
 
 
         <div
-            id="category-products-grid"
-            class="category-products-grid"
+            id="subcategories-grid"
+            class="subcategories-grid"
         >
 
-            <!-- JavaScript ayaa subcategories-ka gelinaya -->
+            <!-- JavaScript ayaa halkan gelinaya subcategories-ka -->
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         INDIVIDUAL PRODUCTS VIEW
+    ========================== -->
+
+    <div
+        id="products-view"
+        class="products-view"
+    >
+
+        <button
+            id="back-to-subcategories"
+            class="back-btn"
+            type="button"
+        >
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Category
+        </button>
+
+
+        <div class="products-header">
+
+            <span>OUR PRODUCTS</span>
+
+            <h2 id="products-title">
+                Cooking Tools
+            </h2>
+
+            <div class="title-line"></div>
+
+        </div>
+
+
+        <div
+            id="products-grid"
+            class="products-grid"
+        >
+
+            <!-- JavaScript ayaa individual products-ka gelinaya -->
 
         </div>
 
     </div>
 
 </section>
-        
-
+    
     </main>
 
 
