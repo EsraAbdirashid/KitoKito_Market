@@ -506,6 +506,11 @@ input {
         margin-left: auto;
         margin-right: 18px;
     }
+     
+
+    .mobile-search {
+        display: flex;
+    }
 
     .nav-actions {
         margin-left: 0;
@@ -515,6 +520,10 @@ input {
         margin-left: 12px;
     }
 }
+}
+
+.mobile-search {
+    display: none;
 }
 
 
