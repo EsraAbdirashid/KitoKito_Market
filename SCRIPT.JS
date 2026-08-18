@@ -1,8 +1,4 @@
 /* =========================================================
-   KITOKITO MARKET - JAVASCRIPT
-========================================================= */
-
-/* =========================================================
    MOBILE MENU
 ========================================================= */
 
@@ -781,15 +777,14 @@ function openProducts(subcategory) {
                     </strong>
 
 
-                    <button
-                        class="add-cart-btn"
-                        type="button"
-                    >
-                        <i class="fa-solid fa-cart-shopping"></i>
-
-                        Add to Cart
-                    </button>
-
+                   <button
+    class="add-cart-btn"
+    type="button"
+    onclick='addToCart(${JSON.stringify(product)})'
+>
+    <i class="fa-solid fa-cart-shopping"></i>
+    Add to Cart
+</button>
                 </div>
 
             </div>
