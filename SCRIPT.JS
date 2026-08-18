@@ -783,7 +783,6 @@ function openProducts(subcategory) {
     onclick='addToCart(${JSON.stringify(product)})'
 >
     <i class="fa-solid fa-cart-shopping"></i>
-    Add to Cart
 </button>
                 </div>
 
