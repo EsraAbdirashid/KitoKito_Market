@@ -870,3 +870,76 @@ if (backToSubcategories) {
     }, 100);
   });
 }
+
+
+/* =========================
+   CART
+========================= */
+
+let cart = [];
+
+const cartPanel = document.querySelector("#cart-panel");
+const cartItems = document.querySelector("#cart-items");
+const cartCount = document.querySelector("#cart-count");
+const cartTotal = document.querySelector("#cart-total");
+
+document.querySelector(".cart-btn").addEventListener("click", () => {
+    cartPanel.classList.add("show");
+});
+
+document.querySelector("#close-cart").addEventListener("click", () => {
+    cartPanel.classList.remove("show");
+});
+
+
+function updateCart() {
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach((product, index) => {
+
+        total += parseFloat(product.price.replace("$", ""));
+
+        cartItems.innerHTML += `
+            <div class="cart-item">
+
+                <img src="${product.image}" alt="${product.name}">
+
+                <div>
+                    <h4>${product.name}</h4>
+                    <span>${product.price}</span>
+                </div>
+
+                <button onclick="removeFromCart(${index})">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+
+            </div>
+        `;
+
+    });
+
+    cartCount.textContent = cart.length;
+
+    cartTotal.textContent = `$${total.toFixed(2)}`;
+}
+
+
+function addToCart(product) {
+
+    cart.push(product);
+
+    updateCart();
+
+    cartPanel.classList.add("show");
+}
+
+
+function removeFromCart(index) {
+
+    cart.splice(index, 1);
+
+    updateCart();
+}
