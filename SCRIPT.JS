@@ -837,7 +837,6 @@ function openProducts(subcategory) {
     const products =
         individualProducts[subcategory];
 
-
     if (!products) {
         return;
     }
@@ -848,7 +847,7 @@ function openProducts(subcategory) {
     subcategoriesView.classList.remove("show");
 
 
-    /* Set title */
+    /* Product title */
 
     productsTitle.textContent =
         subcategory;
@@ -859,10 +858,7 @@ function openProducts(subcategory) {
     productsGrid.innerHTML = "";
 
 
-    /*
-       If no individual products have
-       been added yet
-    */
+    /* No products */
 
     if (products.length === 0) {
 
@@ -873,12 +869,11 @@ function openProducts(subcategory) {
                 <i class="fa-solid fa-box-open"></i>
 
                 <h3>
-                    Products Coming Soon
+                    No Products Available
                 </h3>
 
                 <p>
-                    Products for this category
-                    will be added soon.
+                    Products will be added soon.
                 </p>
 
             </div>
@@ -911,6 +906,7 @@ function openProducts(subcategory) {
                     <i class="fa-regular fa-heart"></i>
                 </button>
 
+
                 <img
                     src="${product.image}"
                     alt="${product.name}"
@@ -920,6 +916,11 @@ function openProducts(subcategory) {
 
 
             <div class="individual-product-info">
+
+                <span class="product-category">
+                    ${subcategory}
+                </span>
+
 
                 <h3>
                     ${product.name}
@@ -936,9 +937,10 @@ function openProducts(subcategory) {
                     <button
                         class="add-cart-btn"
                         type="button"
-                        aria-label="Add to cart"
                     >
                         <i class="fa-solid fa-cart-shopping"></i>
+
+                        Add to Cart
                     </button>
 
                 </div>
@@ -958,7 +960,7 @@ function openProducts(subcategory) {
     productsView.classList.add("show");
 
 
-    /* Scroll */
+    /* Scroll to products */
 
     setTimeout(() => {
 
