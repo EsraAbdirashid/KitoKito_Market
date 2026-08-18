@@ -571,7 +571,7 @@ shopCategoryButtons.forEach((button) => {
 */
 
 const individualProducts = {
-  "Cooking Tools": ["Cooking Tools": [
+  "Cooking Tools": [
 
     {
         name: "Kitchen Knife Set",
@@ -597,7 +597,8 @@ const individualProducts = {
         price: "$8.00"
     }
 
-],],
+
+  ],
 
   "Plates, Bowls & Cutlery": [],
 
