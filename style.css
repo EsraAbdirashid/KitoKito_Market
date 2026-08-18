@@ -427,16 +427,29 @@ input {
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
+
+.mobile-search {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
 
     .nav-top {
         width: 94%;
-
         min-height: 70px;
-
         gap: 12px;
+
+        display: flex;
+        align-items: center;
+    }
+
+
+    .logo {
+        margin-right: auto;
     }
 
 
@@ -445,20 +458,32 @@ input {
     }
 
 
+    /* Hide desktop search */
+
     .search-box {
         display: none;
     }
 
 
-    .nav-actions {
-        margin-left: auto;
+    /* Mobile search icon */
 
+    .mobile-search {
+        display: flex;
+
+        margin-left: 0;
+        margin-right: 18px;
+    }
+
+
+    .nav-actions {
+        margin-left: 0;
         gap: 10px;
     }
 
 
     .menu-toggle {
         display: block;
+        margin-left: 12px;
     }
 
 
@@ -491,39 +516,6 @@ input {
         width: 94%;
     }
 
-    @media (max-width: 768px) {
-
-    .nav-top {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo {
-        margin-right: auto;
-    }
-
-    .mobile-search {
-        margin-left: auto;
-        margin-right: 18px;
-    }
-     
-
-    .mobile-search {
-        display: flex;
-    }
-
-    .nav-actions {
-        margin-left: 0;
-    }
-
-    .menu-toggle {
-        margin-left: 12px;
-    }
-}
-}
-
-.mobile-search {
-    display: none;
 }
 
 
