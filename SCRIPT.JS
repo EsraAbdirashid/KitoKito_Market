@@ -740,14 +740,14 @@ function openProducts(subcategory) {
     card.innerHTML = `
 
             <div class="individual-product-image">
-
-                <button
-                    class="wishlist-btn"
-                    type="button"
-                    aria-label="Add to wishlist"
-                >
-                    <i class="fa-regular fa-heart"></i>
-                </button>
+<button
+    class="wishlist-btn"
+    type="button"
+    onclick='toggleWishlist(${JSON.stringify(product)})'
+    aria-label="Add to wishlist"
+>
+    <i class="fa-regular fa-heart"></i>
+</button>
 
 
                 <img
