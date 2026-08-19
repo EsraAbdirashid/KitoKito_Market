@@ -1255,8 +1255,15 @@ function searchProducts() {
         searchInput.value.trim().toLowerCase();
 
     if (!query) {
-        return;
+
+    const searchResults = document.querySelector("#search-results");
+
+    if (searchResults) {
+        searchResults.classList.remove("show");
     }
+
+    return;
+}
 
     const results = [];
 
