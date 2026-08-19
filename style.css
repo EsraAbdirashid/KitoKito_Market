@@ -16,6 +16,17 @@ body {
     color: #27316c;
 }
 
+html {
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #fcfdf9;
+        color: #27316c;
+    }
+}
+
 
 a {
     text-decoration: none;
@@ -3079,3 +3090,12 @@ body {
     }
 
 }
+
+html {
+    color-scheme: light;
+}
+/* 
+body {
+    background-color: #ffffff;
+    color: #111111;
+} */
