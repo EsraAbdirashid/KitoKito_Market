@@ -1254,6 +1254,81 @@ function searchProducts() {
     showSearchResults(results, query);
 }
 
+function getMainCategory(subcategory) {
+
+    const categories = {
+
+        "Home & Kitchen": [
+            "Cooking Tools",
+            "Plates, Bowls & Cutlery",
+            "Cups, Mugs & Water Bottles",
+            "Food Storage & Containers",
+            "Spice & Kitchen Organizers",
+            "Cleaning & Laundry",
+            "Bathroom Accessories",
+            "Home Storage & Organization",
+            "Home Lighting",
+            "Home Decoration"
+        ],
+
+        "Car Accessories": [
+            "Jump Starters",
+            "Car Phone Holders",
+            "Car Chargers & USB Adapters",
+            "Tire Repair & Inflation Tools",
+            "Emergency & Safety Tools",
+            "Car Cleaning Tools",
+            "Car Air Fresheners",
+            "Sun Shades",
+            "Seat & Steering Wheel Covers",
+            "Car LED Lights & Lighting Accessories"
+        ],
+
+        "Stationery": [
+            "Notebooks",
+            "Pens",
+            "Pencils",
+            "Markers",
+            "Highlighters",
+            "Erasers & Sharpeners",
+            "Rulers & Geometry Sets",
+            "Files & Folders",
+            "Sticky Notes",
+            "Printer Paper, Ink & Toner",
+            "Riso",
+            "Konica",
+            "HP Copier",
+            "Canon Copier"
+        ],
+
+        "Electronics": [
+            "Smartphones — iPhone, Samsung",
+            "Earphones & Headphones",
+            "Bluetooth Speakers",
+            "Smart Watches",
+            "Power Banks",
+            "Chargers & Adapters",
+            "USB Cables",
+            "USB Flash Drives",
+            "Phone Cases & Screen Protectors",
+            "Power Strips & Extension Cables",
+            "Laptops"
+        ]
+
+    };
+
+
+    for (const category in categories) {
+
+        if (categories[category].includes(subcategory)) {
+            return category;
+        }
+
+    }
+
+    return "";
+}
+
 function showSearchResults(results, query) {
 
     productsTitle.textContent =
