@@ -1190,6 +1190,11 @@ function removeFromWishlist(index) {
 const searchInput = document.querySelector(".search-box input");
 const searchButton = document.querySelector(".search-btn");
 
+const categoryBtn =
+    document.querySelector(".category-btn");
+
+let selectedSearchCategory = "All Categories";
+
 searchButton.addEventListener("click", searchProducts);
 
 searchInput.addEventListener("keydown", (event) => {
