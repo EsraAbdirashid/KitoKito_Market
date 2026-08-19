@@ -2804,3 +2804,60 @@ body {
     }
 
 }
+
+@media (max-width: 768px) {
+
+    /* =========================
+       EXPLORE CATEGORIES - MOBILE
+    ========================= */
+
+    #subcategories-grid.subcategories-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+
+    /* =========================
+       OUR PRODUCTS - MOBILE
+    ========================= */
+
+    #products-view .products-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* Hide main categories when Explore Category opens */
+
+    #main-categories.category-grid.hidden {
+        display: none !important;
+    }
+
+
+    /* Hide Explore Category until it is opened */
+
+    #subcategories-view {
+        display: none;
+    }
+
+    #subcategories-view.show {
+        display: block !important;
+    }
+
+
+    /* Hide Our Products until it is opened */
+
+    #products-view {
+        display: none;
+    }
+
+    #products-view.show {
+        display: block !important;
+    }
+
+}
