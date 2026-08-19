@@ -1563,6 +1563,58 @@ function showSearchResults(
 
 }
 
+/* =========================
+   SHOW SEARCH RESULTS
+========================= */
+
+function showSearchResults(
+    results,
+    query
+) {
+
+    /* Never show empty query */
+
+    if (!query || query.trim() === "") {
+        return;
+    }
+
+
+    const searchResults =
+        document.querySelector(
+            "#search-results"
+        );
+
+
+    const searchResultsGrid =
+        document.querySelector(
+            "#search-results-grid"
+        );
+
+
+    const searchResultsTitle =
+        document.querySelector(
+            "#search-results-title"
+        );
+
+
+    if (
+        !searchResults ||
+        !searchResultsGrid ||
+        !searchResultsTitle
+    ) {
+
+        return;
+
+    }
+
+
+    searchResultsTitle.textContent =
+        `Search Results for "${query}"`;
+
+
+    searchResultsGrid.innerHTML = "";
+
+
     /* =========================
        NO RESULTS
     ========================= */
