@@ -1182,3 +1182,54 @@ function removeFromWishlist(index) {
     updateWishlist();
 
 }
+
+/* =========================
+   SEARCH
+========================= */
+
+const searchInput = document.querySelector(".search-box input");
+const searchButton = document.querySelector(".search-btn");
+
+searchButton.addEventListener("click", searchProducts);
+
+searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        searchProducts();
+    }
+});
+
+
+function searchProducts() {
+
+    const query = searchInput.value.trim().toLowerCase();
+
+    if (!query) {
+        return;
+    }
+
+    const results = [];
+
+    Object.entries(individualProducts).forEach(
+        ([subcategory, products]) => {
+
+            products.forEach((product) => {
+
+                if (
+                    product.name.toLowerCase().includes(query) ||
+                    subcategory.toLowerCase().includes(query)
+                ) {
+                    results.push({
+                        ...product,
+                        subcategory
+                    });
+                }
+
+            });
+
+        }
+    );
+
+
+    showSearchResults(results, query);
+}
+
