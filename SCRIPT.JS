@@ -1166,7 +1166,6 @@ function removeFromWishlist(index) {
 
 }
 
-
 /* =========================
    SEARCH
 ========================= */
@@ -1218,12 +1217,13 @@ searchCategoryItems.forEach((item) => {
    SEARCH BUTTON
 ========================= */
 
-if (searchButton) {
+if (searchButton && searchInput) {
 
-    searchButton.addEventListener(
-        "click",
-        searchProducts
-    );
+    searchButton.addEventListener("click", () => {
+
+        searchProducts();
+
+    });
 
 }
 
@@ -1250,31 +1250,66 @@ if (searchInput) {
 
 
 /* =========================
+   SEARCH INPUT CLEAR
+========================= */
+
+if (searchInput) {
+
+    searchInput.addEventListener("input", () => {
+
+        const value =
+            searchInput.value.trim();
+
+        if (!value) {
+
+            hideSearchResults();
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   HIDE SEARCH RESULTS
+========================= */
+
+function hideSearchResults() {
+
+    const searchResults =
+        document.querySelector("#search-results");
+
+    if (!searchResults) {
+        return;
+    }
+
+    searchResults.classList.remove("show");
+
+    searchResults.style.display = "none";
+
+}
+
+
+/* =========================
    SEARCH PRODUCTS
 ========================= */
 
 function searchProducts() {
 
+    if (!searchInput) {
+        return;
+    }
+
     const query =
         searchInput.value.trim().toLowerCase();
 
-    const searchResults =
-        document.querySelector("#search-results");
 
-
-    /* =========================
-       EMPTY SEARCH
-    ========================= */
+    /* Empty search */
 
     if (!query) {
 
-        if (searchResults) {
-
-            searchResults.classList.remove("show");
-
-            searchResults.style.display = "none";
-
-        }
+        hideSearchResults();
 
         return;
 
@@ -1284,9 +1319,7 @@ function searchProducts() {
     const results = [];
 
 
-    /* =========================
-       SEARCH THROUGH PRODUCTS
-    ========================= */
+    /* Search products */
 
     Object.entries(individualProducts).forEach(
         ([subcategory, products]) => {
@@ -1376,34 +1409,16 @@ function getMainCategory(subcategory) {
    SHOW SEARCH RESULTS
 ========================= */
 
-function showSearchResults(
-    results,
-    query
-) {
-
-    /* Never show empty search */
-
-    if (!query || query.trim() === "") {
-        return;
-    }
-
+function showSearchResults(results, query) {
 
     const searchResults =
-        document.querySelector(
-            "#search-results"
-        );
-
+        document.querySelector("#search-results");
 
     const searchResultsGrid =
-        document.querySelector(
-            "#search-results-grid"
-        );
-
+        document.querySelector("#search-results-grid");
 
     const searchResultsTitle =
-        document.querySelector(
-            "#search-results-title"
-        );
+        document.querySelector("#search-results-title");
 
 
     if (
@@ -1417,9 +1432,18 @@ function showSearchResults(
     }
 
 
-    /* =========================
-       TITLE
-    ========================= */
+    /* Empty query */
+
+    if (!query || query.trim() === "") {
+
+        hideSearchResults();
+
+        return;
+
+    }
+
+
+    /* Title */
 
     searchResultsTitle.textContent =
         `Search Results for "${query}"`;
@@ -1542,332 +1566,15 @@ function showSearchResults(
 
 
     /* =========================
-       SHOW SEARCH SECTION
-    ========================= */
-
-    searchResults.style.display = "block";
-
-    searchResults.classList.add("show");
-
-
-    /* Scroll to results */
-
-    setTimeout(() => {
-
-        searchResults.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
-    }, 100);
-
-}
-
-/* =========================
-   SHOW SEARCH RESULTS
-========================= */
-
-function showSearchResults(
-    results,
-    query
-) {
-
-    /* Never show empty query */
-
-    if (!query || query.trim() === "") {
-        return;
-    }
-
-
-    const searchResults =
-        document.querySelector(
-            "#search-results"
-        );
-
-
-    const searchResultsGrid =
-        document.querySelector(
-            "#search-results-grid"
-        );
-
-
-    const searchResultsTitle =
-        document.querySelector(
-            "#search-results-title"
-        );
-
-
-    if (
-        !searchResults ||
-        !searchResultsGrid ||
-        !searchResultsTitle
-    ) {
-
-        return;
-
-    }
-
-
-    searchResultsTitle.textContent =
-        `Search Results for "${query}"`;
-
-
-    searchResultsGrid.innerHTML = "";
-
-
-    /* =========================
-       NO RESULTS
-    ========================= */
-
-    if (results.length === 0) {
-
-        searchResultsGrid.innerHTML = `
-
-            <div class="products-empty">
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-                <h3>
-                    No Products Found
-                </h3>
-
-                <p>
-                    We couldn't find a product matching your search.
-                </p>
-
-            </div>
-
-        `;
-
-    }
-
-
-    /* =========================
-       RESULTS
-    ========================= */
-
-    else {
-
-        results.forEach((product) => {
-
-            const card =
-                document.createElement("div");
-
-
-            card.className =
-                "individual-product-card";
-
-
-            card.innerHTML = `
-
-                <div class="individual-product-image">
-
-                    <button
-                        class="wishlist-btn"
-                        type="button"
-                        onclick='toggleWishlist(${JSON.stringify(product)})'
-                        aria-label="Add to wishlist"
-                    >
-
-                        <i class="fa-regular fa-heart"></i>
-
-                    </button>
-
-
-                    <img
-                        src="${product.image}"
-                        alt="${product.name}"
-                    >
-
-                </div>
-
-
-                <div class="individual-product-info">
-
-                    <span class="product-category">
-                        ${product.subcategory}
-                    </span>
-
-
-                    <h3>
-                        ${product.name}
-                    </h3>
-
-
-                    <div class="individual-product-bottom">
-
-                        <strong>
-                            ${product.price}
-                        </strong>
-
-
-                        <button
-                            class="add-cart-btn"
-                            type="button"
-                            onclick='addToCart(${JSON.stringify(product)})'
-                            aria-label="Add to Cart"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            `;
-
-
-            searchResultsGrid.appendChild(card);
-
-        });
-
-    }
-
-
-    /* =========================
-       SHOW RESULTS
-    ========================= */
-
-    searchResults.style.display = "block";
-
-    searchResults.classList.add("show");
-
-
-    setTimeout(() => {
-
-        searchResults.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
-    }, 100);
-
-}
-    /* =========================
-       NO RESULTS
-    ========================= */
-
-    if (results.length === 0) {
-
-        searchResultsGrid.innerHTML = `
-
-            <div class="products-empty">
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-                <h3>
-                    No Products Found
-                </h3>
-
-                <p>
-                    We couldn't find a product matching your search.
-                </p>
-
-            </div>
-
-        `;
-
-    }
-
-
-    /* =========================
-       RESULTS
-    ========================= */
-
-    else {
-
-        results.forEach((product) => {
-
-            const card =
-                document.createElement("div");
-
-            card.className =
-                "individual-product-card";
-
-
-            card.innerHTML = `
-
-                <div class="individual-product-image">
-
-                    <button
-                        class="wishlist-btn"
-                        type="button"
-                        onclick='toggleWishlist(${JSON.stringify(product)})'
-                        aria-label="Add to wishlist"
-                    >
-
-                        <i class="fa-regular fa-heart"></i>
-
-                    </button>
-
-
-                    <img
-                        src="${product.image}"
-                        alt="${product.name}"
-                    >
-
-                </div>
-
-
-                <div class="individual-product-info">
-
-                    <span class="product-category">
-
-                        ${product.subcategory}
-
-                    </span>
-
-
-                    <h3>
-
-                        ${product.name}
-
-                    </h3>
-
-
-                    <div class="individual-product-bottom">
-
-                        <strong>
-
-                            ${product.price}
-
-                        </strong>
-
-
-                        <button
-                            class="add-cart-btn"
-                            type="button"
-                            onclick='addToCart(${JSON.stringify(product)})'
-                            aria-label="Add to Cart"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            `;
-
-
-            searchResultsGrid.appendChild(card);
-
-        });
-
-    }
-
-
-    /* =========================
        SHOW RESULTS SECTION
     ========================= */
 
-   searchResults.classList.add("show");
-   searchResults.style.display = "block";
+    searchResults.style.display = "block";
 
+    searchResults.classList.add("show");
+
+
+    /* Scroll */
 
     setTimeout(() => {
 
