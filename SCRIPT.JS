@@ -1232,11 +1232,18 @@ if (searchButton) {
 
 if (searchInput) {
 
-    searchInput.addEventListener("keydown", (event) => {
+    searchInput.addEventListener("input", () => {
 
-        if (event.key === "Enter") {
+        const searchResults =
+            document.querySelector("#search-results");
 
-            searchProducts();
+        if (
+            searchInput.value.trim() === "" &&
+            searchResults
+        ) {
+
+            searchResults.classList.remove("show");
+            searchResults.style.display = "none";
 
         }
 
@@ -1254,12 +1261,11 @@ function searchProducts() {
     const query =
         searchInput.value.trim().toLowerCase();
 
-    if (!query) {
-
-    const searchResults = document.querySelector("#search-results");
+   if (!query) {
 
     if (searchResults) {
         searchResults.classList.remove("show");
+        searchResults.style.display = "none";
     }
 
     return;
@@ -1507,7 +1513,8 @@ function showSearchResults(
        SHOW RESULTS SECTION
     ========================= */
 
-    searchResults.classList.add("show");
+   searchResults.classList.add("show");
+   searchResults.style.display = "block";
 
 
     setTimeout(() => {
