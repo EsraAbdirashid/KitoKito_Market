@@ -200,7 +200,26 @@ input {
 .category-dropdown button:hover {
     background: var(--yellow);
 }
+  
+/* =========================
+   SEARCH RESULTS
+========================= */
 
+.search-results {
+    display: none;
+    width: 94%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.search-results.show {
+    display: block;
+}
+
+.search-results-header h2 {
+    color: #27316c;
+    margin-bottom: 25px;
+}
 
 /*  SEARCH INPUT */
 
