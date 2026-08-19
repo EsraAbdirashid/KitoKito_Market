@@ -993,6 +993,12 @@ body {
     gap: 14px;
 }
 
+.category-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
 
 /*  CATEGORY CARD */
 
