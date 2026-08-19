@@ -1203,10 +1203,10 @@ searchInput.addEventListener("keydown", (event) => {
     }
 });
 
-
 function searchProducts() {
 
-    const query = searchInput.value.trim().toLowerCase();
+    const query =
+        searchInput.value.trim().toLowerCase();
 
     if (!query) {
         return;
@@ -1219,21 +1219,37 @@ function searchProducts() {
 
             products.forEach((product) => {
 
+                const category =
+                    getMainCategory(subcategory);
+
+                const matchesCategory =
+                    selectedSearchCategory === "All Categories" ||
+                    category === selectedSearchCategory;
+
+                const matchesSearch =
+                    product.name
+                        .toLowerCase()
+                        .includes(query) ||
+                    subcategory
+                        .toLowerCase()
+                        .includes(query);
+
                 if (
-                    product.name.toLowerCase().includes(query) ||
-                    subcategory.toLowerCase().includes(query)
+                    matchesCategory &&
+                    matchesSearch
                 ) {
+
                     results.push({
                         ...product,
                         subcategory
                     });
+
                 }
 
             });
 
         }
     );
-
 
     showSearchResults(results, query);
 }
