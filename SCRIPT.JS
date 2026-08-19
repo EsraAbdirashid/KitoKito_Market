@@ -1170,14 +1170,9 @@ function removeFromWishlist(index) {
    SEARCH
 ========================= */
 
-const searchInput =
-    document.querySelector(".search-box input");
-
-const searchButton =
-    document.querySelector(".search-btn");
-
-const categoryBtnSearch =
-    document.querySelector(".category-btn");
+const searchInput = document.querySelector(".search-box input");
+const searchButton = document.querySelector(".search-btn");
+const categoryBtnSearch = document.querySelector(".category-btn");
 
 let selectedSearchCategory = "All Categories";
 
@@ -1219,11 +1214,7 @@ searchCategoryItems.forEach((item) => {
 
 if (searchButton && searchInput) {
 
-    searchButton.addEventListener("click", () => {
-
-        searchProducts();
-
-    });
+    searchButton.addEventListener("click", searchProducts);
 
 }
 
@@ -1250,17 +1241,14 @@ if (searchInput) {
 
 
 /* =========================
-   SEARCH INPUT CLEAR
+   CLEAR SEARCH
 ========================= */
 
 if (searchInput) {
 
     searchInput.addEventListener("input", () => {
 
-        const value =
-            searchInput.value.trim();
-
-        if (!value) {
+        if (searchInput.value.trim() === "") {
 
             hideSearchResults();
 
@@ -1319,8 +1307,6 @@ function searchProducts() {
     const results = [];
 
 
-    /* Search products */
-
     Object.entries(individualProducts).forEach(
         ([subcategory, products]) => {
 
@@ -1329,13 +1315,9 @@ function searchProducts() {
                 const mainCategory =
                     getMainCategory(subcategory);
 
-
                 const categoryMatch =
-                    selectedSearchCategory ===
-                    "All Categories" ||
-                    mainCategory ===
-                    selectedSearchCategory;
-
+                    selectedSearchCategory === "All Categories" ||
+                    mainCategory === selectedSearchCategory;
 
                 const searchMatch =
                     product.name
@@ -1347,10 +1329,7 @@ function searchProducts() {
                         .includes(query);
 
 
-                if (
-                    categoryMatch &&
-                    searchMatch
-                ) {
+                if (categoryMatch && searchMatch) {
 
                     results.push({
                         ...product,
@@ -1376,20 +1355,16 @@ function searchProducts() {
 
 function getMainCategory(subcategory) {
 
-    for (
-        const category in productsData
-    ) {
+    for (const category in productsData) {
 
         const subcategories =
             productsData[category];
-
 
         const exists =
             subcategories.some(
                 (item) =>
                     item.name === subcategory
             );
-
 
         if (exists) {
 
@@ -1398,7 +1373,6 @@ function getMainCategory(subcategory) {
         }
 
     }
-
 
     return "";
 
@@ -1432,8 +1406,6 @@ function showSearchResults(results, query) {
     }
 
 
-    /* Empty query */
-
     if (!query || query.trim() === "") {
 
         hideSearchResults();
@@ -1443,13 +1415,8 @@ function showSearchResults(results, query) {
     }
 
 
-    /* Title */
-
     searchResultsTitle.textContent =
         `Search Results for "${query}"`;
-
-
-    /* Clear old results */
 
     searchResultsGrid.innerHTML = "";
 
@@ -1491,7 +1458,6 @@ function showSearchResults(results, query) {
 
             const card =
                 document.createElement("div");
-
 
             card.className =
                 "individual-product-card";
@@ -1557,7 +1523,6 @@ function showSearchResults(results, query) {
 
             `;
 
-
             searchResultsGrid.appendChild(card);
 
         });
@@ -1566,15 +1531,13 @@ function showSearchResults(results, query) {
 
 
     /* =========================
-       SHOW RESULTS SECTION
+       SHOW RESULTS
     ========================= */
 
     searchResults.style.display = "block";
 
     searchResults.classList.add("show");
 
-
-    /* Scroll */
 
     setTimeout(() => {
 
