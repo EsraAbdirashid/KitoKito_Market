@@ -1171,16 +1171,42 @@ function removeFromWishlist(index) {
    SEARCH
 ========================= */
 
-const searchInput =
-    document.querySelector(".search-box input");
+if (searchInput) {
 
-const searchButton =
-    document.querySelector(".search-btn");
+    searchInput.addEventListener("keydown", (event) => {
 
-const categoryBtnSearch =
-    document.querySelector(".category-btn");
+        if (event.key === "Enter") {
 
-let selectedSearchCategory = "All Categories";
+            searchProducts();
+
+        }
+
+    });
+
+}
+
+if (searchInput) {
+
+    searchInput.addEventListener("input", () => {
+
+        const query =
+            searchInput.value.trim();
+
+        const searchResults =
+            document.querySelector("#search-results");
+
+        if (query === "") {
+
+            if (searchResults) {
+                searchResults.classList.remove("show");
+                searchResults.style.display = "none";
+            }
+
+        }
+
+    });
+
+}
 
 
 /* =========================
@@ -1261,15 +1287,20 @@ function searchProducts() {
     const query =
         searchInput.value.trim().toLowerCase();
 
-   if (!query) {
+    const searchResults =
+        document.querySelector("#search-results");
 
-    if (searchResults) {
-        searchResults.classList.remove("show");
-        searchResults.style.display = "none";
+    /* If search is empty, close results completely */
+
+    if (!query) {
+
+        if (searchResults) {
+            searchResults.classList.remove("show");
+            searchResults.style.display = "none";
+        }
+
+        return;
     }
-
-    return;
-}
 
     const results = [];
 
@@ -1314,7 +1345,6 @@ function searchProducts() {
     );
 
     showSearchResults(results, query);
-
 }
 
 
@@ -1358,6 +1388,9 @@ function showSearchResults(
     results,
     query
 ) {
+  if (!query || query.trim() === "") {
+    return;
+}
 
     const searchResults =
         document.querySelector(
