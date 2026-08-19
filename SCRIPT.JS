@@ -1166,6 +1166,7 @@ function removeFromWishlist(index) {
 
 }
 
+
 /* =========================
    SEARCH
 ========================= */
@@ -1219,11 +1220,10 @@ searchCategoryItems.forEach((item) => {
 
 if (searchButton) {
 
-    searchButton.addEventListener("click", () => {
-
-        searchProducts();
-
-    });
+    searchButton.addEventListener(
+        "click",
+        searchProducts
+    );
 
 }
 
@@ -1250,49 +1250,21 @@ if (searchInput) {
 
 
 /* =========================
-   CLOSE RESULTS WHEN EMPTY
-========================= */
-
-if (searchInput) {
-
-    searchInput.addEventListener("input", () => {
-
-        const searchResults =
-            document.querySelector("#search-results");
-
-        if (searchInput.value.trim() === "") {
-
-            if (searchResults) {
-
-                searchResults.classList.remove("show");
-
-                searchResults.style.display = "none";
-
-            }
-
-        }
-
-    });
-
-}
-
-
-/* =========================
    SEARCH PRODUCTS
 ========================= */
 
 function searchProducts() {
 
     const query =
-        searchInput
-            ? searchInput.value.trim().toLowerCase()
-            : "";
+        searchInput.value.trim().toLowerCase();
 
     const searchResults =
         document.querySelector("#search-results");
 
 
-    /* Empty search */
+    /* =========================
+       EMPTY SEARCH
+    ========================= */
 
     if (!query) {
 
@@ -1312,6 +1284,10 @@ function searchProducts() {
     const results = [];
 
 
+    /* =========================
+       SEARCH THROUGH PRODUCTS
+    ========================= */
+
     Object.entries(individualProducts).forEach(
         ([subcategory, products]) => {
 
@@ -1324,7 +1300,6 @@ function searchProducts() {
                 const categoryMatch =
                     selectedSearchCategory ===
                     "All Categories" ||
-
                     mainCategory ===
                     selectedSearchCategory;
 
@@ -1406,7 +1381,7 @@ function showSearchResults(
     query
 ) {
 
-    /* Never show empty query */
+    /* Never show empty search */
 
     if (!query || query.trim() === "") {
         return;
@@ -1442,12 +1417,151 @@ function showSearchResults(
     }
 
 
+    /* =========================
+       TITLE
+    ========================= */
+
     searchResultsTitle.textContent =
         `Search Results for "${query}"`;
 
 
+    /* Clear old results */
+
     searchResultsGrid.innerHTML = "";
 
+
+    /* =========================
+       NO RESULTS
+    ========================= */
+
+    if (results.length === 0) {
+
+        searchResultsGrid.innerHTML = `
+
+            <div class="products-empty">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <h3>
+                    No Products Found
+                </h3>
+
+                <p>
+                    We couldn't find a product matching your search.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =========================
+       PRODUCTS FOUND
+    ========================= */
+
+    else {
+
+        results.forEach((product) => {
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "individual-product-card";
+
+
+            card.innerHTML = `
+
+                <div class="individual-product-image">
+
+                    <button
+                        class="wishlist-btn"
+                        type="button"
+                        onclick='toggleWishlist(${JSON.stringify(product)})'
+                        aria-label="Add to wishlist"
+                    >
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                    >
+
+                </div>
+
+
+                <div class="individual-product-info">
+
+                    <span class="product-category">
+                        ${product.subcategory}
+                    </span>
+
+
+                    <h3>
+                        ${product.name}
+                    </h3>
+
+
+                    <div class="individual-product-bottom">
+
+                        <strong>
+                            ${product.price}
+                        </strong>
+
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            onclick='addToCart(${JSON.stringify(product)})'
+                            aria-label="Add to Cart"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            searchResultsGrid.appendChild(card);
+
+        });
+
+    }
+
+
+    /* =========================
+       SHOW SEARCH SECTION
+    ========================= */
+
+    searchResults.style.display = "block";
+
+    searchResults.classList.add("show");
+
+
+    /* Scroll to results */
+
+    setTimeout(() => {
+
+        searchResults.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+
+}
 
     /* =========================
        NO RESULTS
