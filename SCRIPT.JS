@@ -1320,6 +1320,22 @@ function getMainCategory(subcategory) {
 
     for (const category in categories) {
 
+      const searchResults =
+    document.querySelector("#search-results");
+
+const searchResultsGrid =
+    document.querySelector("#search-results-grid");
+
+const searchResultsTitle =
+    document.querySelector("#search-results-title");
+
+searchResultsGrid.innerHTML = "";
+
+searchResultsTitle.textContent =
+    `Search Results for "${query}"`;
+
+searchResults.classList.add("show");
+
         if (categories[category].includes(subcategory)) {
             return category;
         }
