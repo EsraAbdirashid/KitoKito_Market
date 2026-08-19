@@ -2604,3 +2604,181 @@ body {
 
     cursor: pointer;
 }
+
+/* =========================
+   CATEGORIES - MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .categories {
+        width: 100%;
+        padding: 20px 4% 30px;
+    }
+
+    .section-title {
+        margin-bottom: 18px;
+    }
+
+    .section-title h2 {
+        font-size: 21px;
+    }
+
+    .title-line {
+        width: 45px;
+        height: 3px;
+        margin: 6px auto 0;
+    }
+
+
+    /* MAIN CATEGORIES */
+
+    .category-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+
+    /* CATEGORY CARD */
+
+    .category-card {
+        width: 100%;
+        height: 180px;
+        border-radius: 8px;
+    }
+
+
+    /* CATEGORY IMAGE */
+
+    .category-image {
+        width: 100%;
+        height: 115px;
+    }
+
+    .category-image img {
+        width: 88%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+
+    /* CATEGORY BOTTOM */
+
+    .category-bottom {
+        height: 65px;
+        padding: 0 12px;
+    }
+
+
+    /* CATEGORY NAME */
+
+    .category-info h3 {
+        margin-bottom: 4px;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+
+    /* SHOP NOW */
+
+    .shop-category-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        padding: 4px 0;
+
+        border: none;
+        background: transparent;
+
+        color: #27316c;
+
+        font-size: 11px;
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+    .shop-category-btn i {
+        font-size: 10px;
+    }
+
+
+    /* SUBCATEGORIES */
+
+    .subcategories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+
+    .subcategory-image {
+        height: 150px;
+    }
+
+    .subcategory-info {
+        padding: 12px;
+    }
+
+    .subcategory-info h3 {
+        min-height: 38px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+
+    /* BACK BUTTON */
+
+    .back-btn {
+        margin-bottom: 18px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+
+    /* SUBCATEGORY / PRODUCTS HEADERS */
+
+    .subcategory-header,
+    .products-header {
+        margin-bottom: 22px;
+    }
+
+    .subcategory-header h2,
+    .products-header h2 {
+        font-size: 22px;
+    }
+
+
+    /* INDIVIDUAL PRODUCTS */
+
+    .products-view .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .individual-product-image {
+        height: 165px;
+    }
+
+    .individual-product-info {
+        padding: 12px;
+    }
+
+    .individual-product-info h3 {
+        min-height: 38px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .individual-product-bottom strong {
+        font-size: 14px;
+    }
+
+    .individual-product-bottom .add-cart-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+}
