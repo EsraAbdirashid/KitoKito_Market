@@ -464,25 +464,15 @@ input {
         display: none;
     }
 
-.search-box {
-    display: none;
-}
 
-.search-box.mobile-show {
-    display: flex !important;
+    /* Mobile search icon */
 
-    position: absolute;
-    top: 70px;
-    left: 3%;
+    .mobile-search {
+        display: flex;
 
-    width: 94%;
-    max-width: none;
-
-    margin: 0;
-
-    z-index: 9999;
-}
-}
+        margin-left: 0;
+        margin-right: 18px;
+    }
 
 
     .nav-actions {
@@ -643,7 +633,7 @@ input {
 
 /* SHOP BUTTON */
 
-.hero-btn {
+.hero-btn{
     display: inline-flex;
 
     align-items: center;

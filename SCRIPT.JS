@@ -21,43 +21,39 @@ if (menuToggle && navMenu) {
   });
 }
 
+// /* =========================================================
+//    MOBILE SEARCH
+// ========================================================= */
 
+// const mobileSearchButton = document.querySelector(".mobile-search");
+// const searchBox = document.querySelector(".search-box");
 
-/* =========================================================
+// if (mobileSearchButton && searchBox) {
+
+//     mobileSearchButton.addEventListener("click", function () {
+
+//         searchBox.classList.toggle("mobile-show");
+
+//     });
+
+// }
+
+/* =========================
    MOBILE SEARCH
-========================================================= */
+========================= */
 
-const mobileSearchButton =
+const mobileSearch =
     document.querySelector(".mobile-search");
 
-const desktopSearchBox =
+const searchBox =
     document.querySelector(".search-box");
 
-if (mobileSearchButton && desktopSearchBox) {
 
-    mobileSearchButton.addEventListener("click", () => {
+mobileSearch.addEventListener("click", () => {
 
-        if (desktopSearchBox.style.display === "flex") {
+    searchBox.classList.toggle("mobile-show");
 
-            desktopSearchBox.style.display = "none";
-
-        } else {
-
-            desktopSearchBox.style.display = "flex";
-
-            desktopSearchBox.style.position = "absolute";
-            desktopSearchBox.style.top = "70px";
-            desktopSearchBox.style.left = "3%";
-            desktopSearchBox.style.width = "94%";
-            desktopSearchBox.style.maxWidth = "none";
-            desktopSearchBox.style.margin = "0";
-            desktopSearchBox.style.zIndex = "9999";
-
-        }
-
-    });
-
-}
+});
 
 
 /* =========================================================
