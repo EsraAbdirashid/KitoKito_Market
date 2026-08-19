@@ -1350,11 +1350,11 @@ function showSearchResults(results, query) {
     productsTitle.textContent =
         `Search Results for "${query}"`;
 
-    productsGrid.innerHTML = "";
+   searchResultsGrid.innerHTML = "";
 
     if (results.length === 0) {
 
-        productsGrid.innerHTML = `
+       searchResultsGrid.innerHTML = `
             <div class="products-empty">
                 <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -1425,7 +1425,7 @@ function showSearchResults(results, query) {
                 </div>
             `;
 
-            productsGrid.appendChild(card);
+            searchResultsGrid.appendChild(card);
 
         });
 
