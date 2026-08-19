@@ -21,40 +21,24 @@ if (menuToggle && navMenu) {
   });
 }
 
-// /* =========================================================
-//    MOBILE SEARCH
-// ========================================================= */
 
-// const mobileSearchButton = document.querySelector(".mobile-search");
-// const searchBox = document.querySelector(".search-box");
-
-// if (mobileSearchButton && searchBox) {
-
-//     mobileSearchButton.addEventListener("click", function () {
-
-//         searchBox.classList.toggle("mobile-show");
-
-//     });
-
-// }
 
 /* =========================
    MOBILE SEARCH
 ========================= */
 
-const mobileSearch =
-    document.querySelector(".mobile-search");
+const mobileSearch = document.querySelector(".mobile-search");
+const searchBox = document.querySelector(".search-box");
 
-const searchBox =
-    document.querySelector(".search-box");
+if (mobileSearch && searchBox) {
 
+    mobileSearch.addEventListener("click", () => {
 
-mobileSearch.addEventListener("click", () => {
+        searchBox.classList.toggle("mobile-show");
 
-    searchBox.classList.toggle("mobile-show");
+    });
 
-});
-
+}
 
 /* =========================================================
    ALL CATEGORIES DROPDOWN
