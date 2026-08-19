@@ -435,6 +435,35 @@ input {
     display: none;
 }
 
+.mobile-search {
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+    box-shadow: none;
+}
+
+.search-box.mobile-show {
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+
+    .search-box.mobile-show {
+        display: flex !important;
+
+        position: absolute;
+
+        top: 70px;
+        left: 3%;
+        right: 3%;
+
+        width: 94%;
+
+        z-index: 999;
+    }
+
+}
+
 
 @media (max-width: 768px) {
 
