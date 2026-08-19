@@ -1233,3 +1233,96 @@ function searchProducts() {
     showSearchResults(results, query);
 }
 
+function showSearchResults(results, query) {
+
+    productsTitle.textContent =
+        `Search Results for "${query}"`;
+
+    productsGrid.innerHTML = "";
+
+    if (results.length === 0) {
+
+        productsGrid.innerHTML = `
+            <div class="products-empty">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <h3>No Products Found</h3>
+
+                <p>
+                    We couldn't find a product matching your search.
+                </p>
+            </div>
+        `;
+
+    } else {
+
+        results.forEach((product) => {
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "individual-product-card";
+
+            card.innerHTML = `
+
+                <div class="individual-product-image">
+
+                    <button
+                        class="wishlist-btn"
+                        type="button"
+                        onclick='toggleWishlist(${JSON.stringify(product)})'
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                    >
+
+                </div>
+
+                <div class="individual-product-info">
+
+                    <span class="product-category">
+                        ${product.subcategory}
+                    </span>
+
+                    <h3>
+                        ${product.name}
+                    </h3>
+
+                    <div class="individual-product-bottom">
+
+                        <strong>
+                            ${product.price}
+                        </strong>
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            onclick='addToCart(${JSON.stringify(product)})'
+                            aria-label="Add to Cart"
+                        >
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+            `;
+
+            productsGrid.appendChild(card);
+
+        });
+
+    }
+
+    productsView.classList.add("show");
+
+    productsView.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
