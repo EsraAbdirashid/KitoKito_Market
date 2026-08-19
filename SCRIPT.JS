@@ -1183,25 +1183,88 @@ function removeFromWishlist(index) {
 
 }
 
+
 /* =========================
    SEARCH
 ========================= */
 
-const searchInput = document.querySelector(".search-box input");
-const searchButton = document.querySelector(".search-btn");
+const searchInput =
+    document.querySelector(".search-box input");
 
-const categoryBtn =
+const searchButton =
+    document.querySelector(".search-btn");
+
+const categoryBtnSearch =
     document.querySelector(".category-btn");
 
 let selectedSearchCategory = "All Categories";
 
-searchButton.addEventListener("click", searchProducts);
 
-searchInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        searchProducts();
-    }
+/* =========================
+   CATEGORY FILTER
+========================= */
+
+const searchCategoryItems =
+    document.querySelectorAll(".category-dropdown button");
+
+searchCategoryItems.forEach((item) => {
+
+    item.addEventListener("click", () => {
+
+        selectedSearchCategory =
+            item.textContent.trim();
+
+        if (categoryBtnSearch) {
+
+            categoryBtnSearch.innerHTML =
+                `${selectedSearchCategory}
+                <i class="fa-solid fa-chevron-down"></i>`;
+
+        }
+
+        categoryDropdown.classList.remove("show");
+
+    });
+
 });
+
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+if (searchButton) {
+
+    searchButton.addEventListener(
+        "click",
+        searchProducts
+    );
+
+}
+
+
+/* =========================
+   ENTER KEY
+========================= */
+
+if (searchInput) {
+
+    searchInput.addEventListener("keydown", (event) => {
+
+        if (event.key === "Enter") {
+
+            searchProducts();
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   SEARCH PRODUCTS
+========================= */
 
 function searchProducts() {
 
@@ -1219,24 +1282,27 @@ function searchProducts() {
 
             products.forEach((product) => {
 
-                const category =
+                const mainCategory =
                     getMainCategory(subcategory);
 
-                const matchesCategory =
-                    selectedSearchCategory === "All Categories" ||
-                    category === selectedSearchCategory;
+                const categoryMatch =
+                    selectedSearchCategory ===
+                    "All Categories" ||
+                    mainCategory ===
+                    selectedSearchCategory;
 
-                const matchesSearch =
+                const searchMatch =
                     product.name
                         .toLowerCase()
                         .includes(query) ||
+
                     subcategory
                         .toLowerCase()
                         .includes(query);
 
                 if (
-                    matchesCategory &&
-                    matchesSearch
+                    categoryMatch &&
+                    searchMatch
                 ) {
 
                     results.push({
@@ -1252,121 +1318,117 @@ function searchProducts() {
     );
 
     showSearchResults(results, query);
+
 }
+
+
+/* =========================
+   GET MAIN CATEGORY
+========================= */
 
 function getMainCategory(subcategory) {
 
-    const categories = {
+    for (
+        const category in productsData
+    ) {
 
-        "Home & Kitchen": [
-            "Cooking Tools",
-            "Plates, Bowls & Cutlery",
-            "Cups, Mugs & Water Bottles",
-            "Food Storage & Containers",
-            "Spice & Kitchen Organizers",
-            "Cleaning & Laundry",
-            "Bathroom Accessories",
-            "Home Storage & Organization",
-            "Home Lighting",
-            "Home Decoration"
-        ],
+        const subcategories =
+            productsData[category];
 
-        "Car Accessories": [
-            "Jump Starters",
-            "Car Phone Holders",
-            "Car Chargers & USB Adapters",
-            "Tire Repair & Inflation Tools",
-            "Emergency & Safety Tools",
-            "Car Cleaning Tools",
-            "Car Air Fresheners",
-            "Sun Shades",
-            "Seat & Steering Wheel Covers",
-            "Car LED Lights & Lighting Accessories"
-        ],
+        const exists =
+            subcategories.some(
+                (item) =>
+                    item.name === subcategory
+            );
 
-        "Stationery": [
-            "Notebooks",
-            "Pens",
-            "Pencils",
-            "Markers",
-            "Highlighters",
-            "Erasers & Sharpeners",
-            "Rulers & Geometry Sets",
-            "Files & Folders",
-            "Sticky Notes",
-            "Printer Paper, Ink & Toner",
-            "Riso",
-            "Konica",
-            "HP Copier",
-            "Canon Copier"
-        ],
+        if (exists) {
 
-        "Electronics": [
-            "Smartphones — iPhone, Samsung",
-            "Earphones & Headphones",
-            "Bluetooth Speakers",
-            "Smart Watches",
-            "Power Banks",
-            "Chargers & Adapters",
-            "USB Cables",
-            "USB Flash Drives",
-            "Phone Cases & Screen Protectors",
-            "Power Strips & Extension Cables",
-            "Laptops"
-        ]
+            return categoryNames[category];
 
-    };
-
-
-    for (const category in categories) {
-
-      const searchResults =
-    document.querySelector("#search-results");
-
-const searchResultsGrid =
-    document.querySelector("#search-results-grid");
-
-const searchResultsTitle =
-    document.querySelector("#search-results-title");
-
-searchResultsGrid.innerHTML = "";
-
-searchResultsTitle.textContent =
-    `Search Results for "${query}"`;
-
-searchResults.classList.add("show");
-
-        if (categories[category].includes(subcategory)) {
-            return category;
         }
 
     }
 
     return "";
+
 }
 
-function showSearchResults(results, query) {
 
-    productsTitle.textContent =
+/* =========================
+   SHOW SEARCH RESULTS
+========================= */
+
+function showSearchResults(
+    results,
+    query
+) {
+
+    const searchResults =
+        document.querySelector(
+            "#search-results"
+        );
+
+    const searchResultsGrid =
+        document.querySelector(
+            "#search-results-grid"
+        );
+
+    const searchResultsTitle =
+        document.querySelector(
+            "#search-results-title"
+        );
+
+
+    if (
+        !searchResults ||
+        !searchResultsGrid ||
+        !searchResultsTitle
+    ) {
+
+        return;
+
+    }
+
+
+    searchResultsTitle.textContent =
         `Search Results for "${query}"`;
 
-   searchResultsGrid.innerHTML = "";
+
+    searchResultsGrid.innerHTML = "";
+
+
+    /* =========================
+       NO RESULTS
+    ========================= */
 
     if (results.length === 0) {
 
-       searchResultsGrid.innerHTML = `
+        searchResultsGrid.innerHTML = `
+
             <div class="products-empty">
+
                 <i class="fa-solid fa-magnifying-glass"></i>
 
-                <h3>No Products Found</h3>
+                <h3>
+                    No Products Found
+                </h3>
 
                 <p>
                     We couldn't find a product matching your search.
                 </p>
+
             </div>
+
         `;
 
-    } else {
+    }
+
+
+    /* =========================
+       RESULTS
+    ========================= */
+
+    else {
 
         results.forEach((product) => {
 
@@ -1376,6 +1438,7 @@ function showSearchResults(results, query) {
             card.className =
                 "individual-product-card";
 
+
             card.innerHTML = `
 
                 <div class="individual-product-image">
@@ -1384,9 +1447,13 @@ function showSearchResults(results, query) {
                         class="wishlist-btn"
                         type="button"
                         onclick='toggleWishlist(${JSON.stringify(product)})'
+                        aria-label="Add to wishlist"
                     >
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
+
 
                     <img
                         src="${product.image}"
@@ -1395,21 +1462,31 @@ function showSearchResults(results, query) {
 
                 </div>
 
+
                 <div class="individual-product-info">
 
                     <span class="product-category">
+
                         ${product.subcategory}
+
                     </span>
 
+
                     <h3>
+
                         ${product.name}
+
                     </h3>
+
 
                     <div class="individual-product-bottom">
 
                         <strong>
+
                             ${product.price}
+
                         </strong>
+
 
                         <button
                             class="add-cart-btn"
@@ -1417,13 +1494,17 @@ function showSearchResults(results, query) {
                             onclick='addToCart(${JSON.stringify(product)})'
                             aria-label="Add to Cart"
                         >
+
                             <i class="fa-solid fa-cart-shopping"></i>
+
                         </button>
 
                     </div>
 
                 </div>
+
             `;
+
 
             searchResultsGrid.appendChild(card);
 
@@ -1431,10 +1512,21 @@ function showSearchResults(results, query) {
 
     }
 
-    productsView.classList.add("show");
 
-    productsView.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    /* =========================
+       SHOW RESULTS SECTION
+    ========================= */
+
+    searchResults.classList.add("show");
+
+
+    setTimeout(() => {
+
+        searchResults.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+
 }
