@@ -3132,3 +3132,40 @@ body {
     }
 
 }
+
+/* =========================
+   MOBILE SEARCH BOX - SHORTER
+========================= */
+
+@media (max-width: 768px) {
+
+    .search-box.mobile-show {
+        left: 8%;
+        right: auto;
+        width: 84%;
+        max-width: none;
+
+        height: 44px;
+    }
+
+    .search-box.mobile-show input {
+        min-width: 0;
+        width: 100%;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    .search-box.mobile-show .category-btn {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .search-box.mobile-show .search-btn {
+        flex-shrink: 0;
+        width: 48px;
+        min-width: 48px;
+        height: 100%;
+        font-size: 16px;
+    }
+
+}
