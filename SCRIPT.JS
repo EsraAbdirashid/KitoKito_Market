@@ -1166,47 +1166,20 @@ function removeFromWishlist(index) {
 
 }
 
-
 /* =========================
    SEARCH
 ========================= */
 
-if (searchInput) {
+const searchInput =
+    document.querySelector(".search-box input");
 
-    searchInput.addEventListener("keydown", (event) => {
+const searchButton =
+    document.querySelector(".search-btn");
 
-        if (event.key === "Enter") {
+const categoryBtnSearch =
+    document.querySelector(".category-btn");
 
-            searchProducts();
-
-        }
-
-    });
-
-}
-
-if (searchInput) {
-
-    searchInput.addEventListener("input", () => {
-
-        const query =
-            searchInput.value.trim();
-
-        const searchResults =
-            document.querySelector("#search-results");
-
-        if (query === "") {
-
-            if (searchResults) {
-                searchResults.classList.remove("show");
-                searchResults.style.display = "none";
-            }
-
-        }
-
-    });
-
-}
+let selectedSearchCategory = "All Categories";
 
 
 /* =========================
@@ -1231,7 +1204,9 @@ searchCategoryItems.forEach((item) => {
 
         }
 
-        categoryDropdown.classList.remove("show");
+        if (categoryDropdown) {
+            categoryDropdown.classList.remove("show");
+        }
 
     });
 
@@ -1244,10 +1219,11 @@ searchCategoryItems.forEach((item) => {
 
 if (searchButton) {
 
-    searchButton.addEventListener(
-        "click",
-        searchProducts
-    );
+    searchButton.addEventListener("click", () => {
+
+        searchProducts();
+
+    });
 
 }
 
@@ -1258,18 +1234,41 @@ if (searchButton) {
 
 if (searchInput) {
 
+    searchInput.addEventListener("keydown", (event) => {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            searchProducts();
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   CLOSE RESULTS WHEN EMPTY
+========================= */
+
+if (searchInput) {
+
     searchInput.addEventListener("input", () => {
 
         const searchResults =
             document.querySelector("#search-results");
 
-        if (
-            searchInput.value.trim() === "" &&
-            searchResults
-        ) {
+        if (searchInput.value.trim() === "") {
 
-            searchResults.classList.remove("show");
-            searchResults.style.display = "none";
+            if (searchResults) {
+
+                searchResults.classList.remove("show");
+
+                searchResults.style.display = "none";
+
+            }
 
         }
 
@@ -1285,24 +1284,33 @@ if (searchInput) {
 function searchProducts() {
 
     const query =
-        searchInput.value.trim().toLowerCase();
+        searchInput
+            ? searchInput.value.trim().toLowerCase()
+            : "";
 
     const searchResults =
         document.querySelector("#search-results");
 
-    /* If search is empty, close results completely */
+
+    /* Empty search */
 
     if (!query) {
 
         if (searchResults) {
+
             searchResults.classList.remove("show");
+
             searchResults.style.display = "none";
+
         }
 
         return;
+
     }
 
+
     const results = [];
+
 
     Object.entries(individualProducts).forEach(
         ([subcategory, products]) => {
@@ -1312,11 +1320,14 @@ function searchProducts() {
                 const mainCategory =
                     getMainCategory(subcategory);
 
+
                 const categoryMatch =
                     selectedSearchCategory ===
                     "All Categories" ||
+
                     mainCategory ===
                     selectedSearchCategory;
+
 
                 const searchMatch =
                     product.name
@@ -1326,6 +1337,7 @@ function searchProducts() {
                     subcategory
                         .toLowerCase()
                         .includes(query);
+
 
                 if (
                     categoryMatch &&
@@ -1344,7 +1356,9 @@ function searchProducts() {
         }
     );
 
+
     showSearchResults(results, query);
+
 }
 
 
@@ -1361,11 +1375,13 @@ function getMainCategory(subcategory) {
         const subcategories =
             productsData[category];
 
+
         const exists =
             subcategories.some(
                 (item) =>
                     item.name === subcategory
             );
+
 
         if (exists) {
 
@@ -1374,6 +1390,7 @@ function getMainCategory(subcategory) {
         }
 
     }
+
 
     return "";
 
@@ -1388,19 +1405,25 @@ function showSearchResults(
     results,
     query
 ) {
-  if (!query || query.trim() === "") {
-    return;
-}
+
+    /* Never show empty query */
+
+    if (!query || query.trim() === "") {
+        return;
+    }
+
 
     const searchResults =
         document.querySelector(
             "#search-results"
         );
 
+
     const searchResultsGrid =
         document.querySelector(
             "#search-results-grid"
         );
+
 
     const searchResultsTitle =
         document.querySelector(
@@ -1426,6 +1449,136 @@ function showSearchResults(
     searchResultsGrid.innerHTML = "";
 
 
+    /* =========================
+       NO RESULTS
+    ========================= */
+
+    if (results.length === 0) {
+
+        searchResultsGrid.innerHTML = `
+
+            <div class="products-empty">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <h3>
+                    No Products Found
+                </h3>
+
+                <p>
+                    We couldn't find a product matching your search.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =========================
+       RESULTS
+    ========================= */
+
+    else {
+
+        results.forEach((product) => {
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "individual-product-card";
+
+
+            card.innerHTML = `
+
+                <div class="individual-product-image">
+
+                    <button
+                        class="wishlist-btn"
+                        type="button"
+                        onclick='toggleWishlist(${JSON.stringify(product)})'
+                        aria-label="Add to wishlist"
+                    >
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                    >
+
+                </div>
+
+
+                <div class="individual-product-info">
+
+                    <span class="product-category">
+                        ${product.subcategory}
+                    </span>
+
+
+                    <h3>
+                        ${product.name}
+                    </h3>
+
+
+                    <div class="individual-product-bottom">
+
+                        <strong>
+                            ${product.price}
+                        </strong>
+
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            onclick='addToCart(${JSON.stringify(product)})'
+                            aria-label="Add to Cart"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            searchResultsGrid.appendChild(card);
+
+        });
+
+    }
+
+
+    /* =========================
+       SHOW RESULTS
+    ========================= */
+
+    searchResults.style.display = "block";
+
+    searchResults.classList.add("show");
+
+
+    setTimeout(() => {
+
+        searchResults.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 100);
+
+}
     /* =========================
        NO RESULTS
     ========================= */
