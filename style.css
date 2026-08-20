@@ -590,8 +590,8 @@ input {
     background: #fcfdf9;
     position: relative;
     z-index: 1;
-
     padding-top: 45px;
+    
 }
 
 .hero-slider {
@@ -1043,7 +1043,6 @@ body {
 
 /* =========================================================
    BACKGROUND COLORS
-   HTML-ka lama beddelin
 ========================================================= */
 
 .category-card:nth-child(1) {
@@ -1180,6 +1179,10 @@ body {
 ========================================================= */
 
 @media (max-width: 768px) {
+
+    .hero-small-title {
+        margin-top: 100px;
+    }
 
     .category-grid {
         width: 100%;
@@ -3312,14 +3315,13 @@ body {
     width: 155px;
     height: auto;
     display: block;
-
-    margin: 0 0 5px;
+    margin-top: -12px;
 }
 
 .footer-brand p {
     max-width: 225px;
-    margin-top: 6px;
-    margin: 0 0 10px;
+    
+
    margin-bottom: 10px;
     font-size: 11px;
     line-height: 1.8;
