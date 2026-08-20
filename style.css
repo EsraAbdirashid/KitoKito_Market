@@ -3311,7 +3311,6 @@ body {
 .footer-logo {
     width: 155px;
     height: auto;
-
     display: block;
 
     margin: 0 0 5px;
@@ -3319,10 +3318,10 @@ body {
 
 .footer-brand p {
     max-width: 225px;
-
+    margin-top: 6px;
     margin: 0 0 10px;
-
-    font-size: 12px;
+   margin-bottom: 10px;
+    font-size: 11px;
     line-height: 1.8;
 
     color: #ffffff;
