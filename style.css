@@ -3770,3 +3770,19 @@ body {
         color-scheme: light !important;
     }
 }
+
+@media (max-width: 768px) {
+    .cart-panel {
+        height: 85vh;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .cart-footer {
+        position: sticky;
+        bottom: 0;
+        background: #fff;
+        padding: 12px;
+        z-index: 10;
+    }
+}
