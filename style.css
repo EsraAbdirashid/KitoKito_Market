@@ -3026,6 +3026,7 @@ body {
     .cart-panel {
         width: 88%;
         max-width: 340px;
+        height: 100vh;
         right: -100%;
         padding: 16px;
     }
@@ -3126,6 +3127,7 @@ body {
     .checkout-panel {
         width: 88%;
         max-width: 340px;
+
         right: -100%;
     }
 
