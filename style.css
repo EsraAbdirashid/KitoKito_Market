@@ -3773,8 +3773,8 @@ body {
 
 @media (max-width: 768px) {
     .cart-panel {
-        height: 70vh;
-        max-height: 70vh;
+        height: 80vh;
+        max-height: 80%;
         overflow-y: auto;
     }
 
