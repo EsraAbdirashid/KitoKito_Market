@@ -3860,8 +3860,8 @@ body {
 @media (max-width: 768px) {
 
     .cart-panel {
-        height: 90vh !important;
-        max-height: 90vh !important;
+        height: 89vh !important;
+        max-height: 89vh !important;
     }
 
 }
