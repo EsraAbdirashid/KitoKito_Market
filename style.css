@@ -3788,3 +3788,26 @@ body {
 }
 
 
+@media (max-width: 768px) {
+    .cart-panel {
+        height: 85vh;
+        max-height: 85vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-items {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .cart-footer {
+        margin-top: auto;
+        flex-shrink: 0;
+        background: #fff;
+        padding: 15px;
+        position: sticky;
+        bottom: 0;
+        z-index: 10;
+    }
+}
