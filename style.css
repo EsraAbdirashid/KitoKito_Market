@@ -3261,5 +3261,538 @@ body {
 
 
 
+```css
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+
+    background: #063078;
+
+    color: #ffffff;
+
+    margin-top: 0;
+
+    padding: 28px 4% 0;
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.15fr
+        1.2fr
+        1.4fr;
+
+    gap: 35px;
+
+    padding-bottom: 18px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.footer-brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.footer-logo {
+
+    width: 190px;
+
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+
+.footer-brand p {
+
+    max-width: 280px;
+
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.social-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.social-icons a {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #063078;
+
+    font-size: 19px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.social-icons a:hover {
+
+    background: #fcb316;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.footer-column h3 {
+
+    margin: 0 0 14px;
+
+    color: #fcb316;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.footer-column a {
+
+    margin-bottom: 9px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-column a:hover {
+
+    color: #fcb316;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CONTACT US
+========================================================= */
+
+.contact-column {
+
+    gap: 0;
+}
+
+
+.contact-item {
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center;
+
+    gap: 11px;
+
+    width: 100%;
+
+    margin-bottom: 11px !important;
+
+    color: #ffffff;
+
+    transform: none !important;
+}
+
+
+.contact-item:hover {
+
+    color: #fcb316 !important;
+
+    transform: none !important;
+}
+
+
+.contact-item i {
+
+    width: 20px;
+
+    flex-shrink: 0;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+
+.contact-item:hover i {
+
+    color: #fcb316;
+}
+
+
+.contact-item span {
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter-column p {
+
+    max-width: 260px;
+
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.newsletter-form {
+
+    width: 100%;
+
+    max-width: 270px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    background: #ffffff;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+
+.newsletter-form input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    padding: 0 12px;
+
+    border: none;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #27316c;
+
+    font-size: 13px;
+}
+
+
+.newsletter-form input::placeholder {
+
+    color: #777;
+}
+
+
+.newsletter-form button {
+
+    width: 48px;
+
+    height: 100%;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: #fcb316;
+
+    color: #27316c;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.newsletter-form button:hover {
+
+    background: #e5a300;
+
+}
+
+
+.newsletter-message {
+
+    display: none;
+
+    margin-top: 8px !important;
+
+    font-size: 12px !important;
+
+    line-height: 1.4 !important;
+}
+
+
+.newsletter-message.show {
+
+    display: block;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 13px 0 14px;
+
+    border-top: 1px solid rgba(255,255,255,0.18);
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .footer {
+
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+
+    .footer-container {
+
+        grid-template-columns:
+            1.4fr
+            1fr
+            1fr
+            1.1fr;
+
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .footer {
+
+        padding: 30px 6% 0;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding-bottom: 22px;
+    }
+
+
+    /* BRAND */
+
+    .footer-brand {
+
+        align-items: flex-start;
+    }
+
+
+    .footer-logo {
+
+        width: 180px;
+    }
+
+
+    .footer-brand p {
+
+        max-width: 320px;
+
+        font-size: 14px;
+    }
+
+
+    /* COLUMNS */
+
+    .footer-column {
+
+        width: 100%;
+
+        align-items: flex-start;
+    }
+
+
+    .footer-column h3 {
+
+        margin-bottom: 12px;
+
+        font-size: 14px;
+    }
+
+
+    .footer-column a {
+
+        font-size: 14px;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-item {
+
+        width: auto !important;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter-column p {
+
+        max-width: 340px;
+    }
+
+
+    .newsletter-form {
+
+        width: 100%;
+
+        max-width: 340px;
+    }
+
+
+    /* COPYRIGHT */
+
+    .footer-bottom {
+
+        padding: 13px 0 15px;
+    }
+
+
+    .footer-bottom p {
+
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+}
+```
 
 

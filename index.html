@@ -657,6 +657,7 @@
     </main>
 
 
+                ```html
 <!-- =========================
      FOOTER
 ========================= -->
@@ -665,7 +666,7 @@
 
     <div class="footer-container">
 
-        <!-- COLUMN 1: BRAND -->
+        <!-- 1. BRAND -->
         <div class="footer-brand">
 
             <img
@@ -675,184 +676,152 @@
             >
 
             <p>
-                Kitokito Market brings quality products
-                for your home, car, office and everyday life.
+                Your one-stop shop for quality products
+                for home, car, office and more.
             </p>
 
-            <!-- SOCIAL MEDIA -->
-            <div class="footer-social">
+            <div class="social-icons">
 
-                <a href="#" aria-label="Facebook">
+                <a
+                    href="https://www.facebook.com/share/p/1D3e5GkgBC/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
 
-                <a href="#" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-
-                <a href="#" aria-label="Instagram">
+                <a
+                    href="https://www.instagram.com/kitokitomarket/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
                     <i class="fa-brands fa-instagram"></i>
                 </a>
 
+                <a
+                    href="https://www.tiktok.com/@kitokitomarket"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                >
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
             </div>
 
         </div>
 
 
-        <!-- COLUMN 2: QUICK LINKS -->
+        <!-- 2. QUICK LINKS -->
         <div class="footer-column">
 
-            <h3>Quick Links</h3>
+            <h3>QUICK LINKS</h3>
 
-            <ul>
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#categories">Shop By Categories</a>
-                </li>
-
-                <li>
-                    <a href="#products">Our Products</a>
-                </li>
-
-                <li>
-                    <a href="#footer">Contact Us</a>
-                </li>
-
-            </ul>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#footer">Contact Us</a>
 
         </div>
 
 
-        <!-- COLUMN 3: CATEGORIES -->
+        <!-- 3. CATEGORIES -->
         <div class="footer-column">
 
-            <h3>Categories</h3>
+            <h3>CATEGORIES</h3>
 
-            <ul>
-
-                <li>
-                    <a href="#categories">Home & Kitchen</a>
-                </li>
-
-                <li>
-                    <a href="#categories">Car Accessories</a>
-                </li>
-
-                <li>
-                    <a href="#categories">Stationery</a>
-                </li>
-
-                <li>
-                    <a href="#categories">Electronics</a>
-                </li>
-
-            </ul>
+            <a href="#categories">Home &amp; Kitchen</a>
+            <a href="#categories">Car Accessories</a>
+            <a href="#categories">Stationery</a>
+            <a href="#categories">Electronics</a>
 
         </div>
 
 
-        <!-- COLUMN 4: CUSTOMER SERVICE -->
+        <!-- 4. CUSTOMER SERVICE -->
         <div class="footer-column">
 
-            <h3>Customer Service</h3>
+            <h3>CUSTOMER SERVICE</h3>
 
-            <ul>
-
-                <li>
-                    <a href="#footer">Contact Us</a>
-                </li>
-
-                <li>
-                    <a href="#footer">Shipping Information</a>
-                </li>
-
-                <li>
-                    <a href="#footer">Returns & Refunds</a>
-                </li>
-
-                <li>
-                    <a href="#footer">Help Center</a>
-                </li>
-
-            </ul>
+            <a href="#">My Account</a>
+            <a href="#">Track Order</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Returns &amp; Refunds</a>
+            <a href="#">Shipping Info</a>
 
         </div>
 
 
-        <!-- COLUMN 5: CONTACT + NEWSLETTER -->
-        <div class="footer-column footer-contact">
+        <!-- 5. CONTACT US -->
+        <div class="footer-column contact-column">
 
-            <h3>Contact Us</h3>
+            <h3>CONTACT US</h3>
 
-            <div class="contact-item">
+            <a href="tel:+251978839272" class="contact-item">
 
                 <i class="fa-solid fa-phone"></i>
 
-                <span>
-                    Phone number
-                </span>
+                <span>+251 978 839 272</span>
 
-            </div>
+            </a>
+
+
+            <a
+                href="mailto:Kitokitomarket@gmail.com"
+                class="contact-item"
+            >
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <span>Kitokitomarket@gmail.com</span>
+
+            </a>
+
 
             <div class="contact-item">
 
-                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-solid fa-location-dot"></i>
 
-                <span>
-                    WhatsApp number
-                </span>
+                <span>Jigjiga - Ethiopia</span>
 
             </div>
 
-            <div class="contact-item">
-
-                <i class="fa-solid fa-envelope"></i>
-
-                <span>
-                    Email address
-                </span>
-
-            </div>
+        </div>
 
 
-            <!-- NEWSLETTER -->
+        <!-- 6. NEWSLETTER -->
+        <div class="footer-column newsletter-column">
 
-            <div class="newsletter">
+            <h3>NEWSLETTER</h3>
 
-                <h3>Newsletter</h3>
+            <p>
+                Subscribe to get updates on new arrivals
+                and special offers.
+            </p>
 
-                <p>
-                    Subscribe to receive our latest updates.
-                </p>
+            <form id="newsletter-form" class="newsletter-form">
 
-                <form class="newsletter-form">
+                <input
+                    type="email"
+                    id="newsletter-email"
+                    placeholder="Enter your email"
+                    required
+                >
 
-                    <input
-                        type="email"
-                        placeholder="Your email address"
-                        aria-label="Email address"
-                        required
-                    >
+                <button
+                    type="submit"
+                    aria-label="Subscribe"
+                >
+                    <i class="fa-regular fa-paper-plane"></i>
+                </button>
 
-                    <button
-                        type="submit"
-                        aria-label="Subscribe"
-                    >
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
+            </form>
 
-                </form>
-
-                <small
-                    class="newsletter-message"
-                    aria-live="polite"
-                ></small>
-
-            </div>
+            <p
+                id="newsletter-message"
+                class="newsletter-message"
+            ></p>
 
         </div>
 
@@ -864,12 +833,14 @@
     <div class="footer-bottom">
 
         <p>
-            © 2026 Kitokito Market. All Rights Reserved.
+            © 2026 Kitokito Market All Rights Reserved
         </p>
 
     </div>
 
 </footer>
+```
+
               
 
 
