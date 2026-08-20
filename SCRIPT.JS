@@ -1549,3 +1549,58 @@ function showSearchResults(results, query) {
     }, 100);
 
 }
+
+// =========================
+// NEWSLETTER
+// =========================
+
+const newsletterForm =
+document.getElementById("newsletter-form");
+
+const newsletterEmail =
+document.getElementById("newsletter-email");
+
+const newsletterMessage =
+document.getElementById("newsletter-message");
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener(
+        "submit",
+        function (e) {
+
+            e.preventDefault();
+
+            const email =
+            newsletterEmail.value.trim();
+
+            if (email === "") {
+
+                newsletterMessage.textContent =
+                "Please enter your email.";
+
+                newsletterMessage.style.color =
+                "#ff4d4d";
+
+                return;
+            }
+
+            newsletterMessage.textContent =
+            "Thank you for subscribing!";
+
+            newsletterMessage.style.color =
+            "#00e676";
+
+            newsletterForm.reset();
+
+            setTimeout(() => {
+
+                newsletterMessage.textContent =
+                "";
+
+            }, 3000);
+
+        }
+    );
+
+}
