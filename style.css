@@ -3855,3 +3855,13 @@ body {
         padding: 12px;
     }
 }
+
+/* CART PANEL - FINAL MOBILE SIZE */
+@media (max-width: 768px) {
+
+    .cart-panel {
+        height: 90vh !important;
+        max-height: 90vh !important;
+    }
+
+}
