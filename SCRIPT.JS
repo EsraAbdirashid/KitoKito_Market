@@ -218,17 +218,17 @@ const productsData = {
 
   {
     name: "Home Accessories",
-    image: "images/products/home-accessories.jpg",
+    image: "images/home-access.jpeg",
   },
 
   {
     name: "Refrigerator",
-    image: "images/products/refrigerator.jpg",
+    image: "images/talaagad.jpeg",
   },
 
   {
     name: "TCL TV",
-    image: "images/products/tcl-tv.jpg",
+    image: "images/TCL TV.jpeg",
   },
 ],
 
