@@ -590,7 +590,8 @@ const individualProducts = {
     {
         name: "Kitchen Knife Set",
         image: "images/products/kitchen-knife-set.jpg",
-        price: "$15.00"
+        price: "Wholesale"
+       
     },
 
     {
@@ -602,7 +603,8 @@ const individualProducts = {
     {
         name: "Vegetable Peeler",
         image: "images/products/vegetable-peeler.jpg",
-        price: "$5.00"
+        price: "WHOLWSALE"
+         MOQ: 20
     },
 
     {
@@ -794,6 +796,9 @@ function openProducts(subcategory) {
                         ${product.price}
                     </strong>
 
+                     <span class="product-moq">
+                     MOQ: ${product.MOQ}
+                     </span>
 
                    <button
     class="add-cart-btn"
