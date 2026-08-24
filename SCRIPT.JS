@@ -862,6 +862,7 @@ const individualProducts = {
   "Feather Flags": [
     {
       name: "Feather Flags",
+      image: "images/feather flags(100pcs) .jpg",
       price: "Wholesale",
       MOQ: 100
     }
