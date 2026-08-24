@@ -321,7 +321,7 @@ const productsData = {
 
   {
     name: "Epson",
-    image: "images/products/epson.jpg",
+    image: "images/epson(30pcs) .jpg",
   },
 
   {
@@ -351,7 +351,7 @@ const productsData = {
 
   {
     name: "Inks",
-    image: "images/products/inks.jpg",
+    image: "images/inks.jpg",
   },
 
   {
@@ -844,6 +844,7 @@ const individualProducts = {
   "Epson": [
     {
       name: "Epson",
+      image: "images/epson(30pcs) .jpg",
       price: "Wholesale",
       MOQ: 30
     }
@@ -892,6 +893,7 @@ const individualProducts = {
   "Inks": [
     {
       name: "Inks",
+      image: "images/inks.jpg",
       price: "Wholesale",
       MOQ: 1
     }
