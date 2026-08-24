@@ -3876,4 +3876,6 @@ body {
 .product-moq {
     display: block;
     font-size: 14px;
+    font-weight: 700;
+    color: #062b78;
 }
