@@ -240,7 +240,7 @@ const productsData = {
      car: [
   {
     name: "Jump Starter",
-    image: "images/products/jump-starter.jpg",
+    image: "images/car phone holder 50 pcs.jpg.jpeg",
   },
 
   {
@@ -704,6 +704,7 @@ const individualProducts = {
   "Jump Starter": [
     {
       name: "Jump Starter",
+      image: "images/car phone holder 50 pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 50
     }
