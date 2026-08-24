@@ -341,7 +341,7 @@ const productsData = {
 
   {
     name: "Highlighters",
-    image: "images/products/highlighters.jpg",
+    image: "images/highlightere 1000pcs.jpg",
   },
 
   {
