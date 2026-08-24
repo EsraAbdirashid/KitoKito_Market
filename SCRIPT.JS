@@ -361,7 +361,7 @@ const productsData = {
 
     {
       name: "Pen",
-      image: "images/products/pen.jpg",
+      image: "images/pen 3000pcs.jpg",
     },
 
     {
@@ -916,6 +916,7 @@ const individualProducts = {
   Pen: [
     {
       name: "Pen",
+      image: "images/pen 3000pcs.jpg",
       price: "Wholesale",
       MOQ: 3000,
     },
