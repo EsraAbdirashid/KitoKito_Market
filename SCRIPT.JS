@@ -265,7 +265,7 @@ const productsData = {
 
   {
     name: "Car Headlights",
-    image: "images/products/car-headlights.jpg",
+    image: "images/car headlights 5pcs.jpg.jpeg",
   },
 
   {
