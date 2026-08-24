@@ -645,7 +645,7 @@ const individualProducts = {
   "Cutlery": [
     {
       name: "Cutlery",
-      image: "images/cutlery.jpeg",
+      image: "images/cultery.jpeg",
       price: "Wholesale",
       MOQ: 100
     }
