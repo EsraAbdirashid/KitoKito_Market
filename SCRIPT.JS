@@ -316,7 +316,7 @@ const productsData = {
 
   {
     name: "Envelopes",
-    image: "images/products/envelopes.jpg",
+    image: "images/envelops(500pcs).jpg",
   },
 
   {
@@ -835,6 +835,7 @@ const individualProducts = {
   "Envelopes": [
     {
       name: "Envelopes",
+      image: "images/envelops(500pcs).jpg",
       price: "Wholesale",
       MOQ: 500
     }
