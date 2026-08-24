@@ -311,7 +311,7 @@ const productsData = {
 
   {
     name: "Desk Title",
-    image: "images/products/desk-title.jpg",
+    image: "images/desk title(50pcs).jpg",
   },
 
   {
@@ -826,6 +826,7 @@ const individualProducts = {
   "Desk Title": [
     {
       name: "Desk Title",
+      image: "images/desk title(50pcs).jpg",
       price: "Wholesale",
       MOQ: 50
     }
