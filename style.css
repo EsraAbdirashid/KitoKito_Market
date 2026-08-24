@@ -2451,7 +2451,8 @@ body {
     border: none;
     border-radius: 5px;
 
-    background: #27316c;
+ 
+    background:#27316c ;
     color: #fff;
 
     cursor: pointer;
@@ -3274,7 +3275,7 @@ body {
 
 .footer {
     width: 100%;
-    background: #062b78;
+    background: #27316c;
     color: #ffffff;
     padding: 24px 4.5% 0;
     box-sizing: border-box;

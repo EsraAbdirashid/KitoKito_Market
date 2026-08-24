@@ -1401,8 +1401,6 @@ cart.length = 0;
 // Update cart UI
 updateCart();
 
-  
-
 });
 
 /* =========================
