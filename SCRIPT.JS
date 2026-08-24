@@ -326,12 +326,12 @@ const productsData = {
 
   {
     name: "Eraser and Cutting",
-    image: "images/products/eraser-and-cutting.jpg",
+    image: "images/eraser and cutter(1000pcs).jpg",
   },
 
   {
     name: "Feather Flags",
-    image: "images/products/feather-flags.jpg",
+    image: "images/feather flags(100pcs) .jpg",
   },
 
   {
@@ -853,6 +853,7 @@ const individualProducts = {
   "Eraser and Cutting": [
     {
       name: "Eraser and Cutting",
+      image: "images/eraser and cutter(1000pcs).jpg",
       price: "Wholesale",
       MOQ: 1000
     }
