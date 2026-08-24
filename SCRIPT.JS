@@ -767,6 +767,7 @@ const individualProducts = {
   "Car Air Freshener": [
     {
       name: "Car Air Freshener",
+      image: "images/car air freshener 15pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 15
     }
