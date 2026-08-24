@@ -213,7 +213,7 @@ const productsData = {
 
   {
     name: "Storage Baskets",
-    image: "images/homebasket.jpeg",
+    image: "images/home-basket.jpeg",
   },
 
   {
@@ -627,6 +627,7 @@ const individualProducts = {
   "Washing Machine": [
     {
       name: "Washing Machine",
+      image: "images/washin machine.jpeg",
       price: "Wholesale",
       MOQ: 50
     }
@@ -1067,9 +1068,7 @@ function openProducts(subcategory) {
 
             <div class="individual-product-info">
 
-                <span class="product-category">
-                    ${subcategory}
-                </span>
+              
 
 
                 <h3>
@@ -1819,9 +1818,7 @@ function showSearchResults(results, query) {
 
                 <div class="individual-product-info">
 
-                    <span class="product-category">
-                        ${product.subcategory}
-                    </span>
+                  
 
 
                     <h3>
