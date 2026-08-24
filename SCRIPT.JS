@@ -758,6 +758,7 @@ const individualProducts = {
   "Car Cleaner Set": [
     {
       name: "Car Cleaner Set",
+      image: "images/car cleaner set 700pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 700
     }
