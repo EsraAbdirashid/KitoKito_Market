@@ -583,125 +583,374 @@ shopCategoryButtons.forEach((button) => {
 
 const individualProducts = {
 
-  "Cooking Tools": [
+  /* =====================================================
+     HOME & KITCHEN
+  ===================================================== */
 
+  "Washing Machine": [
     {
-        name: "Kitchen Knife Set",
-        image: "images/products/kitchen-knife-set.jpg",
-        price: "Wholesale",
-        MOQ: 10
-    },
-
-    {
-        name: "Kitchen Utensil Set",
-        image: "images/products/kitchen-utensil-set.jpg",
-        price: "Wholesale",
-        MOQ: 20
-    },
-
-    {
-        name: "Vegetable Peeler",
-        image: "images/products/vegetable-peeler.jpg",
-        price: "Wholesale",
-        MOQ: 30
-    },
-
-    {
-        name: "Cutting Board",
-        image: "images/products/cutting-board.jpg",
-        price: "Wholesale",
-        MOQ: 15
+      name: "Washing Machine",
+      price: "Wholesale",
+      MOQ: 50
     }
-
   ],
 
-  "Plates, Bowls & Cutlery": [],
+  "Mini Household Products": [
+    {
+      name: "Mini Household Products",
+      price: "Wholesale",
+      MOQ: 50
+    }
+  ],
 
-  "Cups, Mugs & Water Bottles": [],
+  "Cutlery": [
+    {
+      name: "Cutlery",
+      price: "Wholesale",
+      MOQ: 100
+    }
+  ],
 
-  "Food Storage & Containers": [],
+  "Cooking Tools": [
+    {
+      name: "Cooking Tools",
+      price: "Wholesale",
+      MOQ: 150
+    }
+  ],
 
-  "Spice & Kitchen Organizers": [],
+  "Storage Baskets": [
+    {
+      name: "Storage Baskets",
+      price: "Wholesale",
+      MOQ: 3000
+    }
+  ],
 
-  "Cleaning & Laundry": [],
+  "Home Accessories": [
+    {
+      name: "Home Accessories",
+      price: "Wholesale",
+      MOQ: 50
+    }
+  ],
 
-  "Bathroom Accessories": [],
+  "Refrigerator": [
+    {
+      name: "Refrigerator",
+      price: "Wholesale",
+      MOQ: 10
+    }
+  ],
 
-  "Home Storage & Organization": [],
+  "TCL TV": [
+    {
+      name: "TCL TV",
+      price: "Wholesale",
+      MOQ: 5
+    }
+  ],
 
-  "Home Lighting": [],
 
-  "Home Decoration": [],
+  /* =====================================================
+     CAR ACCESSORIES
+  ===================================================== */
 
-  "Jump Starters": [],
+  "Jump Starter": [
+    {
+      name: "Jump Starter",
+      price: "Wholesale",
+      MOQ: 50
+    }
+  ],
 
-  "Car Phone Holders": [],
+  "Car USB Charger": [
+    {
+      name: "Car USB Charger",
+      price: "Wholesale",
+      MOQ: 20
+    }
+  ],
 
-  "Car Chargers & USB Adapters": [],
+  "Car Sun Shade": [
+    {
+      name: "Car Sun Shade",
+      price: "Wholesale",
+      MOQ: 300
+    }
+  ],
 
-  "Tire Repair & Inflation Tools": [],
+  "Car Seat Cover": [
+    {
+      name: "Car Seat Cover",
+      price: "Wholesale",
+      MOQ: 10
+    }
+  ],
 
-  "Emergency & Safety Tools": [],
+  "Car Phone Holder": [
+    {
+      name: "Car Phone Holder",
+      price: "Wholesale",
+      MOQ: 50
+    }
+  ],
 
-  "Car Cleaning Tools": [],
+  "Car Headlights": [
+    {
+      name: "Car Headlights",
+      price: "Wholesale",
+      MOQ: 5
+    }
+  ],
 
-  "Car Air Fresheners": [],
+  "Car Cleaner Set": [
+    {
+      name: "Car Cleaner Set",
+      price: "Wholesale",
+      MOQ: 700
+    }
+  ],
 
-  "Sun Shades": [],
+  "Car Air Freshener": [
+    {
+      name: "Car Air Freshener",
+      price: "Wholesale",
+      MOQ: 15
+    }
+  ],
 
-  "Seat & Steering Wheel Covers": [],
+  "Car Wheel Cover": [
+    {
+      name: "Car Wheel Cover",
+      price: "Wholesale",
+      MOQ: 50
+    }
+  ],
 
-  "Car LED Lights & Lighting Accessories": [],
+  "Car Accessory": [
+    {
+      name: "Car Accessory",
+      price: "Wholesale",
+      MOQ: 100
+    }
+  ],
 
-  Notebooks: [],
 
-  Pens: [],
+  /* =====================================================
+     STATIONERY
+  ===================================================== */
 
-  Pencils: [],
+  "A4 Glossy": [
+    {
+      name: "A4 Glossy",
+      price: "Wholesale",
+      MOQ: 200
+    }
+  ],
 
-  Markers: [],
+  "Canon iR2224-1": [
+    {
+      name: "Canon iR2224-1",
+      price: "Wholesale",
+      MOQ: 1
+    }
+  ],
 
-  Highlighters: [],
+  "Cutter": [
+    {
+      name: "Cutter",
+      price: "Wholesale",
+      MOQ: 50
+    }
+  ],
 
-  "Erasers & Sharpeners": [],
+  "Desk Title": [
+    {
+      name: "Desk Title",
+      price: "Wholesale",
+      MOQ: 50
+    }
+  ],
 
-  "Rulers & Geometry Sets": [],
+  "Envelopes": [
+    {
+      name: "Envelopes",
+      price: "Wholesale",
+      MOQ: 500
+    }
+  ],
 
-  "Files & Folders": [],
+  "Epson": [
+    {
+      name: "Epson",
+      price: "Wholesale",
+      MOQ: 30
+    }
+  ],
 
-  "Sticky Notes": [],
+  "Eraser and Cutting": [
+    {
+      name: "Eraser and Cutting",
+      price: "Wholesale",
+      MOQ: 1000
+    }
+  ],
 
-  "Printer Paper, Ink & Toner": [],
+  "Feather Flags": [
+    {
+      name: "Feather Flags",
+      price: "Wholesale",
+      MOQ: 100
+    }
+  ],
 
-  Riso: [],
+  "File Folders": [
+    {
+      name: "File Folders",
+      price: "Wholesale",
+      MOQ: 800
+    }
+  ],
 
-  Konica: [],
+  "Highlighters": [
+    {
+      name: "Highlighters",
+      price: "Wholesale",
+      MOQ: 1000
+    }
+  ],
 
-  "HP Copier": [],
+  "HP LaserJet Pro Printer": [
+    {
+      name: "HP LaserJet Pro Printer",
+      price: "Wholesale",
+      MOQ: 1
+    }
+  ],
 
-  "Canon Copier": [],
+  "Inks": [
+    {
+      name: "Inks",
+      price: "Wholesale",
+      MOQ: 1
+    }
+  ],
+
+  "Konica": [
+    {
+      name: "Konica",
+      price: "Wholesale",
+      MOQ: 1
+    }
+  ],
+
+  "Marker": [
+    {
+      name: "Marker",
+      price: "Wholesale",
+      MOQ: 2000
+    }
+  ],
+
+  "Note Books": [
+    {
+      name: "Note Books",
+      price: "Wholesale",
+      MOQ: 3000
+    }
+  ],
+
+  "Pen": [
+    {
+      name: "Pen",
+      price: "Wholesale",
+      MOQ: 3000
+    }
+  ],
+
+  "Pencils": [
+    {
+      name: "Pencils",
+      price: "Wholesale",
+      MOQ: 3000
+    }
+  ],
+
+  "PVC Cards": [
+    {
+      name: "PVC Cards",
+      price: "Wholesale",
+      MOQ: 1000
+    }
+  ],
+
+  "Riso": [
+    {
+      name: "Riso",
+      price: "Wholesale",
+      MOQ: 1
+    }
+  ],
+
+  "Rulers": [
+    {
+      name: "Rulers",
+      price: "Wholesale",
+      MOQ: 1000
+    }
+  ],
+
+  "Hand Sanitizer": [
+    {
+      name: "Hand Sanitizer",
+      price: "Wholesale",
+      MOQ: 100
+    }
+  ],
+
+  "Sticky Notes": [
+    {
+      name: "Sticky Notes",
+      price: "Wholesale",
+      MOQ: 300
+    }
+  ],
+
+  "Tray": [
+    {
+      name: "Tray",
+      price: "Wholesale",
+      MOQ: 200
+    }
+  ],
+
+  "White Board": [
+    {
+      name: "White Board",
+      price: "Wholesale",
+      MOQ: 50
+    }
+  ],
+
+
+  /* =====================================================
+     ELECTRONICS
+     DATA WILL BE ADDED LATER
+  ===================================================== */
 
   "Smartphones — iPhone, Samsung": [],
-
   "Earphones & Headphones": [],
-
   "Bluetooth Speakers": [],
-
   "Smart Watches": [],
-
   "Power Banks": [],
-
   "Chargers & Adapters": [],
-
   "USB Cables": [],
-
   "USB Flash Drives": [],
-
   "Phone Cases & Screen Protectors": [],
-
   "Power Strips & Extension Cables": [],
+  "Laptops": []
 
-  Laptops: [],
 };
 
 
