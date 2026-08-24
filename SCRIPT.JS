@@ -351,7 +351,7 @@ const productsData = {
 
     {
       name: "Marker",
-      image: "images/products/marker.jpg",
+      image: "images/marker2000pcs.jpg",
     },
 
     {
@@ -898,6 +898,7 @@ const individualProducts = {
   Marker: [
     {
       name: "Marker",
+      image: "images/marker2000pcs.jpg",
       price: "Wholesale",
       MOQ: 2000,
     },
