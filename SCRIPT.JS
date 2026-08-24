@@ -401,7 +401,7 @@ const productsData = {
 
     {
       name: "White Board",
-      image: "images/products/white-board.jpg",
+      image: "images/white boards(50pcs).jpg",
     },
   ],
 
@@ -988,6 +988,7 @@ const individualProducts = {
   "White Board": [
     {
       name: "White Board",
+      image: "images/white boards(50pcs).jpg",
       price: "Wholesale",
       MOQ: 50,
     },
