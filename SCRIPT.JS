@@ -336,7 +336,7 @@ const productsData = {
 
   {
     name: "File Folders",
-    image: "images/products/file-folders.jpg",
+    image: "images/file folders800pcs.jpg",
   },
 
   {
@@ -871,6 +871,7 @@ const individualProducts = {
   "File Folders": [
     {
       name: "File Folders",
+      image: "images/file folders800pcs.jpg",
       price: "Wholesale",
       MOQ: 800
     }
