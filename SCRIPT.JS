@@ -371,7 +371,7 @@ const productsData = {
 
     {
       name: "PVC Cards",
-      image: "images/products/pvc-cards.jpg",
+      image: "images/pvc cards 1000pcs.jpg",
     },
 
     {
@@ -934,6 +934,7 @@ const individualProducts = {
   "PVC Cards": [
     {
       name: "PVC Cards",
+      image: "images/pvc cards 1000pcs.jpg",
       price: "Wholesale",
       MOQ: 1000,
     },
