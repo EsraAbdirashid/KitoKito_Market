@@ -376,7 +376,7 @@ const productsData = {
 
     {
       name: "Riso",
-      image: "images/products/riso.jpg",
+      image: "images/riso 1pcs .jpg",
     },
 
     {
@@ -943,6 +943,7 @@ const individualProducts = {
   Riso: [
     {
       name: "Riso",
+      image: "images/riso 1pcs .jpg",
       price: "Wholesale",
       MOQ: 1,
     },
