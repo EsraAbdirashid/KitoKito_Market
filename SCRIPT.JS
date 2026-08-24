@@ -270,12 +270,12 @@ const productsData = {
 
   {
     name: "Car Cleaner Set",
-    image: "images/products/car-cleaner-set.jpg",
+    image: "images/car cleaner set 700pcs.jpg.jpeg",
   },
 
   {
     name: "Car Air Freshener",
-    image: "images/products/car-air-freshener.jpg",
+    image: "images/",
   },
 
   {
@@ -749,6 +749,7 @@ const individualProducts = {
   "Car Headlights": [
     {
       name: "Car Headlights",
+      image: "images/car headlights 5pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 5
     }
