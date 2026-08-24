@@ -39,6 +39,7 @@ if (mobileSearch && searchBox) {
 
 }
 
+
 /* =========================================================
    ALL CATEGORIES DROPDOWN
 ========================================================= */
@@ -77,6 +78,7 @@ if (categoryBtn && categoryDropdown) {
   });
 }
 
+
 /* =========================================================
    ACTIVE NAV LINK
 ========================================================= */
@@ -107,6 +109,7 @@ navLinks.forEach((link) => {
     }
   });
 });
+
 
 /* =========================================================
    HERO SLIDER
@@ -178,6 +181,7 @@ dots.forEach((dot, index) => {
   });
 });
 
+
 /* =========================================================
    PRODUCT / SUBCATEGORY DATA
 ========================================================= */
@@ -239,6 +243,7 @@ const productsData = {
     },
   ],
 
+
   /* =====================================================
        CAR ACCESSORIES
     ===================================================== */
@@ -294,6 +299,7 @@ const productsData = {
       image: "images/products/car-led-lights.jpg",
     },
   ],
+
 
   /* =====================================================
        STATIONERY
@@ -371,6 +377,7 @@ const productsData = {
     },
   ],
 
+
   /* =====================================================
        ELECTRONICS
     ===================================================== */
@@ -433,6 +440,7 @@ const productsData = {
   ],
 };
 
+
 /* =========================================================
    CATEGORY NAMES
 ========================================================= */
@@ -446,6 +454,7 @@ const categoryNames = {
 
   electronics: "Electronics",
 };
+
 
 /* =========================================================
    GET CATEGORY ELEMENTS
@@ -470,6 +479,7 @@ const backToCategories = document.querySelector("#back-to-categories");
 const backToSubcategories = document.querySelector("#back-to-subcategories");
 
 const shopCategoryButtons = document.querySelectorAll(".shop-category-btn");
+
 
 /* =========================================================
    OPEN CATEGORY
@@ -553,6 +563,7 @@ function openCategory(category) {
   }, 100);
 }
 
+
 /* =========================================================
    SHOP NOW BUTTONS
 ========================================================= */
@@ -565,54 +576,42 @@ shopCategoryButtons.forEach((button) => {
   });
 });
 
+
 /* =========================================================
    INDIVIDUAL PRODUCTS DATA
 ========================================================= */
 
-/*
-   Halkan ayaan dambe ku gelin doonaa
-   individual products-ka dhabta ah.
-
-   Tusaale:
-
-   "Cooking Tools": [
-       {
-           name: "Kitchen Knife",
-           image: "images/products/knife.jpg",
-           price: "$10"
-       }
-   ]
-*/
-
 const individualProducts = {
+
   "Cooking Tools": [
 
     {
         name: "Kitchen Knife Set",
         image: "images/products/kitchen-knife-set.jpg",
-        price: "Wholesale"
-       
+        price: "Wholesale",
+        MOQ: 10
     },
 
     {
         name: "Kitchen Utensil Set",
         image: "images/products/kitchen-utensil-set.jpg",
-        price: "$12.00"
+        price: "Wholesale",
+        MOQ: 20
     },
 
     {
         name: "Vegetable Peeler",
         image: "images/products/vegetable-peeler.jpg",
-        price: "WHOLWSALE"
-         MOQ: 20
+        price: "Wholesale",
+        MOQ: 30
     },
 
     {
         name: "Cutting Board",
         image: "images/products/cutting-board.jpg",
-        price: "$8.00"
+        price: "Wholesale",
+        MOQ: 15
     }
-
 
   ],
 
@@ -705,6 +704,7 @@ const individualProducts = {
   Laptops: [],
 };
 
+
 /* =========================================================
    OPEN INDIVIDUAL PRODUCTS
 ========================================================= */
@@ -760,14 +760,15 @@ function openProducts(subcategory) {
     card.innerHTML = `
 
             <div class="individual-product-image">
-<button
-    class="wishlist-btn"
-    type="button"
-    onclick='toggleWishlist(${JSON.stringify(product)})'
-    aria-label="Add to wishlist"
->
-    <i class="fa-regular fa-heart"></i>
-</button>
+
+                <button
+                    class="wishlist-btn"
+                    type="button"
+                    onclick='toggleWishlist(${JSON.stringify(product)})'
+                    aria-label="Add to wishlist"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </button>
 
 
                 <img
@@ -792,21 +793,28 @@ function openProducts(subcategory) {
 
                 <div class="individual-product-bottom">
 
-                    <strong>
-                        ${product.price}
-                    </strong>
+                    <div class="product-price-moq">
 
-                     <span class="product-moq">
-                     MOQ: ${product.MOQ}
-                     </span>
+                        <strong>
+                            ${product.price}
+                        </strong>
 
-                   <button
-    class="add-cart-btn"
-    type="button"
-    onclick='addToCart(${JSON.stringify(product)})'
->
-    <i class="fa-solid fa-cart-shopping"></i>
-</button>
+                        <span class="product-moq">
+                            MOQ: ${product.MOQ}
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-cart-btn"
+                        type="button"
+                        onclick='addToCart(${JSON.stringify(product)})'
+                        aria-label="Add to Cart"
+                    >
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+
                 </div>
 
             </div>
@@ -830,6 +838,7 @@ function openProducts(subcategory) {
   }, 100);
 }
 
+
 /* =========================================================
    VIEW PRODUCTS
 ========================================================= */
@@ -847,6 +856,7 @@ document.addEventListener("click", (event) => {
     openProducts(subcategory);
   }
 });
+
 
 /* =========================================================
    BACK TO CATEGORIES
@@ -868,6 +878,7 @@ if (backToCategories) {
     }, 100);
   });
 }
+
 
 /* =========================================================
    BACK TO SUBCATEGORIES
@@ -913,20 +924,30 @@ function updateCart() {
 
     cartItems.innerHTML = "";
 
-    let total = 0;
-
     cart.forEach((product, index) => {
-
-        total += parseFloat(product.price.replace("$", ""));
 
         cartItems.innerHTML += `
             <div class="cart-item">
 
-                <img src="${product.image}" alt="${product.name}">
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
 
                 <div>
-                    <h4>${product.name}</h4>
-                    <span>${product.price}</span>
+
+                    <h4>
+                        ${product.name}
+                    </h4>
+
+                    <span>
+                        ${product.price}
+                    </span>
+
+                    <small>
+                        MOQ: ${product.MOQ}
+                    </small>
+
                 </div>
 
                 <button onclick="removeFromCart(${index})">
@@ -940,7 +961,15 @@ function updateCart() {
 
     cartCount.textContent = cart.length;
 
-    cartTotal.textContent = `$${total.toFixed(2)}`;
+    /*
+       Since the product price is now "Wholesale"
+       instead of a numeric price, the cart total
+       will display Wholesale.
+    */
+
+    cartTotal.textContent = cart.length > 0
+        ? "Wholesale"
+        : "$0.00";
 }
 
 
@@ -960,6 +989,7 @@ function removeFromCart(index) {
 
     updateCart();
 }
+
 
 /* =========================
    CHECKOUT
@@ -984,29 +1014,33 @@ document.querySelector(".checkout-btn").addEventListener("click", () => {
 
     checkoutItems.innerHTML = "";
 
-    let total = 0;
-
     cart.forEach((product) => {
-
-        const price =
-            parseFloat(product.price.replace("$", ""));
-
-        total += price;
 
         checkoutItems.innerHTML += `
             <div class="checkout-item">
 
-                <span>${product.name}</span>
+                <div>
 
-                <strong>${product.price}</strong>
+                    <span>
+                        ${product.name}
+                    </span>
+
+                    <small>
+                        MOQ: ${product.MOQ}
+                    </small>
+
+                </div>
+
+                <strong>
+                    ${product.price}
+                </strong>
 
             </div>
         `;
 
     });
 
-    checkoutTotal.textContent =
-        `$${total.toFixed(2)}`;
+    checkoutTotal.textContent = "Wholesale";
 
     checkoutPanel.classList.add("show");
 
@@ -1046,6 +1080,7 @@ document.querySelector("#place-order").addEventListener("click", () => {
     );
 
 });
+
 
 /* =========================
    WISHLIST
@@ -1142,6 +1177,10 @@ function updateWishlist() {
                         ${product.price}
                     </strong>
 
+                    <span>
+                        MOQ: ${product.MOQ}
+                    </span>
+
                 </div>
 
 
@@ -1170,6 +1209,7 @@ function removeFromWishlist(index) {
     updateWishlist();
 
 }
+
 
 /* =========================
    SEARCH
@@ -1506,9 +1546,17 @@ function showSearchResults(results, query) {
 
                     <div class="individual-product-bottom">
 
-                        <strong>
-                            ${product.price}
-                        </strong>
+                        <div class="product-price-moq">
+
+                            <strong>
+                                ${product.price}
+                            </strong>
+
+                            <span class="product-moq">
+                                MOQ: ${product.MOQ}
+                            </span>
+
+                        </div>
 
 
                         <button
@@ -1555,9 +1603,10 @@ function showSearchResults(results, query) {
 
 }
 
-// =========================
-// NEWSLETTER
-// =========================
+
+/* =========================
+   NEWSLETTER
+========================= */
 
 const newsletterForm =
 document.getElementById("newsletter-form");
