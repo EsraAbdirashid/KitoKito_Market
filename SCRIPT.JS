@@ -260,7 +260,7 @@ const productsData = {
 
   {
     name: "Car Phone Holder",
-    image: "images/products/car-phone-holder.jpg",
+    image: "images/car phone holder 50 pcs.jpg.jpeg",
   },
 
   {
