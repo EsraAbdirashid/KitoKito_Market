@@ -1332,6 +1332,7 @@ document.querySelector("#close-checkout").addEventListener("click", () => {
 });
 
 document.querySelector("#place-order").addEventListener("click", () => {
+
   const name = document.querySelector("#customer-name").value.trim();
 
   const phone = document.querySelector("#customer-phone").value.trim();
@@ -1340,13 +1341,46 @@ document.querySelector("#place-order").addEventListener("click", () => {
 
   if (!name || !phone || !address) {
     alert("Please fill in all customer information.");
-
     return;
   }
 
-  alert("Order ready! Backend will be connected later.");
-});
+  /* =========================
+     WHATSAPP ORDER MESSAGE
+  ========================= */
 
+  const whatsappNumber = "251XXXXXXXXX";
+
+  let message = `Hello Kitokito Market,
+
+I would like to place an order.
+
+Customer Information:
+Name: ${name}
+Phone: ${phone}
+Address: ${address}
+
+Order Details:
+`;
+
+  cart.forEach((product, index) => {
+    message += `
+${index + 1}. ${product.name}
+MOQ: ${product.MOQ}
+Price: ${product.price}
+`;
+  });
+
+  message += `
+Total: Wholesale
+
+Thank you.`;
+
+  const whatsappURL =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+
+});
 /* =========================
    WISHLIST
 ========================= */
