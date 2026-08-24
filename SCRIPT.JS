@@ -275,7 +275,7 @@ const productsData = {
 
   {
     name: "Car Air Freshener",
-    image: "images/",
+    image: "images/car air freshener 15pcs.jpg.jpeg",
   },
 
   {
