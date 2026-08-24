@@ -190,193 +190,230 @@ const productsData = {
   /* =====================================================
        HOME & KITCHEN
     ===================================================== */
+       home: [
+  {
+    name: "Washing Machine",
+    image: "images/products/washing-machine.jpg",
+  },
 
-  home: [
-    {
-      name: "Cooking Tools",
-      image: "images/products/cooking-tools.jpg",
-    },
+  {
+    name: "Mini Household Products",
+    image: "images/products/mini-household-products.jpg",
+  },
 
-    {
-      name: "Plates, Bowls & Cutlery",
-      image: "images/products/plates-bowls-cutlery.jpg",
-    },
+  {
+    name: "Cutlery",
+    image: "images/products/cutlery.jpg",
+  },
 
-    {
-      name: "Cups, Mugs & Water Bottles",
-      image: "images/products/cups-mugs-water-bottles.jpg",
-    },
+  {
+    name: "Cooking Tools",
+    image: "images/products/cooking-tools.jpg",
+  },
 
-    {
-      name: "Food Storage & Containers",
-      image: "images/products/food-storage-containers.jpg",
-    },
+  {
+    name: "Storage Baskets",
+    image: "images/products/storage-baskets.jpg",
+  },
 
-    {
-      name: "Spice & Kitchen Organizers",
-      image: "images/products/spice-kitchen-organizers.jpg",
-    },
+  {
+    name: "Home Accessories",
+    image: "images/products/home-accessories.jpg",
+  },
 
-    {
-      name: "Cleaning & Laundry",
-      image: "images/products/cleaning-laundry.jpg",
-    },
+  {
+    name: "Refrigerator",
+    image: "images/products/refrigerator.jpg",
+  },
 
-    {
-      name: "Bathroom Accessories",
-      image: "images/products/bathroom-accessories.jpg",
-    },
-
-    {
-      name: "Home Storage & Organization",
-      image: "images/products/home-storage-organization.jpg",
-    },
-
-    {
-      name: "Home Lighting",
-      image: "images/products/home-lighting.jpg",
-    },
-
-    {
-      name: "Home Decoration",
-      image: "images/products/home-decoration.jpg",
-    },
-  ],
+  {
+    name: "TCL TV",
+    image: "images/products/tcl-tv.jpg",
+  },
+],
 
 
   /* =====================================================
        CAR ACCESSORIES
     ===================================================== */
 
-  car: [
-    {
-      name: "Jump Starters",
-      image: "images/products/jump-starters.jpg",
-    },
+     car: [
+  {
+    name: "Jump Starter",
+    image: "images/products/jump-starter.jpg",
+  },
 
-    {
-      name: "Car Phone Holders",
-      image: "images/products/car-phone-holders.jpg",
-    },
+  {
+    name: "Car USB Charger",
+    image: "images/products/car-usb-charger.jpg",
+  },
 
-    {
-      name: "Car Chargers & USB Adapters",
-      image: "images/products/car-chargers-usb-adapters.jpg",
-    },
+  {
+    name: "Car Sun Shade",
+    image: "images/products/car-sun-shade.jpg",
+  },
 
-    {
-      name: "Tire Repair & Inflation Tools",
-      image: "images/products/tire-repair-inflation-tools.jpg",
-    },
+  {
+    name: "Car Seat Cover",
+    image: "images/products/car-seat-cover.jpg",
+  },
 
-    {
-      name: "Emergency & Safety Tools",
-      image: "images/products/emergency-safety-tools.jpg",
-    },
+  {
+    name: "Car Phone Holder",
+    image: "images/products/car-phone-holder.jpg",
+  },
 
-    {
-      name: "Car Cleaning Tools",
-      image: "images/products/car-cleaning-tools.jpg",
-    },
+  {
+    name: "Car Headlights",
+    image: "images/products/car-headlights.jpg",
+  },
 
-    {
-      name: "Car Air Fresheners",
-      image: "images/products/car-air-fresheners.jpg",
-    },
+  {
+    name: "Car Cleaner Set",
+    image: "images/products/car-cleaner-set.jpg",
+  },
 
-    {
-      name: "Sun Shades",
-      image: "images/products/sun-shades.jpg",
-    },
+  {
+    name: "Car Air Freshener",
+    image: "images/products/car-air-freshener.jpg",
+  },
 
-    {
-      name: "Seat & Steering Wheel Covers",
-      image: "images/products/seat-steering-wheel-covers.jpg",
-    },
+  {
+    name: "Car Wheel Cover",
+    image: "images/products/car-wheel-cover.jpg",
+  },
 
-    {
-      name: "Car LED Lights & Lighting Accessories",
-      image: "images/products/car-led-lights.jpg",
-    },
-  ],
-
+  {
+    name: "Car Accessory",
+    image: "images/products/car-accessory.jpg",
+  },
+],
 
   /* =====================================================
        STATIONERY
     ===================================================== */
 
-  stationery: [
-    {
-      name: "Notebooks",
-      image: "images/products/notebooks.jpg",
-    },
+       stationery: [
+  {
+    name: "A4 Glossy",
+    image: "images/products/a4-glossy.jpg",
+  },
 
-    {
-      name: "Pens",
-      image: "images/products/pens.jpg",
-    },
+  {
+    name: "Canon iR2224-1",
+    image: "images/products/canon-ir2224-1.jpg",
+  },
 
-    {
-      name: "Pencils",
-      image: "images/products/pencils.jpg",
-    },
+  {
+    name: "Cutter",
+    image: "images/products/cutter.jpg",
+  },
 
-    {
-      name: "Markers",
-      image: "images/products/markers.jpg",
-    },
+  {
+    name: "Desk Title",
+    image: "images/products/desk-title.jpg",
+  },
 
-    {
-      name: "Highlighters",
-      image: "images/products/highlighters.jpg",
-    },
+  {
+    name: "Envelopes",
+    image: "images/products/envelopes.jpg",
+  },
 
-    {
-      name: "Erasers & Sharpeners",
-      image: "images/products/erasers-sharpeners.jpg",
-    },
+  {
+    name: "Epson",
+    image: "images/products/epson.jpg",
+  },
 
-    {
-      name: "Rulers & Geometry Sets",
-      image: "images/products/rulers-geometry-sets.jpg",
-    },
+  {
+    name: "Eraser and Cutting",
+    image: "images/products/eraser-and-cutting.jpg",
+  },
 
-    {
-      name: "Files & Folders",
-      image: "images/products/files-folders.jpg",
-    },
+  {
+    name: "Feather Flags",
+    image: "images/products/feather-flags.jpg",
+  },
 
-    {
-      name: "Sticky Notes",
-      image: "images/products/sticky-notes.jpg",
-    },
+  {
+    name: "File Folders",
+    image: "images/products/file-folders.jpg",
+  },
 
-    {
-      name: "Printer Paper, Ink & Toner",
-      image: "images/products/printer-paper-ink-toner.jpg",
-    },
+  {
+    name: "Highlighters",
+    image: "images/products/highlighters.jpg",
+  },
 
-    {
-      name: "Riso",
-      image: "images/products/riso.jpg",
-    },
+  {
+    name: "HP LaserJet Pro Printer",
+    image: "images/products/hp-laserjet-pro-printer.jpg",
+  },
 
-    {
-      name: "Konica",
-      image: "images/products/konica.jpg",
-    },
+  {
+    name: "Inks",
+    image: "images/products/inks.jpg",
+  },
 
-    {
-      name: "HP Copier",
-      image: "images/products/hp-copier.jpg",
-    },
+  {
+    name: "Konica",
+    image: "images/products/konica.jpg",
+  },
 
-    {
-      name: "Canon Copier",
-      image: "images/products/canon-copier.jpg",
-    },
-  ],
+  {
+    name: "Marker",
+    image: "images/products/marker.jpg",
+  },
 
+  {
+    name: "Note Books",
+    image: "images/products/note-books.jpg",
+  },
+
+  {
+    name: "Pen",
+    image: "images/products/pen.jpg",
+  },
+
+  {
+    name: "Pencils",
+    image: "images/products/pencils.jpg",
+  },
+
+  {
+    name: "PVC Cards",
+    image: "images/products/pvc-cards.jpg",
+  },
+
+  {
+    name: "Riso",
+    image: "images/products/riso.jpg",
+  },
+
+  {
+    name: "Rulers",
+    image: "images/products/rulers.jpg",
+  },
+
+  {
+    name: "Hand Sanitizer",
+    image: "images/products/hand-sanitizer.jpg",
+  },
+
+  {
+    name: "Sticky Notes",
+    image: "images/products/sticky-notes.jpg",
+  },
+
+  {
+    name: "Tray",
+    image: "images/products/tray.jpg",
+  },
+
+  {
+    name: "White Board",
+    image: "images/products/white-board.jpg",
+  },
+],
 
   /* =====================================================
        ELECTRONICS
