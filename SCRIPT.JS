@@ -740,6 +740,7 @@ const individualProducts = {
   "Car Phone Holder": [
     {
       name: "Car Phone Holder",
+       image: "images/car phone holder 50 pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 50
     }
