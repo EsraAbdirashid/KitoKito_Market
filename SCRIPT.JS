@@ -1334,9 +1334,7 @@ document.querySelector("#close-checkout").addEventListener("click", () => {
 document.querySelector("#place-order").addEventListener("click", () => {
 
   const name = document.querySelector("#customer-name").value.trim();
-
   const phone = document.querySelector("#customer-phone").value.trim();
-
   const address = document.querySelector("#customer-address").value.trim();
 
   if (!name || !phone || !address) {
@@ -1345,35 +1343,44 @@ document.querySelector("#place-order").addEventListener("click", () => {
   }
 
   /* =========================
-     WHATSAPP ORDER MESSAGE
+     PROFESSIONAL WHATSAPP ORDER
   ========================= */
 
-  const whatsappNumber = "251978839272";
+  const whatsappNumber = "251XXXXXXXXX";
 
   let message = `Hello Kitokito Market,
 
-I would like to place an order.
+I would like to place a wholesale order.
 
-Customer Information:
+━━━━━━━━━━━━━━━━━━
+CUSTOMER INFORMATION
+━━━━━━━━━━━━━━━━━━
+
 Name: ${name}
 Phone: ${phone}
 Address: ${address}
 
-Order Details:
+━━━━━━━━━━━━━━━━━━
+ORDER DETAILS
+━━━━━━━━━━━━━━━━━━
+
 `;
 
   cart.forEach((product, index) => {
-    message += `
-${index + 1}. ${product.name}
-MOQ: ${product.MOQ}
+    message += `${index + 1}. ${product.name}
+MOQ: ${product.MOQ} pcs
 Price: ${product.price}
+
 `;
   });
 
-  message += `
-Total: Wholesale
+  message += `━━━━━━━━━━━━━━━━━━
 
-Thank you.`;
+Thank you for your service.
+I look forward to your confirmation.
+
+Best regards,
+${name}`;
 
   const whatsappURL =
     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -1381,6 +1388,7 @@ Thank you.`;
   window.open(whatsappURL, "_blank");
 
 });
+
 /* =========================
    WISHLIST
 ========================= */
