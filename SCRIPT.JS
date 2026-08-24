@@ -396,7 +396,7 @@ const productsData = {
 
     {
       name: "Tray",
-      image: "images/products/tray.jpg",
+      image: "images/Tray200pcs.jpg",
     },
 
     {
@@ -979,6 +979,7 @@ const individualProducts = {
   Tray: [
     {
       name: "Tray",
+      image: "images/Tray200pcs.jpg",
       price: "Wholesale",
       MOQ: 200,
     },
