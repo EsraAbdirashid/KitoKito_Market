@@ -1377,10 +1377,6 @@ Price: ${product.price}
   message += `━━━━━━━━━━━━━━━━━━
 
 Thank you for your service.
-I look forward to your confirmation.
-
-Best regards,
-${name}`;
 
   const whatsappURL =
     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
