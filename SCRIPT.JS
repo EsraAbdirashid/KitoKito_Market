@@ -356,7 +356,7 @@ const productsData = {
 
     {
       name: "Note Books",
-      image: "images/products/note-books.jpg",
+      image: "images/note books. 3000pcs.jpg",
     },
 
     {
@@ -907,6 +907,7 @@ const individualProducts = {
   "Note Books": [
     {
       name: "Note Books",
+      image: "images/note books. 3000pcs.jpg",
       price: "Wholesale",
       MOQ: 3000,
     },
