@@ -636,6 +636,7 @@ const individualProducts = {
   "Mini Household Products": [
     {
       name: "Mini Household Products",
+      image: "images/min.jpeg",
       price: "Wholesale",
       MOQ: 50
     }
@@ -644,6 +645,7 @@ const individualProducts = {
   "Cutlery": [
     {
       name: "Cutlery",
+      image: "images/cutlery.jpeg",
       price: "Wholesale",
       MOQ: 100
     }
@@ -652,6 +654,7 @@ const individualProducts = {
   "Cooking Tools": [
     {
       name: "Cooking Tools",
+      image: "images/washin machine.jpeg",
       price: "Wholesale",
       MOQ: 150
     }
