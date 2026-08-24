@@ -346,7 +346,7 @@ const productsData = {
 
     {
       name: "Konica",
-      image: "images/products/konica.jpg",
+      image: "images/konica 1pcs.jpg",
     },
 
     {
@@ -889,6 +889,7 @@ const individualProducts = {
   Konica: [
     {
       name: "Konica",
+      image: "images/konica 1pcs.jpg",
       price: "Wholesale",
       MOQ: 1,
     },
