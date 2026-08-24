@@ -301,7 +301,7 @@ const productsData = {
 
   {
     name: "Canon iR2224-1",
-    image: "images/products/canon-ir2224-1.jpg",
+    image: "images/Canon-iR2224-1(1pcs).jpg",
   },
 
   {
@@ -808,6 +808,7 @@ const individualProducts = {
   "Canon iR2224-1": [
     {
       name: "Canon iR2224-1",
+      image: "images/Canon-iR2224-1(1pcs).jpg",
       price: "Wholesale",
       MOQ: 1
     }
