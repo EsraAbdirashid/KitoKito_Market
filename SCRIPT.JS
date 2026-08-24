@@ -654,7 +654,7 @@ const individualProducts = {
   "Cooking Tools": [
     {
       name: "Cooking Tools",
-      image: "images/washin machine.jpeg",
+      image: "images/cooking-tools.jpeg",
       price: "Wholesale",
       MOQ: 150
     }
@@ -663,6 +663,7 @@ const individualProducts = {
   "Storage Baskets": [
     {
       name: "Storage Baskets",
+      image: "images/home-basket.jpeg",
       price: "Wholesale",
       MOQ: 3000
     }
@@ -671,6 +672,7 @@ const individualProducts = {
   "Home Accessories": [
     {
       name: "Home Accessories",
+      image: "images/home-access.jpeg",
       price: "Wholesale",
       MOQ: 50
     }
@@ -679,6 +681,7 @@ const individualProducts = {
   "Refrigerator": [
     {
       name: "Refrigerator",
+      image: "images/talaagad.jpeg",
       price: "Wholesale",
       MOQ: 10
     }
@@ -687,6 +690,7 @@ const individualProducts = {
   "TCL TV": [
     {
       name: "TCL TV",
+      image: "images/TCL TV.jpeg",
       price: "Wholesale",
       MOQ: 5
     }
