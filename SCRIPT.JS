@@ -296,7 +296,7 @@ const productsData = {
        stationery: [
   {
     name: "A4 Glossy",
-    image: "images/products/a4-glossy.jpg",
+    image: "images/a4 glossy 200pcs.jpg",
   },
 
   {
@@ -799,6 +799,7 @@ const individualProducts = {
   "A4 Glossy": [
     {
       name: "A4 Glossy",
+      image: "images/a4 glossy 200pcs.jpg",
       price: "Wholesale",
       MOQ: 200
     }
