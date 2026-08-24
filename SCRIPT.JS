@@ -193,27 +193,27 @@ const productsData = {
        home: [
   {
     name: "Washing Machine",
-    image: "images/products/washing-machine.jpg",
+    image: "images/washin machine.jpeg",
   },
 
   {
     name: "Mini Household Products",
-    image: "images/products/mini-household-products.jpg",
+    image: "images/min.jpeg",
   },
 
   {
     name: "Cutlery",
-    image: "images/products/cutlery.jpg",
+    image: "images/cultery.jpeg",
   },
 
   {
     name: "Cooking Tools",
-    image: "images/products/cooking-tools.jpg",
+    image: "images/cooking-tools.jpeg",
   },
 
   {
     name: "Storage Baskets",
-    image: "images/products/storage-baskets.jpg",
+    image: "images/homebasket.jpeg",
   },
 
   {
