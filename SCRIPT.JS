@@ -1387,19 +1387,21 @@ ${name}`;
 
   window.open(whatsappURL, "_blank");
 
-    // Clear customer information
-  document.querySelector("#customer-name").value = "";
-  document.querySelector("#customer-phone").value = "";
-  document.querySelector("#customer-address").value = "";
+  // Clear customer information
+document.querySelector("#customer-name").value = "";
+document.querySelector("#customer-phone").value = "";
+document.querySelector("#customer-address").value = "";
 
-  // Close checkout panel
-  checkoutPanel.classList.remove("show");
+// Close checkout panel
+checkoutPanel.classList.remove("show");
 
-  // Clear cart
-  cart.length = 0;
+// Clear cart
+cart.length = 0;
 
-  // Update cart UI
-  renderCart();
+// Update cart UI
+updateCart();
+
+  
 
 });
 
