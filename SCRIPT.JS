@@ -381,17 +381,17 @@ const productsData = {
 
     {
       name: "Rulers",
-      image: "images/products/rulers.jpg",
+      image: "images/rullers3000pcs.jpg",
     },
 
     {
-      name: "Hand Sanitizer",
-      image: "images/products/hand-sanitizer.jpg",
+      name: "Stand Banners",
+      image: "images/stand banners100pcs.jpg",
     },
 
     {
       name: "Sticky Notes",
-      image: "images/products/sticky-notes.jpg",
+      image: "images/sticky notes 3000pcs.jpg",
     },
 
     {
@@ -952,14 +952,16 @@ const individualProducts = {
   Rulers: [
     {
       name: "Rulers",
+      image: "images/rullers3000pcs.jpg",
       price: "Wholesale",
       MOQ: 1000,
     },
   ],
 
-  "Hand Sanitizer": [
+  "Stand Banners": [
     {
-      name: "Hand Sanitizer",
+      name: "Stand Banners",
+      image: "images/stand banners100pcs.jpg",
       price: "Wholesale",
       MOQ: 100,
     },
