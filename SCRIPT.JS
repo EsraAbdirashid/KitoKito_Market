@@ -1348,7 +1348,7 @@ document.querySelector("#place-order").addEventListener("click", () => {
      WHATSAPP ORDER MESSAGE
   ========================= */
 
-  const whatsappNumber = "251921236763";
+  const whatsappNumber = "251978839272";
 
   let message = `Hello Kitokito Market,
 
