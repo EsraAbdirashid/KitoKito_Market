@@ -245,12 +245,12 @@ const productsData = {
 
   {
     name: "Car USB Charger",
-    image: "images/products/car-usb-charger.jpg",
+    image: "images/car usb charger 20pcs.jpg.jpeg",
   },
 
   {
     name: "Car Sun Shade",
-    image: "images/products/car-sun-shade.jpg",
+    image: "images/car sun shade 300pcs.jpg.jpeg",
   },
 
   {
@@ -713,6 +713,7 @@ const individualProducts = {
   "Car USB Charger": [
     {
       name: "Car USB Charger",
+      image: "images/car usb charger 20pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 20
     }
@@ -721,6 +722,7 @@ const individualProducts = {
   "Car Sun Shade": [
     {
       name: "Car Sun Shade",
+       image: "images/car sun shade 300pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 300
     }
