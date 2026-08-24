@@ -970,6 +970,7 @@ const individualProducts = {
   "Sticky Notes": [
     {
       name: "Sticky Notes",
+      image: "images/sticky notes 3000pcs.jpg",
       price: "Wholesale",
       MOQ: 300,
     },
