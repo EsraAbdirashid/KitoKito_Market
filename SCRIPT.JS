@@ -807,13 +807,12 @@ function openProducts(subcategory) {
 
 
                     <button
-                        class="add-cart-btn"
-                        type="button"
-                        onclick='addToCart(${JSON.stringify(product)})'
-                        aria-label="Add to Cart"
-                    >
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
+    class="add-cart-btn"
+    type="button"
+    onclick='addToCart(${JSON.stringify(product)})'
+>
+    Order Now
+</button>
 
                 </div>
 
@@ -1558,17 +1557,13 @@ function showSearchResults(results, query) {
 
                         </div>
 
-
-                        <button
-                            class="add-cart-btn"
-                            type="button"
-                            onclick='addToCart(${JSON.stringify(product)})'
-                            aria-label="Add to Cart"
-                        >
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                        </button>
+                           <button
+    class="add-cart-btn"
+    type="button"
+    onclick='addToCart(${JSON.stringify(product)})'
+>
+    Order Now
+</button>
 
                     </div>
 
