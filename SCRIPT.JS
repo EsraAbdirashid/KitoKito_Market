@@ -255,7 +255,7 @@ const productsData = {
 
   {
     name: "Car Seat Cover",
-    image: "images/products/car-seat-cover.jpg",
+    image: "images/car seat 10pcs.jpg.jpeg",
   },
 
   {
@@ -731,6 +731,7 @@ const individualProducts = {
   "Car Seat Cover": [
     {
       name: "Car Seat Cover",
+      image: "images/car seat 10pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 10
     }
