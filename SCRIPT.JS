@@ -21,7 +21,6 @@ if (menuToggle && navMenu) {
   });
 }
 
-
 /* =========================
    MOBILE SEARCH
 ========================= */
@@ -30,15 +29,10 @@ const mobileSearch = document.querySelector(".mobile-search");
 const searchBox = document.querySelector(".search-box");
 
 if (mobileSearch && searchBox) {
-
-    mobileSearch.addEventListener("click", () => {
-
-        searchBox.classList.toggle("mobile-show");
-
-    });
-
+  mobileSearch.addEventListener("click", () => {
+    searchBox.classList.toggle("mobile-show");
+  });
 }
-
 
 /* =========================================================
    ALL CATEGORIES DROPDOWN
@@ -78,7 +72,6 @@ if (categoryBtn && categoryDropdown) {
   });
 }
 
-
 /* =========================================================
    ACTIVE NAV LINK
 ========================================================= */
@@ -109,7 +102,6 @@ navLinks.forEach((link) => {
     }
   });
 });
-
 
 /* =========================================================
    HERO SLIDER
@@ -181,7 +173,6 @@ dots.forEach((dot, index) => {
   });
 });
 
-
 /* =========================================================
    PRODUCT / SUBCATEGORY DATA
 ========================================================= */
@@ -190,230 +181,229 @@ const productsData = {
   /* =====================================================
        HOME & KITCHEN
     ===================================================== */
-       home: [
-  {
-    name: "Washing Machine",
-    image: "images/washin machine.jpeg",
-  },
+  home: [
+    {
+      name: "Washing Machine",
+      image: "images/washin machine.jpeg",
+    },
 
-  {
-    name: "Mini Household Products",
-    image: "images/min.jpeg",
-  },
+    {
+      name: "Mini Household Products",
+      image: "images/min.jpeg",
+    },
 
-  {
-    name: "Cutlery",
-    image: "images/cultery.jpeg",
-  },
+    {
+      name: "Cutlery",
+      image: "images/cultery.jpeg",
+    },
 
-  {
-    name: "Cooking Tools",
-    image: "images/cooking-tools.jpeg",
-  },
+    {
+      name: "Cooking Tools",
+      image: "images/cooking-tools.jpeg",
+    },
 
-  {
-    name: "Storage Baskets",
-    image: "images/home-basket.jpeg",
-  },
+    {
+      name: "Storage Baskets",
+      image: "images/home-basket.jpeg",
+    },
 
-  {
-    name: "Home Accessories",
-    image: "images/home-access.jpeg",
-  },
+    {
+      name: "Home Accessories",
+      image: "images/home-access.jpeg",
+    },
 
-  {
-    name: "Refrigerator",
-    image: "images/talaagad.jpeg",
-  },
+    {
+      name: "Refrigerator",
+      image: "images/talaagad.jpeg",
+    },
 
-  {
-    name: "TCL TV",
-    image: "images/TCL TV.jpeg",
-  },
-],
-
+    {
+      name: "TCL TV",
+      image: "images/TCL TV.jpeg",
+    },
+  ],
 
   /* =====================================================
        CAR ACCESSORIES
     ===================================================== */
 
-     car: [
-  {
-    name: "Jump Starter",
-    image: "images/jump starter 50pcs.jpg.jpeg",
-  },
+  car: [
+    {
+      name: "Jump Starter",
+      image: "images/jump starter 50pcs.jpg.jpeg",
+    },
 
-  {
-    name: "Car USB Charger",
-    image: "images/car usb charger 20pcs.jpg.jpeg",
-  },
+    {
+      name: "Car USB Charger",
+      image: "images/car usb charger 20pcs.jpg.jpeg",
+    },
 
-  {
-    name: "Car Sun Shade",
-    image: "images/car sun shade 300pcs.jpg.jpeg",
-  },
+    {
+      name: "Car Sun Shade",
+      image: "images/car sun shade 300pcs.jpg.jpeg",
+    },
 
-  {
-    name: "Car Seat Cover",
-    image: "images/car seat 10pcs.jpg.jpeg",
-  },
+    {
+      name: "Car Seat Cover",
+      image: "images/car seat 10pcs.jpg.jpeg",
+    },
 
-  {
-    name: "Car Phone Holder",
-    image: "images/car phone holder 50 pcs.jpg.jpeg",
-  },
+    {
+      name: "Car Phone Holder",
+      image: "images/car phone holder 50 pcs.jpg.jpeg",
+    },
 
-  {
-    name: "Car Headlights",
-    image: "images/car headlights 5pcs.jpg.jpeg",
-  },
+    {
+      name: "Car Headlights",
+      image: "images/car headlights 5pcs.jpg.jpeg",
+    },
 
-  {
-    name: "Car Cleaner Set",
-    image: "images/car cleaner set 700pcs.jpg.jpeg",
-  },
+    {
+      name: "Car Cleaner Set",
+      image: "images/car cleaner set 700pcs.jpg.jpeg",
+    },
 
-  {
-    name: "Car Air Freshener",
-    image: "images/car air freshener 15pcs.jpg.jpeg",
-  },
+    {
+      name: "Car Air Freshener",
+      image: "images/car air freshener 15pcs.jpg.jpeg",
+    },
 
-  {
-    name: "Car Wheel Cover",
-    image: "images/50pcs car wheel.jpg.jpeg",
-  },
+    {
+      name: "Car Wheel Cover",
+      image: "images/50pcs car wheel.jpg.jpeg",
+    },
 
-  {
-    name: "Car Accessory",
-    image: "images/100pcs.jpg.jpeg",
-  },
-],
+    {
+      name: "Car Accessory",
+      image: "images/100pcs.jpg.jpeg",
+    },
+  ],
 
   /* =====================================================
        STATIONERY
     ===================================================== */
 
-       stationery: [
-  {
-    name: "A4 Glossy",
-    image: "images/a4 glossy 200pcs.jpg",
-  },
+  stationery: [
+    {
+      name: "A4 Glossy",
+      image: "images/a4 glossy 200pcs.jpg",
+    },
 
-  {
-    name: "Canon iR2224-1",
-    image: "images/Canon-iR2224-1(1pcs).jpg",
-  },
+    {
+      name: "Canon iR2224-1",
+      image: "images/Canon-iR2224-1(1pcs).jpg",
+    },
 
-  {
-    name: "Cutter",
-    image: "images/Cutter(50pcs).jpg",
-  },
+    {
+      name: "Cutter",
+      image: "images/Cutter(50pcs).jpg",
+    },
 
-  {
-    name: "Desk Title",
-    image: "images/desk title(50pcs).jpg",
-  },
+    {
+      name: "Desk Title",
+      image: "images/desk title(50pcs).jpg",
+    },
 
-  {
-    name: "Envelopes",
-    image: "images/envelops(500pcs).jpg",
-  },
+    {
+      name: "Envelopes",
+      image: "images/envelops(500pcs).jpg",
+    },
 
-  {
-    name: "Epson",
-    image: "images/epson(30pcs) .jpg",
-  },
+    {
+      name: "Epson",
+      image: "images/epson(30pcs) .jpg",
+    },
 
-  {
-    name: "Eraser and Cutting",
-    image: "images/eraser and cutter(1000pcs).jpg",
-  },
+    {
+      name: "Eraser and Cutting",
+      image: "images/eraser and cutter(1000pcs).jpg",
+    },
 
-  {
-    name: "Feather Flags",
-    image: "images/feather flags(100pcs) .jpg",
-  },
+    {
+      name: "Feather Flags",
+      image: "images/feather flags(100pcs) .jpg",
+    },
 
-  {
-    name: "File Folders",
-    image: "images/file folders800pcs.jpg",
-  },
+    {
+      name: "File Folders",
+      image: "images/file folders800pcs.jpg",
+    },
 
-  {
-    name: "Highlighters",
-    image: "images/highlightere 1000pcs.jpg",
-  },
+    {
+      name: "Highlighters",
+      image: "images/highlightere 1000pcs.jpg",
+    },
 
-  {
-    name: "HP LaserJet Pro Printer",
-    image: "images/products/hp-laserjet-pro-printer.jpg",
-  },
+    {
+      name: "HP LaserJet Pro Printer",
+      image: "images/HP-LaserJet-Pro-3001dw-Laser-Pri(10pcs).jpg",
+    },
 
-  {
-    name: "Inks",
-    image: "images/inks.jpg",
-  },
+    {
+      name: "Inks",
+      image: "images/inks.jpg",
+    },
 
-  {
-    name: "Konica",
-    image: "images/products/konica.jpg",
-  },
+    {
+      name: "Konica",
+      image: "images/products/konica.jpg",
+    },
 
-  {
-    name: "Marker",
-    image: "images/products/marker.jpg",
-  },
+    {
+      name: "Marker",
+      image: "images/products/marker.jpg",
+    },
 
-  {
-    name: "Note Books",
-    image: "images/products/note-books.jpg",
-  },
+    {
+      name: "Note Books",
+      image: "images/products/note-books.jpg",
+    },
 
-  {
-    name: "Pen",
-    image: "images/products/pen.jpg",
-  },
+    {
+      name: "Pen",
+      image: "images/products/pen.jpg",
+    },
 
-  {
-    name: "Pencils",
-    image: "images/products/pencils.jpg",
-  },
+    {
+      name: "Pencils",
+      image: "images/products/pencils.jpg",
+    },
 
-  {
-    name: "PVC Cards",
-    image: "images/products/pvc-cards.jpg",
-  },
+    {
+      name: "PVC Cards",
+      image: "images/products/pvc-cards.jpg",
+    },
 
-  {
-    name: "Riso",
-    image: "images/products/riso.jpg",
-  },
+    {
+      name: "Riso",
+      image: "images/products/riso.jpg",
+    },
 
-  {
-    name: "Rulers",
-    image: "images/products/rulers.jpg",
-  },
+    {
+      name: "Rulers",
+      image: "images/products/rulers.jpg",
+    },
 
-  {
-    name: "Hand Sanitizer",
-    image: "images/products/hand-sanitizer.jpg",
-  },
+    {
+      name: "Hand Sanitizer",
+      image: "images/products/hand-sanitizer.jpg",
+    },
 
-  {
-    name: "Sticky Notes",
-    image: "images/products/sticky-notes.jpg",
-  },
+    {
+      name: "Sticky Notes",
+      image: "images/products/sticky-notes.jpg",
+    },
 
-  {
-    name: "Tray",
-    image: "images/products/tray.jpg",
-  },
+    {
+      name: "Tray",
+      image: "images/products/tray.jpg",
+    },
 
-  {
-    name: "White Board",
-    image: "images/products/white-board.jpg",
-  },
-],
+    {
+      name: "White Board",
+      image: "images/products/white-board.jpg",
+    },
+  ],
 
   /* =====================================================
        ELECTRONICS
@@ -477,7 +467,6 @@ const productsData = {
   ],
 };
 
-
 /* =========================================================
    CATEGORY NAMES
 ========================================================= */
@@ -491,7 +480,6 @@ const categoryNames = {
 
   electronics: "Electronics",
 };
-
 
 /* =========================================================
    GET CATEGORY ELEMENTS
@@ -516,7 +504,6 @@ const backToCategories = document.querySelector("#back-to-categories");
 const backToSubcategories = document.querySelector("#back-to-subcategories");
 
 const shopCategoryButtons = document.querySelectorAll(".shop-category-btn");
-
 
 /* =========================================================
    OPEN CATEGORY
@@ -600,7 +587,6 @@ function openCategory(category) {
   }, 100);
 }
 
-
 /* =========================================================
    SHOP NOW BUTTONS
 ========================================================= */
@@ -613,13 +599,11 @@ shopCategoryButtons.forEach((button) => {
   });
 });
 
-
 /* =========================================================
    INDIVIDUAL PRODUCTS DATA
 ========================================================= */
 
 const individualProducts = {
-
   /* =====================================================
      HOME & KITCHEN
   ===================================================== */
@@ -629,8 +613,8 @@ const individualProducts = {
       name: "Washing Machine",
       image: "images/washin machine.jpeg",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
 
   "Mini Household Products": [
@@ -638,17 +622,17 @@ const individualProducts = {
       name: "Mini Household Products",
       image: "images/min.jpeg",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
 
-  "Cutlery": [
+  Cutlery: [
     {
       name: "Cutlery",
       image: "images/cultery.jpeg",
       price: "Wholesale",
-      MOQ: 100
-    }
+      MOQ: 100,
+    },
   ],
 
   "Cooking Tools": [
@@ -656,8 +640,8 @@ const individualProducts = {
       name: "Cooking Tools",
       image: "images/cooking-tools.jpeg",
       price: "Wholesale",
-      MOQ: 150
-    }
+      MOQ: 150,
+    },
   ],
 
   "Storage Baskets": [
@@ -665,8 +649,8 @@ const individualProducts = {
       name: "Storage Baskets",
       image: "images/home-basket.jpeg",
       price: "Wholesale",
-      MOQ: 3000
-    }
+      MOQ: 3000,
+    },
   ],
 
   "Home Accessories": [
@@ -674,17 +658,17 @@ const individualProducts = {
       name: "Home Accessories",
       image: "images/home-access.jpeg",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
 
-  "Refrigerator": [
+  Refrigerator: [
     {
       name: "Refrigerator",
       image: "images/talaagad.jpeg",
       price: "Wholesale",
-      MOQ: 10
-    }
+      MOQ: 10,
+    },
   ],
 
   "TCL TV": [
@@ -692,10 +676,9 @@ const individualProducts = {
       name: "TCL TV",
       image: "images/TCL TV.jpeg",
       price: "Wholesale",
-      MOQ: 5
-    }
+      MOQ: 5,
+    },
   ],
-
 
   /* =====================================================
      CAR ACCESSORIES
@@ -706,8 +689,8 @@ const individualProducts = {
       name: "Jump Starter",
       image: "images/jump starter 50pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
 
   "Car USB Charger": [
@@ -715,17 +698,17 @@ const individualProducts = {
       name: "Car USB Charger",
       image: "images/car usb charger 20pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 20
-    }
+      MOQ: 20,
+    },
   ],
 
   "Car Sun Shade": [
     {
       name: "Car Sun Shade",
-       image: "images/car sun shade 300pcs.jpg.jpeg",
+      image: "images/car sun shade 300pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 300
-    }
+      MOQ: 300,
+    },
   ],
 
   "Car Seat Cover": [
@@ -733,17 +716,17 @@ const individualProducts = {
       name: "Car Seat Cover",
       image: "images/car seat 10pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 10
-    }
+      MOQ: 10,
+    },
   ],
 
   "Car Phone Holder": [
     {
       name: "Car Phone Holder",
-       image: "images/car phone holder 50 pcs.jpg.jpeg",
+      image: "images/car phone holder 50 pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
 
   "Car Headlights": [
@@ -751,8 +734,8 @@ const individualProducts = {
       name: "Car Headlights",
       image: "images/car headlights 5pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 5
-    }
+      MOQ: 5,
+    },
   ],
 
   "Car Cleaner Set": [
@@ -760,8 +743,8 @@ const individualProducts = {
       name: "Car Cleaner Set",
       image: "images/car cleaner set 700pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 700
-    }
+      MOQ: 700,
+    },
   ],
 
   "Car Air Freshener": [
@@ -769,17 +752,17 @@ const individualProducts = {
       name: "Car Air Freshener",
       image: "images/car air freshener 15pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 15
-    }
+      MOQ: 15,
+    },
   ],
 
   "Car Wheel Cover": [
     {
       name: "Car Wheel Cover",
-       image: "images/50pcs car wheel.jpg.jpeg",
+      image: "images/50pcs car wheel.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
 
   "Car Accessory": [
@@ -787,10 +770,9 @@ const individualProducts = {
       name: "Car Accessory",
       image: "images/100pcs.jpg.jpeg",
       price: "Wholesale",
-      MOQ: 100
-    }
+      MOQ: 100,
+    },
   ],
-
 
   /* =====================================================
      STATIONERY
@@ -801,8 +783,8 @@ const individualProducts = {
       name: "A4 Glossy",
       image: "images/a4 glossy 200pcs.jpg",
       price: "Wholesale",
-      MOQ: 200
-    }
+      MOQ: 200,
+    },
   ],
 
   "Canon iR2224-1": [
@@ -810,17 +792,17 @@ const individualProducts = {
       name: "Canon iR2224-1",
       image: "images/Canon-iR2224-1(1pcs).jpg",
       price: "Wholesale",
-      MOQ: 1
-    }
+      MOQ: 1,
+    },
   ],
 
-  "Cutter": [
+  Cutter: [
     {
       name: "Cutter",
-       image: "images/Cutter(50pcs).jpg",
+      image: "images/Cutter(50pcs).jpg",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
 
   "Desk Title": [
@@ -828,26 +810,26 @@ const individualProducts = {
       name: "Desk Title",
       image: "images/desk title(50pcs).jpg",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
 
-  "Envelopes": [
+  Envelopes: [
     {
       name: "Envelopes",
       image: "images/envelops(500pcs).jpg",
       price: "Wholesale",
-      MOQ: 500
-    }
+      MOQ: 500,
+    },
   ],
 
-  "Epson": [
+  Epson: [
     {
       name: "Epson",
       image: "images/epson(30pcs) .jpg",
       price: "Wholesale",
-      MOQ: 30
-    }
+      MOQ: 30,
+    },
   ],
 
   "Eraser and Cutting": [
@@ -855,8 +837,8 @@ const individualProducts = {
       name: "Eraser and Cutting",
       image: "images/eraser and cutter(1000pcs).jpg",
       price: "Wholesale",
-      MOQ: 1000
-    }
+      MOQ: 1000,
+    },
   ],
 
   "Feather Flags": [
@@ -864,8 +846,8 @@ const individualProducts = {
       name: "Feather Flags",
       image: "images/feather flags(100pcs) .jpg",
       price: "Wholesale",
-      MOQ: 100
-    }
+      MOQ: 100,
+    },
   ],
 
   "File Folders": [
@@ -873,131 +855,132 @@ const individualProducts = {
       name: "File Folders",
       image: "images/file folders800pcs.jpg",
       price: "Wholesale",
-      MOQ: 800
-    }
+      MOQ: 800,
+    },
   ],
 
-  "Highlighters": [
+  Highlighters: [
     {
       name: "Highlighters",
+      image: "images/highlightere 1000pcs.jpg",
       price: "Wholesale",
-      MOQ: 1000
-    }
+      MOQ: 1000,
+    },
   ],
 
   "HP LaserJet Pro Printer": [
     {
       name: "HP LaserJet Pro Printer",
+      image: "images/HP-LaserJet-Pro-3001dw-Laser-Pri(10pcs).jpg",
       price: "Wholesale",
-      MOQ: 1
-    }
+      MOQ: 1,
+    },
   ],
 
-  "Inks": [
+  Inks: [
     {
       name: "Inks",
       image: "images/inks.jpg",
       price: "Wholesale",
-      MOQ: 1
-    }
+      MOQ: 1,
+    },
   ],
 
-  "Konica": [
+  Konica: [
     {
       name: "Konica",
       price: "Wholesale",
-      MOQ: 1
-    }
+      MOQ: 1,
+    },
   ],
 
-  "Marker": [
+  Marker: [
     {
       name: "Marker",
       price: "Wholesale",
-      MOQ: 2000
-    }
+      MOQ: 2000,
+    },
   ],
 
   "Note Books": [
     {
       name: "Note Books",
       price: "Wholesale",
-      MOQ: 3000
-    }
+      MOQ: 3000,
+    },
   ],
 
-  "Pen": [
+  Pen: [
     {
       name: "Pen",
       price: "Wholesale",
-      MOQ: 3000
-    }
+      MOQ: 3000,
+    },
   ],
 
-  "Pencils": [
+  Pencils: [
     {
       name: "Pencils",
       price: "Wholesale",
-      MOQ: 3000
-    }
+      MOQ: 3000,
+    },
   ],
 
   "PVC Cards": [
     {
       name: "PVC Cards",
       price: "Wholesale",
-      MOQ: 1000
-    }
+      MOQ: 1000,
+    },
   ],
 
-  "Riso": [
+  Riso: [
     {
       name: "Riso",
       price: "Wholesale",
-      MOQ: 1
-    }
+      MOQ: 1,
+    },
   ],
 
-  "Rulers": [
+  Rulers: [
     {
       name: "Rulers",
       price: "Wholesale",
-      MOQ: 1000
-    }
+      MOQ: 1000,
+    },
   ],
 
   "Hand Sanitizer": [
     {
       name: "Hand Sanitizer",
       price: "Wholesale",
-      MOQ: 100
-    }
+      MOQ: 100,
+    },
   ],
 
   "Sticky Notes": [
     {
       name: "Sticky Notes",
       price: "Wholesale",
-      MOQ: 300
-    }
+      MOQ: 300,
+    },
   ],
 
-  "Tray": [
+  Tray: [
     {
       name: "Tray",
       price: "Wholesale",
-      MOQ: 200
-    }
+      MOQ: 200,
+    },
   ],
 
   "White Board": [
     {
       name: "White Board",
       price: "Wholesale",
-      MOQ: 50
-    }
+      MOQ: 50,
+    },
   ],
-
 
   /* =====================================================
      ELECTRONICS
@@ -1014,10 +997,8 @@ const individualProducts = {
   "USB Flash Drives": [],
   "Phone Cases & Screen Protectors": [],
   "Power Strips & Extension Cables": [],
-  "Laptops": []
-
+  Laptops: [],
 };
-
 
 /* =========================================================
    OPEN INDIVIDUAL PRODUCTS
@@ -1149,7 +1130,6 @@ function openProducts(subcategory) {
   }, 100);
 }
 
-
 /* =========================================================
    VIEW PRODUCTS
 ========================================================= */
@@ -1167,7 +1147,6 @@ document.addEventListener("click", (event) => {
     openProducts(subcategory);
   }
 });
-
 
 /* =========================================================
    BACK TO CATEGORIES
@@ -1190,7 +1169,6 @@ if (backToCategories) {
   });
 }
 
-
 /* =========================================================
    BACK TO SUBCATEGORIES
 ========================================================= */
@@ -1210,7 +1188,6 @@ if (backToSubcategories) {
   });
 }
 
-
 /* =========================
    CART
 ========================= */
@@ -1223,21 +1200,18 @@ const cartCount = document.querySelector("#cart-count");
 const cartTotal = document.querySelector("#cart-total");
 
 document.querySelector(".cart-btn").addEventListener("click", () => {
-    cartPanel.classList.add("show");
+  cartPanel.classList.add("show");
 });
 
 document.querySelector("#close-cart").addEventListener("click", () => {
-    cartPanel.classList.remove("show");
+  cartPanel.classList.remove("show");
 });
 
-
 function updateCart() {
+  cartItems.innerHTML = "";
 
-    cartItems.innerHTML = "";
-
-    cart.forEach((product, index) => {
-
-        cartItems.innerHTML += `
+  cart.forEach((product, index) => {
+    cartItems.innerHTML += `
             <div class="cart-item">
 
                 <img
@@ -1267,67 +1241,53 @@ function updateCart() {
 
             </div>
         `;
+  });
 
-    });
+  cartCount.textContent = cart.length;
 
-    cartCount.textContent = cart.length;
-
-    /*
+  /*
        Since the product price is now "Wholesale"
        instead of a numeric price, the cart total
        will display Wholesale.
     */
 
-    cartTotal.textContent = cart.length > 0
-        ? "Wholesale"
-        : "$0.00";
+  cartTotal.textContent = cart.length > 0 ? "Wholesale" : "$0.00";
 }
-
 
 function addToCart(product) {
+  cart.push(product);
 
-    cart.push(product);
+  updateCart();
 
-    updateCart();
-
-    cartPanel.classList.add("show");
+  cartPanel.classList.add("show");
 }
-
 
 function removeFromCart(index) {
+  cart.splice(index, 1);
 
-    cart.splice(index, 1);
-
-    updateCart();
+  updateCart();
 }
-
 
 /* =========================
    CHECKOUT
 ========================= */
 
-const checkoutPanel =
-    document.querySelector("#checkout-panel");
+const checkoutPanel = document.querySelector("#checkout-panel");
 
-const checkoutItems =
-    document.querySelector("#checkout-items");
+const checkoutItems = document.querySelector("#checkout-items");
 
-const checkoutTotal =
-    document.querySelector("#checkout-total");
-
+const checkoutTotal = document.querySelector("#checkout-total");
 
 document.querySelector(".checkout-btn").addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
 
-    if (cart.length === 0) {
-        alert("Your cart is empty.");
-        return;
-    }
+  checkoutItems.innerHTML = "";
 
-    checkoutItems.innerHTML = "";
-
-    cart.forEach((product) => {
-
-        checkoutItems.innerHTML += `
+  cart.forEach((product) => {
+    checkoutItems.innerHTML += `
             <div class="checkout-item">
 
                 <div>
@@ -1348,50 +1308,32 @@ document.querySelector(".checkout-btn").addEventListener("click", () => {
 
             </div>
         `;
+  });
 
-    });
+  checkoutTotal.textContent = "Wholesale";
 
-    checkoutTotal.textContent = "Wholesale";
-
-    checkoutPanel.classList.add("show");
-
+  checkoutPanel.classList.add("show");
 });
-
 
 document.querySelector("#close-checkout").addEventListener("click", () => {
-
-    checkoutPanel.classList.remove("show");
-
+  checkoutPanel.classList.remove("show");
 });
-
 
 document.querySelector("#place-order").addEventListener("click", () => {
+  const name = document.querySelector("#customer-name").value.trim();
 
-    const name =
-        document.querySelector("#customer-name").value.trim();
+  const phone = document.querySelector("#customer-phone").value.trim();
 
-    const phone =
-        document.querySelector("#customer-phone").value.trim();
+  const address = document.querySelector("#customer-address").value.trim();
 
-    const address =
-        document.querySelector("#customer-address").value.trim();
+  if (!name || !phone || !address) {
+    alert("Please fill in all customer information.");
 
+    return;
+  }
 
-    if (!name || !phone || !address) {
-
-        alert("Please fill in all customer information.");
-
-        return;
-
-    }
-
-
-    alert(
-        "Order ready! Backend will be connected later."
-    );
-
+  alert("Order ready! Backend will be connected later.");
 });
-
 
 /* =========================
    WISHLIST
@@ -1399,77 +1341,49 @@ document.querySelector("#place-order").addEventListener("click", () => {
 
 let wishlist = [];
 
-const wishlistPanel =
-    document.querySelector("#wishlist-panel");
+const wishlistPanel = document.querySelector("#wishlist-panel");
 
-const wishlistItems =
-    document.querySelector("#wishlist-items");
+const wishlistItems = document.querySelector("#wishlist-items");
 
-const wishlistCount =
-    document.querySelector("#wishlist-count");
-
+const wishlistCount = document.querySelector("#wishlist-count");
 
 /* Open Wishlist */
 
-document
-    .querySelector(".wishlist-nav-btn")
-    .addEventListener("click", () => {
-
-        wishlistPanel.classList.add("show");
-
-    });
-
+document.querySelector(".wishlist-nav-btn").addEventListener("click", () => {
+  wishlistPanel.classList.add("show");
+});
 
 /* Close Wishlist */
 
-document
-    .querySelector("#close-wishlist")
-    .addEventListener("click", () => {
-
-        wishlistPanel.classList.remove("show");
-
-    });
-
+document.querySelector("#close-wishlist").addEventListener("click", () => {
+  wishlistPanel.classList.remove("show");
+});
 
 /* Add / Remove Wishlist */
 
 function toggleWishlist(product) {
+  const existingIndex = wishlist.findIndex(
+    (item) => item.name === product.name,
+  );
 
-    const existingIndex =
-        wishlist.findIndex(
-            item => item.name === product.name
-        );
+  if (existingIndex !== -1) {
+    wishlist.splice(existingIndex, 1);
+  } else {
+    wishlist.push(product);
+  }
 
-
-    if (existingIndex !== -1) {
-
-        wishlist.splice(existingIndex, 1);
-
-    } else {
-
-        wishlist.push(product);
-
-    }
-
-
-    updateWishlist();
-
+  updateWishlist();
 }
-
 
 /* Update Wishlist */
 
 function updateWishlist() {
+  wishlistItems.innerHTML = "";
 
-    wishlistItems.innerHTML = "";
+  wishlistCount.textContent = wishlist.length;
 
-    wishlistCount.textContent =
-        wishlist.length;
-
-
-    wishlist.forEach((product, index) => {
-
-        wishlistItems.innerHTML += `
+  wishlist.forEach((product, index) => {
+    wishlistItems.innerHTML += `
 
             <div class="wishlist-item">
 
@@ -1505,22 +1419,16 @@ function updateWishlist() {
             </div>
 
         `;
-
-    });
-
+  });
 }
-
 
 /* Remove */
 
 function removeFromWishlist(index) {
+  wishlist.splice(index, 1);
 
-    wishlist.splice(index, 1);
-
-    updateWishlist();
-
+  updateWishlist();
 }
-
 
 /* =========================
    SEARCH
@@ -1532,258 +1440,173 @@ const categoryBtnSearch = document.querySelector(".category-btn");
 
 let selectedSearchCategory = "All Categories";
 
-
 /* =========================
    CATEGORY FILTER
 ========================= */
 
-const searchCategoryItems =
-    document.querySelectorAll(".category-dropdown button");
+const searchCategoryItems = document.querySelectorAll(
+  ".category-dropdown button",
+);
 
 searchCategoryItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    selectedSearchCategory = item.textContent.trim();
 
-    item.addEventListener("click", () => {
-
-        selectedSearchCategory =
-            item.textContent.trim();
-
-        if (categoryBtnSearch) {
-
-            categoryBtnSearch.innerHTML =
-                `${selectedSearchCategory}
+    if (categoryBtnSearch) {
+      categoryBtnSearch.innerHTML = `${selectedSearchCategory}
                 <i class="fa-solid fa-chevron-down"></i>`;
+    }
 
-        }
-
-        if (categoryDropdown) {
-            categoryDropdown.classList.remove("show");
-        }
-
-    });
-
+    if (categoryDropdown) {
+      categoryDropdown.classList.remove("show");
+    }
+  });
 });
-
 
 /* =========================
    SEARCH BUTTON
 ========================= */
 
 if (searchButton && searchInput) {
-
-    searchButton.addEventListener("click", searchProducts);
-
+  searchButton.addEventListener("click", searchProducts);
 }
-
 
 /* =========================
    ENTER KEY
 ========================= */
 
 if (searchInput) {
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
 
-    searchInput.addEventListener("keydown", (event) => {
-
-        if (event.key === "Enter") {
-
-            event.preventDefault();
-
-            searchProducts();
-
-        }
-
-    });
-
+      searchProducts();
+    }
+  });
 }
-
 
 /* =========================
    CLEAR SEARCH
 ========================= */
 
 if (searchInput) {
-
-    searchInput.addEventListener("input", () => {
-
-        if (searchInput.value.trim() === "") {
-
-            hideSearchResults();
-
-        }
-
-    });
-
+  searchInput.addEventListener("input", () => {
+    if (searchInput.value.trim() === "") {
+      hideSearchResults();
+    }
+  });
 }
-
 
 /* =========================
    HIDE SEARCH RESULTS
 ========================= */
 
 function hideSearchResults() {
+  const searchResults = document.querySelector("#search-results");
 
-    const searchResults =
-        document.querySelector("#search-results");
+  if (!searchResults) {
+    return;
+  }
 
-    if (!searchResults) {
-        return;
-    }
+  searchResults.classList.remove("show");
 
-    searchResults.classList.remove("show");
-
-    searchResults.style.display = "none";
-
+  searchResults.style.display = "none";
 }
-
 
 /* =========================
    SEARCH PRODUCTS
 ========================= */
 
 function searchProducts() {
+  if (!searchInput) {
+    return;
+  }
 
-    if (!searchInput) {
-        return;
-    }
+  const query = searchInput.value.trim().toLowerCase();
 
-    const query =
-        searchInput.value.trim().toLowerCase();
+  /* Empty search */
 
+  if (!query) {
+    hideSearchResults();
 
-    /* Empty search */
+    return;
+  }
 
-    if (!query) {
+  const results = [];
 
-        hideSearchResults();
+  Object.entries(individualProducts).forEach(([subcategory, products]) => {
+    products.forEach((product) => {
+      const mainCategory = getMainCategory(subcategory);
 
-        return;
+      const categoryMatch =
+        selectedSearchCategory === "All Categories" ||
+        mainCategory === selectedSearchCategory;
 
-    }
+      const searchMatch =
+        product.name.toLowerCase().includes(query) ||
+        subcategory.toLowerCase().includes(query);
 
+      if (categoryMatch && searchMatch) {
+        results.push({
+          ...product,
+          subcategory,
+        });
+      }
+    });
+  });
 
-    const results = [];
-
-
-    Object.entries(individualProducts).forEach(
-        ([subcategory, products]) => {
-
-            products.forEach((product) => {
-
-                const mainCategory =
-                    getMainCategory(subcategory);
-
-                const categoryMatch =
-                    selectedSearchCategory === "All Categories" ||
-                    mainCategory === selectedSearchCategory;
-
-                const searchMatch =
-                    product.name
-                        .toLowerCase()
-                        .includes(query) ||
-
-                    subcategory
-                        .toLowerCase()
-                        .includes(query);
-
-
-                if (categoryMatch && searchMatch) {
-
-                    results.push({
-                        ...product,
-                        subcategory
-                    });
-
-                }
-
-            });
-
-        }
-    );
-
-
-    showSearchResults(results, query);
-
+  showSearchResults(results, query);
 }
-
 
 /* =========================
    GET MAIN CATEGORY
 ========================= */
 
 function getMainCategory(subcategory) {
+  for (const category in productsData) {
+    const subcategories = productsData[category];
 
-    for (const category in productsData) {
+    const exists = subcategories.some((item) => item.name === subcategory);
 
-        const subcategories =
-            productsData[category];
-
-        const exists =
-            subcategories.some(
-                (item) =>
-                    item.name === subcategory
-            );
-
-        if (exists) {
-
-            return categoryNames[category];
-
-        }
-
+    if (exists) {
+      return categoryNames[category];
     }
+  }
 
-    return "";
-
+  return "";
 }
-
 
 /* =========================
    SHOW SEARCH RESULTS
 ========================= */
 
 function showSearchResults(results, query) {
+  const searchResults = document.querySelector("#search-results");
 
-    const searchResults =
-        document.querySelector("#search-results");
+  const searchResultsGrid = document.querySelector("#search-results-grid");
 
-    const searchResultsGrid =
-        document.querySelector("#search-results-grid");
+  const searchResultsTitle = document.querySelector("#search-results-title");
 
-    const searchResultsTitle =
-        document.querySelector("#search-results-title");
+  if (!searchResults || !searchResultsGrid || !searchResultsTitle) {
+    return;
+  }
 
+  if (!query || query.trim() === "") {
+    hideSearchResults();
 
-    if (
-        !searchResults ||
-        !searchResultsGrid ||
-        !searchResultsTitle
-    ) {
+    return;
+  }
 
-        return;
+  searchResultsTitle.textContent = `Search Results for "${query}"`;
 
-    }
+  searchResultsGrid.innerHTML = "";
 
-
-    if (!query || query.trim() === "") {
-
-        hideSearchResults();
-
-        return;
-
-    }
-
-
-    searchResultsTitle.textContent =
-        `Search Results for "${query}"`;
-
-    searchResultsGrid.innerHTML = "";
-
-
-    /* =========================
+  /* =========================
        NO RESULTS
     ========================= */
 
-    if (results.length === 0) {
-
-        searchResultsGrid.innerHTML = `
+  if (results.length === 0) {
+    searchResultsGrid.innerHTML = `
 
             <div class="products-empty">
 
@@ -1800,26 +1623,17 @@ function showSearchResults(results, query) {
             </div>
 
         `;
+  } else {
 
-    }
-
-
-    /* =========================
+  /* =========================
        PRODUCTS FOUND
     ========================= */
+    results.forEach((product) => {
+      const card = document.createElement("div");
 
-    else {
+      card.className = "individual-product-card";
 
-        results.forEach((product) => {
-
-            const card =
-                document.createElement("div");
-
-            card.className =
-                "individual-product-card";
-
-
-            card.innerHTML = `
+      card.innerHTML = `
 
                 <div class="individual-product-image">
 
@@ -1881,85 +1695,58 @@ function showSearchResults(results, query) {
 
             `;
 
-            searchResultsGrid.appendChild(card);
+      searchResultsGrid.appendChild(card);
+    });
+  }
 
-        });
-
-    }
-
-
-    /* =========================
+  /* =========================
        SHOW RESULTS
     ========================= */
 
-    searchResults.style.display = "block";
+  searchResults.style.display = "block";
 
-    searchResults.classList.add("show");
+  searchResults.classList.add("show");
 
-
-    setTimeout(() => {
-
-        searchResults.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
-    }, 100);
-
+  setTimeout(() => {
+    searchResults.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, 100);
 }
-
 
 /* =========================
    NEWSLETTER
 ========================= */
 
-const newsletterForm =
-document.getElementById("newsletter-form");
+const newsletterForm = document.getElementById("newsletter-form");
 
-const newsletterEmail =
-document.getElementById("newsletter-email");
+const newsletterEmail = document.getElementById("newsletter-email");
 
-const newsletterMessage =
-document.getElementById("newsletter-message");
+const newsletterMessage = document.getElementById("newsletter-message");
 
 if (newsletterForm) {
+  newsletterForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    newsletterForm.addEventListener(
-        "submit",
-        function (e) {
+    const email = newsletterEmail.value.trim();
 
-            e.preventDefault();
+    if (email === "") {
+      newsletterMessage.textContent = "Please enter your email.";
 
-            const email =
-            newsletterEmail.value.trim();
+      newsletterMessage.style.color = "#ff4d4d";
 
-            if (email === "") {
+      return;
+    }
 
-                newsletterMessage.textContent =
-                "Please enter your email.";
+    newsletterMessage.textContent = "Thank you for subscribing!";
 
-                newsletterMessage.style.color =
-                "#ff4d4d";
+    newsletterMessage.style.color = "#00e676";
 
-                return;
-            }
+    newsletterForm.reset();
 
-            newsletterMessage.textContent =
-            "Thank you for subscribing!";
-
-            newsletterMessage.style.color =
-            "#00e676";
-
-            newsletterForm.reset();
-
-            setTimeout(() => {
-
-                newsletterMessage.textContent =
-                "";
-
-            }, 3000);
-
-        }
-    );
-
+    setTimeout(() => {
+      newsletterMessage.textContent = "";
+    }, 3000);
+  });
 }
