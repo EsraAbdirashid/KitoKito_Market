@@ -285,7 +285,7 @@ const productsData = {
 
   {
     name: "Car Accessory",
-    image: "images/",
+    image: "images/100pcs.jpg.jpeg",
   },
 ],
 
@@ -785,6 +785,7 @@ const individualProducts = {
   "Car Accessory": [
     {
       name: "Car Accessory",
+      image: "images/100pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 100
     }
