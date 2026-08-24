@@ -1346,7 +1346,7 @@ document.querySelector("#place-order").addEventListener("click", () => {
      PROFESSIONAL WHATSAPP ORDER
   ========================= */
 
-  const whatsappNumber = "251XXXXXXXXX";
+  const whatsappNumber = "251978839272";
 
   let message = `Hello Kitokito Market,
 
@@ -1377,6 +1377,10 @@ Price: ${product.price}
   message += `━━━━━━━━━━━━━━━━━━
 
 Thank you for your service.
+I look forward to your confirmation.
+
+Best regards,
+${name}`;
 
   const whatsappURL =
     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
