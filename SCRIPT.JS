@@ -280,7 +280,7 @@ const productsData = {
 
   {
     name: "Car Wheel Cover",
-    image: "images/products/car-wheel-cover.jpg",
+    image: "images/50pcs car wheel.jpg.jpeg",
   },
 
   {
@@ -776,6 +776,7 @@ const individualProducts = {
   "Car Wheel Cover": [
     {
       name: "Car Wheel Cover",
+       image: "images/50pcs car wheel.jpg.jpeg",
       price: "Wholesale",
       MOQ: 50
     }
