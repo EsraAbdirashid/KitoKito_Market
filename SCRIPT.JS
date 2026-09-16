@@ -405,11 +405,82 @@ const productsData = {
     },
   ],
 
-  /* =====================================================
-       ELECTRONICS
-    ===================================================== */
 
- 
+      /* =====================================================
+     ELECTRONICS
+===================================================== */
+
+electronics: [
+  {
+    name: "Phone Cases",
+    image: "images/products/phone-cases.jpg",
+  },
+
+  {
+    name: "Earphones",
+    image: "images/products/earphones.jpg",
+  },
+
+  {
+    name: "Bluetooth Speakers",
+    image: "images/products/bluetooth-speakers.jpg",
+  },
+
+  {
+    name: "Chargers & Adapters",
+    image: "images/products/chargers-adapters.jpg",
+  },
+
+  {
+    name: "Covers",
+    image: "images/products/covers.jpg",
+  },
+
+  {
+    name: "Headphones",
+    image: "images/products/headphones.jpg",
+  },
+
+  {
+    name: "Laptops",
+    image: "images/products/laptops.jpg",
+  },
+
+  {
+    name: "Power Banks",
+    image: "images/products/power-banks.jpg",
+  },
+
+  {
+    name: "Power Strips",
+    image: "images/products/power-strips.jpg",
+  },
+
+  {
+    name: "Screen Protectors",
+    image: "images/products/screen-protectors.jpg",
+  },
+
+  {
+    name: "Smart Phones",
+    image: "images/products/smart-phones.jpg",
+  },
+
+  {
+    name: "Smart Watches",
+    image: "images/products/smart-watches.jpg",
+  },
+
+  {
+    name: "USB Cables",
+    image: "images/products/usb-cables.jpg",
+  },
+
+  {
+    name: "USB Flash Drives",
+    image: "images/products/usb-flash-drives.jpg",
+  },
+],
 };
 
 /* =========================================================
