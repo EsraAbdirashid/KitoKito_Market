@@ -1206,70 +1206,7 @@ function openProducts(subcategory) {
 
     card.className = "individual-product-card";
 
-    card.innerHTML = `
-
-            <div class="individual-product-image">
-
-                <button
-                    class="wishlist-btn"
-                    type="button"
-                    onclick='toggleWishlist(${JSON.stringify(product)})'
-                    aria-label="Add to wishlist"
-                >
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-
-
-                <img
-                    src="${product.image}"
-                    alt="${product.name}"
-                >
-
-            </div>
-
-
-            <div class="individual-product-info">
-
-              
-
-
-                <h3>
-                    ${product.name}
-                </h3>
-
-
-                <div class="individual-product-bottom">
-
-                    <div class="product-price-moq">
-
-                        <strong>
-                            ${product.price}
-                        </strong>
-
-                        <span class="product-moq">
-                            MOQ: ${product.MOQ}
-                        </span>
-
-                    </div>
-
-
-                    <button
-    class="add-cart-btn"
-    type="button"
-    onclick='addToCart(${JSON.stringify(product)})'
->
-    Order Now
-</button>
-
-                </div>
-
-            </div>
-
-        `;
-
-    productsGrid.appendChild(card);
-  });
-
+   
   /* Show products */
 
   productsView.classList.add("show");
