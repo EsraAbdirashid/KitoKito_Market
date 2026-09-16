@@ -1206,7 +1206,85 @@ function openProducts(subcategory) {
 
     card.className = "individual-product-card";
 
-   
+              card.innerHTML = `
+  <div class="individual-product-image">
+    <button class="wishlist-btn" type="button"
+      onclick='toggleWishlist(${JSON.stringify(product)})'
+      aria-label="Add to wishlist">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <img src="${product.image}" alt="${product.name}">
+  </div>
+
+  <div class="individual-product-info">
+
+    <h3>${product.name}</h3>
+
+    <strong class="product-wholesale">
+      ${product.price}
+    </strong>
+
+    <div class="product-options">
+
+      <label for="type-${product.name.replace(/\s+/g, "-")}">
+        Type:
+      </label>
+
+      <select
+        id="type-${product.name.replace(/\s+/g, "-")}"
+        class="product-type-select"
+      >
+        <option value="">Select Type</option>
+
+        ${
+          product.types && product.types.length
+            ? product.types
+                .map(type => `<option value="${type}">${type}</option>`)
+                .join("")
+            : `<option value="">Types will be added</option>`
+        }
+      </select>
+
+
+      <label for="model-${product.name.replace(/\s+/g, "-")}">
+        Model:
+      </label>
+
+      <select
+        id="model-${product.name.replace(/\s+/g, "-")}"
+        class="product-model-select"
+      >
+        <option value="">Select Model</option>
+
+        ${
+          product.models && product.models.length
+            ? product.models
+                .map(model => `<option value="${model}">${model}</option>`)
+                .join("")
+            : `<option value="">Models will be added</option>`
+        }
+      </select>
+
+    </div>
+
+
+    <span class="product-moq">
+      MOQ: ${product.MOQ}
+    </span>
+
+
+    <button
+      class="add-cart-btn"
+      type="button"
+      onclick='orderElectronics(${JSON.stringify(product)})'
+    >
+      Order Now
+    </button>
+
+  </div>
+`;
+      
   /* Show products */
 
   productsView.classList.add("show");
