@@ -1206,7 +1206,7 @@ function openProducts(subcategory) {
 
     card.className = "individual-product-card";
 
-              card.innerHTML = `
+            card.innerHTML = `
   <div class="individual-product-image">
     <button class="wishlist-btn" type="button"
       onclick='toggleWishlist(${JSON.stringify(product)})'
@@ -1284,7 +1284,10 @@ function openProducts(subcategory) {
 
   </div>
 `;
-      
+
+    productsGrid.appendChild(card);
+  });
+
   /* Show products */
 
   productsView.classList.add("show");
