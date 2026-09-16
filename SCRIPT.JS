@@ -994,10 +994,164 @@ const individualProducts = {
     },
   ],
 
-    /* =====================================================
+
+   /* =====================================================
    ELECTRONICS
 ===================================================== */
 
+"Phone Cases": [
+  {
+    name: "Phone Cases",
+    image: "images/products/phone-cases.jpg",
+    price: "Wholesale",
+    MOQ: 30,
+    types: [],
+    models: [],
+  },
+],
+
+"Earphones": [
+  {
+    name: "Earphones",
+    image: "images/products/earphones.jpg",
+    price: "Wholesale",
+    MOQ: 100,
+    types: [],
+    models: [],
+  },
+],
+
+"Bluetooth Speakers": [
+  {
+    name: "Bluetooth Speakers",
+    image: "images/products/bluetooth-speakers.jpg",
+    price: "Wholesale",
+    MOQ: 10,
+    types: [],
+    models: [],
+  },
+],
+
+"Chargers & Adapters": [
+  {
+    name: "Chargers & Adapters",
+    image: "images/products/chargers-adapters.jpg",
+    price: "Wholesale",
+    MOQ: "5 boxes × 12 pcs",
+    types: [],
+    models: [],
+  },
+],
+
+"Covers": [
+  {
+    name: "Covers",
+    image: "images/products/covers.jpg",
+    price: "Wholesale",
+    MOQ: 30,
+    types: [],
+    models: [],
+  },
+],
+
+"Headphones": [
+  {
+    name: "Headphones",
+    image: "images/products/headphones.jpg",
+    price: "Wholesale",
+    MOQ: 10,
+    types: [],
+    models: [],
+  },
+],
+
+"Laptops": [
+  {
+    name: "Laptops",
+    image: "images/products/laptops.jpg",
+    price: "Wholesale",
+    MOQ: 10,
+    types: [],
+    models: [],
+  },
+],
+
+"Power Banks": [
+  {
+    name: "Power Banks",
+    image: "images/products/power-banks.jpg",
+    price: "Wholesale",
+    MOQ: 50,
+    types: [],
+    models: [],
+  },
+],
+
+"Power Strips": [
+  {
+    name: "Power Strips",
+    image: "images/products/power-strips.jpg",
+    price: "Wholesale",
+    MOQ: "",
+    types: [],
+    models: [],
+  },
+],
+
+"Screen Protectors": [
+  {
+    name: "Screen Protectors",
+    image: "images/products/screen-protectors.jpg",
+    price: "Wholesale",
+    MOQ: 200,
+    types: [],
+    models: [],
+  },
+],
+
+"Smart Phones": [
+  {
+    name: "Smart Phones",
+    image: "images/products/smart-phones.jpg",
+    price: "Wholesale",
+    MOQ: "3 boxes × 12 pcs",
+    types: [],
+    models: [],
+  },
+],
+
+"Smart Watches": [
+  {
+    name: "Smart Watches",
+    image: "images/products/smart-watches.jpg",
+    price: "Wholesale",
+    MOQ: 50,
+    types: [],
+    models: [],
+  },
+],
+
+"USB Cables": [
+  {
+    name: "USB Cables",
+    image: "images/products/usb-cables.jpg",
+    price: "Wholesale",
+    MOQ: 30,
+    types: [],
+    models: [],
+  },
+],
+
+"USB Flash Drives": [
+  {
+    name: "USB Flash Drives",
+    image: "images/products/usb-flash-drives.jpg",
+    price: "Wholesale",
+    MOQ: 70,
+    types: [],
+    models: [],
+  },
+],
 };
 
 /* =========================================================
