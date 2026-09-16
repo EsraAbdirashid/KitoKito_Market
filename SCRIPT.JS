@@ -993,24 +993,38 @@ const individualProducts = {
       MOQ: 50,
     },
   ],
+  
+/* =====================================================
+   ELECTRONICS
+===================================================== */
 
-  /* =====================================================
-     ELECTRONICS
-     DATA WILL BE ADDED LATER
-  ===================================================== */
+"Phone Cases": [],
 
-  "Smartphones — iPhone, Samsung": [],
-  "Earphones & Headphones": [],
-  "Bluetooth Speakers": [],
-  "Smart Watches": [],
-  "Power Banks": [],
-  "Chargers & Adapters": [],
-  "USB Cables": [],
-  "USB Flash Drives": [],
-  "Phone Cases & Screen Protectors": [],
-  "Power Strips & Extension Cables": [],
-  Laptops: [],
-};
+"Earphones": [],
+
+"Bluetooth Speakers": [],
+
+"Chargers & Adapters": [],
+
+"Covers": [],
+
+"Headphones": [],
+
+"Laptops": [],
+
+"Power Banks": [],
+
+"Power Strips": [],
+
+"Screen Protectors": [],
+
+"Smart Phones": [],
+
+"Smart Watches": [],
+
+"USB Cables": [],
+
+"USB Flash Drives": [],
 
 /* =========================================================
    OPEN INDIVIDUAL PRODUCTS
