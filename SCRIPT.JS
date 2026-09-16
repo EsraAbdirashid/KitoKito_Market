@@ -993,38 +993,9 @@ const individualProducts = {
       MOQ: 50,
     },
   ],
-  
-/* =====================================================
-   ELECTRONICS
-===================================================== */
 
-"Phone Cases": [],
-
-"Earphones": [],
-
-"Bluetooth Speakers": [],
-
-"Chargers & Adapters": [],
-
-"Covers": [],
-
-"Headphones": [],
-
-"Laptops": [],
-
-"Power Banks": [],
-
-"Power Strips": [],
-
-"Screen Protectors": [],
-
-"Smart Phones": [],
-
-"Smart Watches": [],
-
-"USB Cables": [],
-
-"USB Flash Drives": [],
+ 
+};
 
 /* =========================================================
    OPEN INDIVIDUAL PRODUCTS
