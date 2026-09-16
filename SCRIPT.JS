@@ -409,62 +409,7 @@ const productsData = {
        ELECTRONICS
     ===================================================== */
 
-  electronics: [
-    {
-      name: "Smartphones — iPhone, Samsung",
-      image: "images/products/smartphones.jpg",
-    },
-
-    {
-      name: "Earphones & Headphones",
-      image: "images/products/earphones-headphones.jpg",
-    },
-
-    {
-      name: "Bluetooth Speakers",
-      image: "images/products/bluetooth-speakers.jpg",
-    },
-
-    {
-      name: "Smart Watches",
-      image: "images/products/smart-watches.jpg",
-    },
-
-    {
-      name: "Power Banks",
-      image: "images/products/power-banks.jpg",
-    },
-
-    {
-      name: "Chargers & Adapters",
-      image: "images/products/chargers-adapters.jpg",
-    },
-
-    {
-      name: "USB Cables",
-      image: "images/products/usb-cables.jpg",
-    },
-
-    {
-      name: "USB Flash Drives",
-      image: "images/products/usb-flash-drives.jpg",
-    },
-
-    {
-      name: "Phone Cases & Screen Protectors",
-      image: "images/products/phone-cases-screen-protectors.jpg",
-    },
-
-    {
-      name: "Power Strips & Extension Cables",
-      image: "images/products/power-strips-extension-cables.jpg",
-    },
-
-    {
-      name: "Laptops",
-      image: "images/products/laptops.jpg",
-    },
-  ],
+ 
 };
 
 /* =========================================================
