@@ -1101,8 +1101,7 @@ const individualProducts = {
     image: "images/products/power-strips.jpg",
     price: "Wholesale",
     MOQ: "",
-    types: [],
-    models: [],
+  
   },
 ],
 
