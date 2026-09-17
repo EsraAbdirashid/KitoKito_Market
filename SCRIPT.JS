@@ -1640,42 +1640,7 @@ ORDER DETAILS
 
 `;
 
-  cart.forEach((product, index) => {
-    message += `${index + 1}. ${product.name}
-MOQ: ${product.MOQ} pcs
-Price: ${product.price}
 
-`;
-  });
-
-  message += `━━━━━━━━━━━━━━━━━━
-
-Thank you for your service.
-I look forward to your confirmation.
-
-Best regards,
-${name}`;
-
-  const whatsappURL =
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-  window.open(whatsappURL, "_blank");
-
-  // Clear customer information
-document.querySelector("#customer-name").value = "";
-document.querySelector("#customer-phone").value = "";
-document.querySelector("#customer-address").value = "";
-
-// Close checkout panel
-checkoutPanel.classList.remove("show");
-
-// Clear cart
-cart.length = 0;
-
-// Update cart UI
-updateCart();
-
-});
 
 /* =========================
    WISHLIST
