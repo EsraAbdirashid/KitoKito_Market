@@ -1121,8 +1121,7 @@ const individualProducts = {
     image: "images/products/smart-phones.jpg",
     price: "Wholesale",
     MOQ: "3 boxes × 12 pcs",
-    types: [],
-    models: [],
+   
   },
 ],
 
