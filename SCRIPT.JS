@@ -1227,48 +1227,7 @@ function openProducts(subcategory) {
       ${product.price}
     </strong>
 
-    <div class="product-options">
-
-      <label for="type-${product.name.replace(/\s+/g, "-")}">
-        Type:
-      </label>
-
-      <select
-        id="type-${product.name.replace(/\s+/g, "-")}"
-        class="product-type-select"
-      >
-        <option value="">Select Type</option>
-
-        ${
-          product.types && product.types.length
-            ? product.types
-                .map(type => `<option value="${type}">${type}</option>`)
-                .join("")
-            : `<option value="">Types will be added</option>`
-        }
-      </select>
-
-
-      <label for="model-${product.name.replace(/\s+/g, "-")}">
-        Model:
-      </label>
-
-      <select
-        id="model-${product.name.replace(/\s+/g, "-")}"
-        class="product-model-select"
-      >
-        <option value="">Select Model</option>
-
-        ${
-          product.models && product.models.length
-            ? product.models
-                .map(model => `<option value="${model}">${model}</option>`)
-                .join("")
-            : `<option value="">Models will be added</option>`
-        }
-      </select>
-
-    </div>
+   
 
 
     <span class="product-moq">
