@@ -1263,7 +1263,28 @@ function openProducts(subcategory) {
   }, 100);
 }
 
+function orderElectronics(product) {
 
+  const type = prompt("Please enter the Type:");
+
+  if (type === null || type.trim() === "") {
+    return;
+  }
+
+  const model = prompt("Please enter the Model:");
+
+  if (model === null || model.trim() === "") {
+    return;
+  }
+
+  const selectedProduct = {
+    ...product,
+    selectedType: type.trim(),
+    selectedModel: model.trim(),
+  };
+
+  addToCart(selectedProduct);
+}
 
 /* =========================================================
    VIEW PRODUCTS
