@@ -473,7 +473,7 @@ electronics: [
 
   {
     name: "USB Cables",
-    image: "images/products/usb-cables.jpg",
+    image: "images/electronics/usb-cables.jpg",
   },
 
   {
