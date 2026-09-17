@@ -1469,7 +1469,43 @@ function updateCart() {
                     alt="${product.name}"
                 >
 
-               
+               <div>
+    <h4>
+        ${product.name}
+    </h4>
+
+    <span>
+        ${product.price}
+    </span>
+
+    <small>
+        MOQ: ${product.MOQ}
+    </small>
+
+    ${
+      product.selectedType || product.selectedModel
+        ? `
+          <div class="cart-product-details">
+
+            ${
+              product.selectedType
+                ? `<small>Type: ${product.selectedType}</small>`
+                : ""
+            }
+
+            ${
+              product.selectedModel
+                ? `<small>Model: ${product.selectedModel}</small>`
+                : ""
+            }
+
+          </div>
+        `
+        : ""
+    }
+</div>
+
+<button onclick="removeFromCart(${index})">
         `;
   });
 
