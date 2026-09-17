@@ -438,7 +438,7 @@ electronics: [
 
   {
     name: "Headphones",
-    image: "images/products/headphones.jpg",
+    image: "images/electronics/headphones.jpg",
   },
 
   {
