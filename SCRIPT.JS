@@ -423,12 +423,12 @@ electronics: [
 
   {
     name: "Bluetooth Speakers",
-    image: "images/products/bluetooth-speakers.jpg",
+    image: "images/electronics/bluetooth-speakers.jpg",
   },
 
   {
     name: "Chargers & Adapters",
-    image: "images/products/chargers-adapters.jpg",
+    image: "images//chargers-adapters.jpg",
   },
 
   {
