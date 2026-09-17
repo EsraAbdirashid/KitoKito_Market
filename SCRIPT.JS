@@ -411,10 +411,6 @@ const productsData = {
 ===================================================== */
 
 electronics: [
-  {
-    name: "Phone Cases",
-    image: "images/electronics/phone-cases.jpg",
-  },
 
   {
     name: "Earphones",
