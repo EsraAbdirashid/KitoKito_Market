@@ -1028,7 +1028,7 @@ const individualProducts = {
 "Earphones": [
   {
     name: "Earphones",
-    image: "images/products/earphones.jpg",
+    image: "images/electronics/arphones 100pcs.jpg",
     price: "Wholesale",
     MOQ: 100,
    
