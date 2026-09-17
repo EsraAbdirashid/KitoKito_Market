@@ -1031,8 +1031,7 @@ const individualProducts = {
     image: "images/products/earphones.jpg",
     price: "Wholesale",
     MOQ: 100,
-    types: [],
-    models: [],
+   
   },
 ],
 
