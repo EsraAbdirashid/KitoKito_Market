@@ -1041,8 +1041,7 @@ const individualProducts = {
     image: "images/products/bluetooth-speakers.jpg",
     price: "Wholesale",
     MOQ: 10,
-    types: [],
-    models: [],
+   
   },
 ],
 
