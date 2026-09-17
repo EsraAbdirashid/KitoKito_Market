@@ -438,12 +438,12 @@ electronics: [
 
   {
     name: "Headphones",
-    image: "images/electronics/headphones.jpg",
+    image: "images/electronics/Headphones 10pcs.jpg",
   },
 
   {
     name: "Laptops",
-    image: "images/products/laptops.jpg",
+    image: "images/products/LAPTOPS 10pcs.jpg",
   },
 
   {
