@@ -1226,17 +1226,12 @@ function openProducts(subcategory) {
     <strong class="product-wholesale">
       ${product.price}
     </strong>
-
-   
-${
  
+<span class="product-moq">
+  MOQ: ${product.MOQ}
+</span>
 
-    <span class="product-moq">
-      MOQ: ${product.MOQ}
-    </span>
-
-
-    <button
+<button
   class="add-cart-btn"
   type="button"
   onclick='orderElectronics(${JSON.stringify(product)}, ${JSON.stringify(subcategory)})'
@@ -1244,7 +1239,7 @@ ${
   Order Now
 </button>
 
-  </div>
+</div>
 `;
 
     productsGrid.appendChild(card);
