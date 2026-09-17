@@ -478,7 +478,7 @@ electronics: [
 
   {
     name: "USB Flash Drives",
-    image: "images/products/usb-flash-drives.jpg",
+    image: "images/electronics/usb-flash-drives.jpg",
   },
 ],
 };
