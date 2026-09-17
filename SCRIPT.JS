@@ -1058,7 +1058,7 @@ const individualProducts = {
 "Covers": [
   {
     name: "Covers",
-    image: "images/products/covers.jpg",
+    image: "images/electronics",
     price: "Wholesale",
     MOQ: 30,
    
