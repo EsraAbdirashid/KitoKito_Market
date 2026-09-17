@@ -1091,8 +1091,7 @@ const individualProducts = {
     image: "images/products/power-banks.jpg",
     price: "Wholesale",
     MOQ: 50,
-    types: [],
-    models: [],
+  
   },
 ],
 
