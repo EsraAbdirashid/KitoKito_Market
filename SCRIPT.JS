@@ -1256,12 +1256,12 @@ ${
 
 
     <button
-      class="add-cart-btn"
-      type="button"
-      onclick='orderElectronics(${JSON.stringify(product)})'
-    >
-      Order Now
-    </button>
+  class="add-cart-btn"
+  type="button"
+  onclick='orderElectronics(${JSON.stringify(product)}, ${JSON.stringify(subcategory)})'
+>
+  Order Now
+</button>
 
   </div>
 `;
