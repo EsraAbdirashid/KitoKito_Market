@@ -468,7 +468,7 @@ electronics: [
 
   {
     name: "Smart Watches",
-    image: "images/electronics/smart-watches.jpg",
+    image: "images/electronics/Smart Watches 50pcs.jpg",
   },
 
   {
