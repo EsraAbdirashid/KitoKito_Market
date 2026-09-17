@@ -1282,6 +1282,125 @@ ${
     });
   }, 100);
 }
+function orderElectronics(product, subcategory) {
+
+  /* Non-Electronics products */
+  if (getMainCategory(subcategory) !== "Electronics") {
+    addToCart(product);
+    return;
+  }
+
+  /* Create order details box */
+  let modal = document.querySelector("#order-details-modal");
+
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.id = "order-details-modal";
+
+    modal.innerHTML = `
+      <div class="order-details-box">
+
+        <button
+          type="button"
+          class="order-details-close"
+          id="close-order-details"
+        >
+          &times;
+        </button>
+
+        <h3 id="order-details-title">
+          Order Product
+        </h3>
+
+        <p>
+          Enter the Type and Model you want.
+        </p>
+
+        <div class="order-details-field">
+
+          <label for="order-type-input">
+            Type
+          </label>
+
+          <input
+            type="text"
+            id="order-type-input"
+            placeholder="Enter Type"
+          >
+
+        </div>
+
+        <div class="order-details-field">
+
+          <label for="order-model-input">
+            Model
+          </label>
+
+          <input
+            type="text"
+            id="order-model-input"
+            placeholder="Enter Model"
+          >
+
+        </div>
+
+        <button
+          type="button"
+          class="order-details-add"
+          id="confirm-order-details"
+        >
+          Add to Cart
+        </button>
+
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    document
+      .querySelector("#close-order-details")
+      .addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+  }
+
+  document.querySelector("#order-details-title").textContent =
+    `Order ${product.name}`;
+
+  document.querySelector("#order-type-input").value = "";
+  document.querySelector("#order-model-input").value = "";
+
+  modal.classList.add("show");
+
+  document.querySelector("#confirm-order-details").onclick = () => {
+
+    const type =
+      document.querySelector("#order-type-input").value.trim();
+
+    const model =
+      document.querySelector("#order-model-input").value.trim();
+
+    if (!type || !model) {
+      return;
+    }
+
+    const selectedProduct = {
+      ...product,
+      selectedType: type,
+      selectedModel: model,
+    };
+
+    addToCart(selectedProduct);
+
+    modal.classList.remove("show");
+  };
+
+  modal.onclick = (event) => {
+    if (event.target === modal) {
+      modal.classList.remove("show");
+    }
+  };
+}
 
 /* =========================================================
    VIEW PRODUCTS
