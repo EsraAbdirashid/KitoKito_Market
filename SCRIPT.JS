@@ -433,7 +433,7 @@ electronics: [
 
   {
     name: "Covers",
-    image: "images/products/covers.jpg",
+    image: "images/electronics/covers.jpg",
   },
 
   {
