@@ -1552,29 +1552,7 @@ document.querySelector(".checkout-btn").addEventListener("click", () => {
 
   checkoutItems.innerHTML = "";
 
-  cart.forEach((product) => {
-    checkoutItems.innerHTML += `
-            <div class="checkout-item">
-
-                <div>
-
-                    <span>
-                        ${product.name}
-                    </span>
-
-                    <small>
-                        MOQ: ${product.MOQ}
-                    </small>
-
-                </div>
-
-                <strong>
-                    ${product.price}
-                </strong>
-
-            </div>
-        `;
-  });
+  
 
   checkoutTotal.textContent = "Wholesale";
 
