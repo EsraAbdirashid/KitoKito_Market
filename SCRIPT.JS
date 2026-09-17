@@ -1263,38 +1263,7 @@ function openProducts(subcategory) {
   }, 100);
 }
 
-function orderElectronics(product) {
-  const productKey = product.name.replace(/\s+/g, "-");
 
-  const typeSelect = document.querySelector(
-    `#type-${productKey}`
-  );
-
-  const modelSelect = document.querySelector(
-    `#model-${productKey}`
-  );
-
-  const type = typeSelect ? typeSelect.value : "";
-  const model = modelSelect ? modelSelect.value : "";
-
-  if (product.types && product.types.length > 0 && !type) {
-    alert("Please select a Type.");
-    return;
-  }
-
-  if (product.models && product.models.length > 0 && !model) {
-    alert("Please select a Model.");
-    return;
-  }
-
-  const selectedProduct = {
-    ...product,
-    selectedType: type,
-    selectedModel: model,
-  };
-
-  addToCart(selectedProduct);
-}
 
 /* =========================================================
    VIEW PRODUCTS
