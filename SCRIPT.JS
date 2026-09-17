@@ -1131,8 +1131,7 @@ const individualProducts = {
     image: "images/products/smart-watches.jpg",
     price: "Wholesale",
     MOQ: 50,
-    types: [],
-    models: [],
+   
   },
 ],
 
