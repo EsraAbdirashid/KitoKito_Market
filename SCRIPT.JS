@@ -413,7 +413,7 @@ const productsData = {
 electronics: [
   {
     name: "Phone Cases",
-    image: "images/products/phone-cases.jpg",
+    image: "images/electronics/phone-cases.jpg",
   },
 
   {
