@@ -1088,7 +1088,7 @@ const individualProducts = {
 "Power Banks": [
   {
     name: "Power Banks",
-    image: "images/products/power-banks.jpg",
+    image: "images/electronics/Power Banks 50pcs.jpg",
     price: "Wholesale",
     MOQ: 50,
   
@@ -1100,7 +1100,7 @@ const individualProducts = {
     name: "Power Strips",
     image: "images/products/power-strips.jpg",
     price: "Wholesale",
-    MOQ: "",
+    MOQ: "10",
   
   },
 ],
