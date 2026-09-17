@@ -1061,8 +1061,7 @@ const individualProducts = {
     image: "images/products/covers.jpg",
     price: "Wholesale",
     MOQ: 30,
-    types: [],
-    models: [],
+   
   },
 ],
 
