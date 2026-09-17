@@ -1640,7 +1640,25 @@ ORDER DETAILS
 
 `;
 
+cart.forEach((product, index) => {
+  message += `${index + 1}. ${product.name}
+`;
 
+  if (product.selectedType) {
+    message += `Type: ${product.selectedType}
+`;
+  }
+
+  if (product.selectedModel) {
+    message += `Model: ${product.selectedModel}
+`;
+  }
+
+  message += `MOQ: ${product.MOQ} pcs
+Price: ${product.price}
+
+`;
+});
 
 /* =========================
    WISHLIST
