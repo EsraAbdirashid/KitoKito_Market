@@ -1068,7 +1068,7 @@ const individualProducts = {
 "Headphones": [
   {
     name: "Headphones",
-    image: "images/products/headphones.jpg",
+    image: "images/electronics/Headphones 10pcs.jpg",
     price: "Wholesale",
     MOQ: 10,
    
