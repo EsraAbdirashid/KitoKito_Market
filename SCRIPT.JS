@@ -1011,16 +1011,6 @@ const individualProducts = {
    ELECTRONICS
 ===================================================== */
 
-"Phone Cases": [
-  {
-    name: "Phone Cases",
-    image: "images/products/phone-cases.jpg",
-    price: "Wholesale",
-    MOQ: 30,
-   
-  },
-],
-
 "Earphones": [
   {
     name: "Earphones",
