@@ -418,7 +418,7 @@ electronics: [
 
   {
     name: "Earphones",
-    image: "images/products/earphones.jpg",
+    image: "images/electronics/arphones 100pcs.jpg",
   },
 
   {
