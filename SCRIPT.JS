@@ -2014,7 +2014,7 @@ function showSearchResults(results, query) {
                            <button
     class="add-cart-btn"
     type="button"
-    onclick='addToCart(${JSON.stringify(product)})'
+   onclick='orderElectronics(${JSON.stringify(product)}, ${JSON.stringify(product.subcategory)})'
 >
     Order Now
 </button>
