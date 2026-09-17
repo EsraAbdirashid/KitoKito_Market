@@ -1111,8 +1111,7 @@ const individualProducts = {
     image: "images/products/screen-protectors.jpg",
     price: "Wholesale",
     MOQ: 200,
-    types: [],
-    models: [],
+   
   },
 ],
 
