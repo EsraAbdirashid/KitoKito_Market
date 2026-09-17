@@ -1552,11 +1552,53 @@ document.querySelector(".checkout-btn").addEventListener("click", () => {
 
   checkoutItems.innerHTML = "";
 
-  
+  cart.forEach((product) => {
+  checkoutItems.innerHTML += `
+    <div class="checkout-item">
 
-  checkoutTotal.textContent = "Wholesale";
+      <div>
 
-  checkoutPanel.classList.add("show");
+        <span>
+          ${product.name}
+        </span>
+
+        ${
+          product.selectedType
+            ? `
+              <small>
+                Type: ${product.selectedType}
+              </small>
+            `
+            : ""
+        }
+
+        ${
+          product.selectedModel
+            ? `
+              <small>
+                Model: ${product.selectedModel}
+              </small>
+            `
+            : ""
+        }
+
+        <small>
+          MOQ: ${product.MOQ}
+        </small>
+
+      </div>
+
+      <strong>
+        ${product.price}
+      </strong>
+
+    </div>
+  `;
+});
+
+  // checkoutTotal.textContent = "Wholesale";
+
+  // checkoutPanel.classList.add("show");
 });
 
 document.querySelector("#close-checkout").addEventListener("click", () => {
