@@ -1471,26 +1471,37 @@ function updateCart() {
 
                 <div>
 
-                    <h4>
-                        ${product.name}
-                    </h4>
+           <h4>
+    ${product.name}
+</h4>
 
-                    <span>
-                        ${product.price}
-                    </span>
+<span>
+    ${product.price}
+</span>
 
-                    <small>
-                        MOQ: ${product.MOQ}
-                    </small>
+<small>
+    MOQ: ${product.MOQ}
+</small>
 
-                </div>
+${
+  product.selectedType || product.selectedModel
+    ? `
+      <div class="cart-product-details">
+        ${
+          product.selectedType
+            ? `<small>Type: ${product.selectedType}</small>`
+            : ""
+        }
 
-                <button onclick="removeFromCart(${index})">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
-
-            </div>
-        `;
+        ${
+          product.selectedModel
+            ? `<small>Model: ${product.selectedModel}</small>`
+            : ""
+        }
+      </div>
+    `
+    : ""
+}
   });
 
   cartCount.textContent = cart.length;
