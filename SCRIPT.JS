@@ -1151,8 +1151,7 @@ const individualProducts = {
     image: "images/products/usb-flash-drives.jpg",
     price: "Wholesale",
     MOQ: 70,
-    types: [],
-    models: [],
+   
   },
 ],
 };
