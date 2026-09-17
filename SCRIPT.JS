@@ -458,7 +458,7 @@ electronics: [
 
   {
     name: "Screen Protectors",
-    image: "images/products/screen-protectors.jpg",
+    image: "images/electronics/screen-protectors.jpg",
   },
 
   {
