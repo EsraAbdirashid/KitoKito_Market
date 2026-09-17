@@ -1229,43 +1229,7 @@ function openProducts(subcategory) {
 
    
 ${
-  getMainCategory(subcategory) === "Electronics"
-    ? `
-      <button
-        class="add-cart-btn"
-        type="button"
-        onclick='orderElectronics(${JSON.stringify(product)}, ${JSON.stringify(subcategory)})'
-      >
-        Order Now
-      </button>
-    `
-    : `
-      <button
-        class="add-cart-btn"
-        type="button"
-        onclick='orderElectronics(${JSON.stringify(product)}, ${JSON.stringify(subcategory)})'
-      >
-        Order Now
-      </button>
-    `
-}
-
-    <span class="product-moq">
-      MOQ: ${product.MOQ}
-    </span>
-
-
-    <button
-  class="add-cart-btn"
-  type="button"
-  onclick='orderElectronics(${JSON.stringify(product)}, ${JSON.stringify(subcategory)})'
->
-  Order Now
-</button>
-
-  </div>
-`;
-
+ 
     productsGrid.appendChild(card);
   });
 
