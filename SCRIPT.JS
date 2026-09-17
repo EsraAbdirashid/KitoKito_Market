@@ -463,7 +463,7 @@ electronics: [
 
   {
     name: "Smart Phones",
-    image: "images/products/smart-phones.jpg",
+    image: "images/electronics/smart-phones.jpg",
   },
 
   {
