@@ -1021,8 +1021,7 @@ const individualProducts = {
     image: "images/products/phone-cases.jpg",
     price: "Wholesale",
     MOQ: 30,
-    types: [],
-    models: [],
+   
   },
 ],
 
