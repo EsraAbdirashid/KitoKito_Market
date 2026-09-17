@@ -1138,7 +1138,7 @@ const individualProducts = {
 "USB Cables": [
   {
     name: "USB Cables",
-    image: "images/products/usb-cables.jpg",
+    image: "images/electronics/USB Cables 30pcs.jpg",
     price: "Wholesale",
     MOQ: 30,
    
@@ -1148,7 +1148,7 @@ const individualProducts = {
 "USB Flash Drives": [
   {
     name: "USB Flash Drives",
-    image: "images/products/usb-flash-drives.jpg",
+    image: "images/electronics/USB Flash Drives 70pcs.jpg",
     price: "Wholesale",
     MOQ: 70,
    
