@@ -1038,7 +1038,7 @@ const individualProducts = {
 "Bluetooth Speakers": [
   {
     name: "Bluetooth Speakers",
-    image: "images/products/bluetooth-speakers.jpg",
+    image: "images/electronics/Bluetooth Speakers 10pcs.jpg",
     price: "Wholesale",
     MOQ: 10,
    
@@ -1048,7 +1048,7 @@ const individualProducts = {
 "Chargers & Adapters": [
   {
     name: "Chargers & Adapters",
-    image: "images/products/chargers-adapters.jpg",
+    image: "images/electronics/Chargers & Adapters 5boxes 12pcs.jpg",
     price: "Wholesale",
     MOQ: "5 boxes × 12 pcs",
    
