@@ -443,7 +443,7 @@ electronics: [
 
   {
     name: "Laptops",
-    image: "images/products/LAPTOPS 10pcs.jpg",
+    image: "images/electronics/LAPTOPS 10pcs.jpg",
   },
 
   {
