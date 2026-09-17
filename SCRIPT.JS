@@ -1051,8 +1051,7 @@ const individualProducts = {
     image: "images/products/chargers-adapters.jpg",
     price: "Wholesale",
     MOQ: "5 boxes × 12 pcs",
-    types: [],
-    models: [],
+   
   },
 ],
 
