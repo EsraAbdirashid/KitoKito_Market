@@ -1596,9 +1596,9 @@ document.querySelector(".checkout-btn").addEventListener("click", () => {
   `;
 });
 
-  // checkoutTotal.textContent = "Wholesale";
+  checkoutTotal.textContent = "Wholesale";
 
-  // checkoutPanel.classList.add("show");
+  checkoutPanel.classList.add("show");
 });
 
 document.querySelector("#close-checkout").addEventListener("click", () => {
