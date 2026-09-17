@@ -1118,7 +1118,7 @@ const individualProducts = {
 "Smart Phones": [
   {
     name: "Smart Phones",
-    image: "images/products/smart-phones.jpg",
+    image: "images/electronics/smart phones 3box 12pcs.jpg",
     price: "Wholesale",
     MOQ: "3 boxes × 12 pcs",
    
