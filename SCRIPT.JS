@@ -1141,8 +1141,7 @@ const individualProducts = {
     image: "images/products/usb-cables.jpg",
     price: "Wholesale",
     MOQ: 30,
-    types: [],
-    models: [],
+   
   },
 ],
 
