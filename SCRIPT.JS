@@ -428,7 +428,7 @@ electronics: [
 
   {
     name: "Chargers & Adapters",
-    image: "images//chargers-adapters.jpg",
+    image: "images/electronics/chargers-adapters.jpg",
   },
 
   {
