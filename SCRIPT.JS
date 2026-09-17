@@ -1098,7 +1098,7 @@ const individualProducts = {
 "Power Strips": [
   {
     name: "Power Strips",
-    image: "images/products/power-strips.jpg",
+    image: "images/electronics/Power Strips.jpg",
     price: "Wholesale",
     MOQ: "10",
   
@@ -1108,7 +1108,7 @@ const individualProducts = {
 "Screen Protectors": [
   {
     name: "Screen Protectors",
-    image: "images/products/screen-protectors.jpg",
+    image: "images/electronics/Screen Protectors 200pcs.jpg",
     price: "Wholesale",
     MOQ: 200,
    
