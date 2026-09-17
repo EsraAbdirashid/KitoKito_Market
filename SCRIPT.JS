@@ -453,7 +453,7 @@ electronics: [
 
   {
     name: "Power Strips",
-    image: "images/electronics/power-strips.jpg",
+    image: "images/electronics/Power Strips.jpg",
   },
 
   {
