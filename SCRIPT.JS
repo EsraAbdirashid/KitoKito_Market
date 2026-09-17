@@ -423,7 +423,7 @@ electronics: [
 
   {
     name: "Bluetooth Speakers",
-    image: "images/electronics/bluetooth-speakers.jpg",
+    image: "images/electronics/Bluetooth Speakers 10pcs.jpg",
   },
 
   {
