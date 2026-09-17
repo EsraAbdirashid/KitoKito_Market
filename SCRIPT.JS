@@ -448,7 +448,7 @@ electronics: [
 
   {
     name: "Power Banks",
-    image: "images/electronics/power-banks.jpg",
+    image: "images/electronics/Power Banks 50pcs.jpg",
   },
 
   {
