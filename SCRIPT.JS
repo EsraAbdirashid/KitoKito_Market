@@ -1081,8 +1081,7 @@ const individualProducts = {
     image: "images/products/laptops.jpg",
     price: "Wholesale",
     MOQ: 10,
-    types: [],
-    models: [],
+   
   },
 ],
 
