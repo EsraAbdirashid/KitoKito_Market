@@ -428,7 +428,7 @@ electronics: [
 
   {
     name: "Chargers & Adapters",
-    image: "images/electronics/chargers-adapters.jpg",
+    image: "images/electronics/Chargers & Adapters 5boxes 12pcs.jpg",
   },
 
   {
