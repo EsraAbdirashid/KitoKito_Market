@@ -2464,6 +2464,44 @@ body {
     visibility: visible !important;
 }
 
+.cart-product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 3px;
+}
+
+.cart-product-details small {
+    color: #333;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.cart-item > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.cart-item span {
+    color: #fcb316;
+    font-weight: 700;
+}
+
+.cart-item small {
+    display: block;
+    color: #333;
+    font-size: 14px;
+}
+
+.cart-product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 .cart-footer {
    margin-top: auto;
     flex-shrink: 0;
