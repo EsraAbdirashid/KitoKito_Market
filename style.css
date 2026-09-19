@@ -2472,7 +2472,7 @@ body {
 }
 
 .cart-product-details small {
-    color: #333;
+    color:  #27316c;;
     font-size: 13px;
     font-weight: 700;
     line-height: 1.4;
@@ -2492,8 +2492,9 @@ body {
 
 .cart-item small {
     display: block;
-    color: #333;
+    color:  #27316c;;
     font-size: 14px;
+    font-weight: 700;
 }
 
 .cart-product-details {
