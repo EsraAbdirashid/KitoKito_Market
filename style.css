@@ -4216,3 +4216,49 @@ body {
     }
 
 }
+
+.custom-alert {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-alert.show {
+    display: flex;
+}
+
+.custom-alert-box {
+    width: 90%;
+    max-width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.custom-alert-box p {
+    margin: 0 0 20px;
+    color: #27316c;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.custom-alert-box button {
+    border: none;
+    padding: 9px 25px;
+    border-radius: 5px;
+    background: #27316c;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.custom-alert-box button:hover {
+    background: #fcb316;
+}
