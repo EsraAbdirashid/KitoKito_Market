@@ -1607,13 +1607,14 @@ document.querySelector("#place-order").addEventListener("click", () => {
   if (!name || !phone || !address) {
    showCustomAlert();
     return;
-  }
+  }  
+  
 
   /* =========================
      PROFESSIONAL WHATSAPP ORDER
   ========================= */
 
-  const whatsappNumber = "251921236763";
+  const whatsappNumber = "251978839272";
 
   let message = `Hello Kitokito Market,
 
