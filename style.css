@@ -4152,14 +4152,14 @@ body {
 
 .cart-item {
     position: relative;
-    padding-right: 60px !important;
+    padding-right: 10px !important;
 }
 
 .cart-delete-btn {
     position: absolute !important;
     right: 8px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
+    top: 55% !important;
+  
 
     width: 30px !important;
     height: 30px !important;
