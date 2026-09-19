@@ -1613,7 +1613,7 @@ document.querySelector("#place-order").addEventListener("click", () => {
      PROFESSIONAL WHATSAPP ORDER
   ========================= */
 
-  const whatsappNumber = "251978839272";
+  const whatsappNumber = "251921236763";
 
   let message = `Hello Kitokito Market,
 
