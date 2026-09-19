@@ -4186,3 +4186,14 @@ body {
     font-size: 16px !important;
     cursor: pointer !important;
 }
+
+/* =========================
+   STICKY BACK BUTTONS
+========================= */
+
+#back-to-categories,
+#back-to-subcategories {
+    position: sticky;
+    top: 90px;
+    z-index: 50;
+}
