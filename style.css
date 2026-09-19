@@ -4073,3 +4073,51 @@ body {
 
 }
 
+/* =========================
+   CART DELETE ICON - FINAL
+========================= */
+
+.cart-item {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.cart-item > button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+
+    margin-left: auto !important;
+    padding: 0 !important;
+
+    border: none !important;
+    background: transparent !important;
+
+    color: #e53935 !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    cursor: pointer !important;
+
+    position: relative !important;
+    z-index: 50 !important;
+}
+
+.cart-item > button i {
+    display: block !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    color: #e53935 !important;
+
+    font-size: 17px !important;
+}
