@@ -4201,3 +4201,13 @@ body {
 
     margin: 0 !important;
 }
+
+@media (max-width: 768px) {
+
+    #back-to-categories,
+    #back-to-subcategories {
+        top: 85px !important;
+        left: 15px !important;
+    }
+
+}
