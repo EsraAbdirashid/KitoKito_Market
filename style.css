@@ -2793,7 +2793,18 @@ body {
 }
 
 
+.wishlist-info strong {
+    display: block;
+    color: #fcb316;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
 
+.wishlist-info span {
+    display: block;
+    color: #333;
+    font-size: 13px;
+}
 
 .wishlist-item > button {
     border: none;
