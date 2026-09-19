@@ -4191,16 +4191,7 @@ body {
    FIXED BACK BUTTONS
 ========================= */
 
-#back-to-categories,
-#back-to-subcategories {
-    position: fixed !important;
-    top: 110px !important;
-    left: 30px !important;
 
-    z-index: 9999 !important;
-
-    margin: 0 !important;
-}
 
 @media (max-width: 768px) {
 
