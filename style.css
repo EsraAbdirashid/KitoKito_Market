@@ -2418,7 +2418,32 @@ body {
 }
 
 
+.cart-item > div {
+    flex: 1;
+    min-width: 0;
+}
 
+.cart-item button {
+    margin-left: auto;
+
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    color: #e53935;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
 
 .cart-footer {
    margin-top: auto;
