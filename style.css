@@ -2630,7 +2630,37 @@ body {
     border-color: #27316c;
 }
 
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
 
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-item > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.checkout-item span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.checkout-item small {
+    color: #444;
+    font-size: 13px;
+}
+
+.checkout-item strong {
+    flex-shrink: 0;
+    color: #fcb316;
+    font-size: 16px;
+}
 
 .checkout-total {
     display: flex;
