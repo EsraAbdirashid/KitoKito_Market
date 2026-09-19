@@ -4191,3 +4191,19 @@ body {
    FIXED BACK BUTTONS
 ========================= */
 
+/* =========================
+   BACK NAVIGATION
+========================= */
+
+.back-navigation {
+    position: sticky;
+    top: 80px;
+
+    z-index: 100;
+
+    width: 100%;
+
+    padding: 10px 0;
+
+    background: #ffffff;
+}
