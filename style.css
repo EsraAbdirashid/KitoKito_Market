@@ -4208,3 +4208,11 @@ body {
     background: #ffffff;
 }
 
+@media (max-width: 768px) {
+
+    .back-navigation {
+        top: 65px;
+        padding: 8px 0;
+    }
+
+}
