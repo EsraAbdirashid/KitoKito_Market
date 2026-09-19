@@ -4209,3 +4209,10 @@ body {
     opacity: 1 !important;
 }
 
+@media (max-width: 768px) {
+    #back-to-categories,
+    #back-to-subcategories {
+        top: 15px !important;
+        left: 15px !important;
+    }
+}
