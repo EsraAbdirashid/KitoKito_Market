@@ -1491,8 +1491,7 @@ function updateCart() {
     }
 </div>
 
-<button onclick="removeFromCart(${index})">
-        `;
+
   });
 
   cartCount.textContent = cart.length;

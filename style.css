@@ -2418,12 +2418,59 @@ body {
 }
 
 
-.cart-item > div {
+.cart-item  div {
     flex: 1;
     min-width: 0;
 }
 
+.cart-item {
+    position: relative;
+    padding-right: 45px;
+}
 
+.cart-item button {
+    position: absolute !important;
+
+    right: 0 !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    width: 30px !important;
+    height: 30px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    background: transparent !important;
+
+    color: #e53935 !important;
+
+    font-size: 17px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    cursor: pointer !important;
+
+    z-index: 999 !important;
+}
+
+.cart-item button i {
+    display: block !important;
+
+    color: #e53935 !important;
+
+    font-size: 17px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 
 .cart-footer {
    margin-top: auto;
