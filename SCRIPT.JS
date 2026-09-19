@@ -2097,3 +2097,15 @@ if (newsletterForm) {
     }, 3000);
   });
 }
+
+
+const customAlert = document.querySelector("#custom-alert");
+const customAlertOk = document.querySelector("#custom-alert-ok");
+
+function showCustomAlert() {
+    customAlert.classList.add("show");
+}
+
+customAlertOk.addEventListener("click", () => {
+    customAlert.classList.remove("show");
+});
