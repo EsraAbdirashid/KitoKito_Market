@@ -4158,8 +4158,8 @@ body {
 .cart-delete-btn {
     position: absolute !important;
     right: 8px !important;
-    top: 55% !important;
-  transform: translateY(calc(-50% + 5px)) !important;
+    
+    
 
     width: 30px !important;
     height: 30px !important;
