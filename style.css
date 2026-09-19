@@ -2652,8 +2652,9 @@ body {
 }
 
 .checkout-item small {
-    color: #444;
+    color: #27316c;
     font-size: 13px;
+    font-weight: 550;
 }
 
 .checkout-item strong {
