@@ -2802,8 +2802,9 @@ body {
 
 .wishlist-info span {
     display: block;
-    color: #333;
+    color: #27316c;;
     font-size: 13px;
+    font-weight: 550;
 }
 
 .wishlist-item > button {
