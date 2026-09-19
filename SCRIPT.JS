@@ -1491,7 +1491,15 @@ function updateCart() {
     }
 </div>
 
-
+<button
+    type="button"
+    class="cart-delete-btn"
+    onclick="removeFromCart(${index})"
+    aria-label="Remove product"
+>
+    <i class="fa-solid fa-trash"></i>
+</button>
+`;
   });
 
   cartCount.textContent = cart.length;
