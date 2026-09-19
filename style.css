@@ -2630,23 +2630,7 @@ body {
     border-color: #27316c;
 }
 
-.checkout-item {
-    display: flex;
 
-    justify-content: space-between;
-
-    gap: 15px;
-
-    padding: 10px 0;
-
-    border-bottom: 1px solid #eee;
-
-    font-size: 14px;
-}
-
-.checkout-item strong {
-    color: #fcb316;
-}
 
 .checkout-total {
     display: flex;
