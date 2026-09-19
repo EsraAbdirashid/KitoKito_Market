@@ -1534,40 +1534,6 @@ body {
    ADD TO CART
 ========================= */
 
-.individual-product-bottom .add-cart-btn {
-    width: 80px;
-    height: 30px;
-
-    padding: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: none;
-    border-radius: 5px;
-
-    background: #27316c;
-    color: #ffffff;
-
-    font-size: 14px;
-
-    cursor: pointer;
-
-    transition: .3s ease;
-}
-
-.individual-product-bottom .add-cart-btn:hover {
-    background: #fcb316;
-}
-
-
-
-.add-cart-btn:hover {
-    background: #fcb316;
-
-    transform: translateY(-2px);
-}
 
 /* =========================
    CATEGORY PRODUCTS
@@ -4111,8 +4077,8 @@ body {
     position: absolute !important;
     right: 8px !important;
     
-    top: 80% !important;
-    transform: none !important;
+    top: 0% !important;
+    transf6rm: none !important;
 
     width: 30px !important;
     height: 30px !important;
