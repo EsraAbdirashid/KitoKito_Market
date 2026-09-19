@@ -2417,16 +2417,8 @@ body {
     font-weight: 600;
 }
 
-.cart-item button {
-    margin-left: auto;
 
-    border: none;
-    background: none;
 
-    color: #e53935;
-
-    cursor: pointer;
-}
 
 .cart-footer {
    margin-top: auto;
