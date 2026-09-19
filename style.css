@@ -4159,7 +4159,8 @@ body {
     position: absolute !important;
     right: 8px !important;
     
-    
+    top: 55% !important;
+    transform: none !important;
 
     width: 30px !important;
     height: 30px !important;
