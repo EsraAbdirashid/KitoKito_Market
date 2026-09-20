@@ -1707,6 +1707,10 @@ document.querySelector("#close-wishlist").addEventListener("click", () => {
   wishlistPanel.classList.remove("show");
 });
 
+document.querySelector("#close-wishlist").addEventListener("click", () => {
+    wishlistPanel.classList.remove("show");
+});
+
 /* Add / Remove Wishlist */
 
 function toggleWishlist(product) {
