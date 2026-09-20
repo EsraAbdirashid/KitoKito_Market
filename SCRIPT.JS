@@ -2103,7 +2103,8 @@ if (newsletterForm) {
 const customAlert = document.querySelector("#custom-alert");
 const customAlertOk = document.querySelector("#custom-alert-ok");
 
-function showCustomAlert() {
+function showCustomAlert(message) {
+    customAlert.querySelector("p").textContent = message;
     customAlert.classList.add("show");
 }
 
