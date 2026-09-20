@@ -1714,55 +1714,9 @@ document.querySelector("#close-wishlist").addEventListener("click", () => {
 /* =========================
    CLOSE PANELS BY CLICKING OUTSIDE
 ========================= */
-/* =========================
-   CLOSE PANELS BY CLICKING OUTSIDE
-========================= */
 
-document.addEventListener("click", (event) => {
 
-    // Do not close panels when clicking panel action buttons
-    if (
-        event.target.closest(".add-cart-btn") ||
-        event.target.closest(".cart-delete-btn") ||
-        event.target.closest(".wishlist-delete-btn")
-    ) {
-        return;
-    }
 
-    /* CART */
-    const cartButton = document.querySelector(".cart-btn");
-
-    if (
-        cartPanel.classList.contains("show") &&
-        !cartPanel.contains(event.target) &&
-        !cartButton.contains(event.target)
-    ) {
-        cartPanel.classList.remove("show");
-    }
-
-    /* CHECKOUT */
-    const checkoutButton = document.querySelector(".checkout-btn");
-
-    if (
-        checkoutPanel.classList.contains("show") &&
-        !checkoutPanel.contains(event.target) &&
-        !checkoutButton.contains(event.target)
-    ) {
-        checkoutPanel.classList.remove("show");
-    }
-
-    /* WISHLIST */
-    const wishlistButton = document.querySelector(".wishlist-nav-btn");
-
-    if (
-        wishlistPanel.classList.contains("show") &&
-        !wishlistPanel.contains(event.target) &&
-        !wishlistButton.contains(event.target)
-    ) {
-        wishlistPanel.classList.remove("show");
-    }
-
-});
 /* Add / Remove Wishlist */
 
 function toggleWishlist(product) {
