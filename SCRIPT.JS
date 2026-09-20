@@ -1605,7 +1605,7 @@ document.querySelector("#place-order").addEventListener("click", () => {
   const address = document.querySelector("#customer-address").value.trim();
 
   if (!name || !phone || !address) {  
-   showCustomAlert();    
+   showCustomAlert("Please fill in all customer information");    
     return;
   }  
 
