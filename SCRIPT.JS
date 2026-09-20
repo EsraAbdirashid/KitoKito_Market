@@ -1717,6 +1717,10 @@ document.querySelector("#close-wishlist").addEventListener("click", () => {
 
 document.addEventListener("click", (event) => {
 
+      if (event.target.closest(".add-cart-btn")) {
+    return;
+}
+
     /* CART */
     const cartButton = document.querySelector(".cart-btn");
 
