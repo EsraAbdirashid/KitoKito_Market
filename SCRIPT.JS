@@ -1539,7 +1539,7 @@ const checkoutTotal = document.querySelector("#checkout-total");
 
 document.querySelector(".checkout-btn").addEventListener("click", () => {
   if (cart.length === 0) {
-    alert("Your cart is empty.");
+   
     return;
   }
 
@@ -1587,7 +1587,7 @@ document.querySelector(".checkout-btn").addEventListener("click", () => {
 
     </div>
   `;
-});
+}); 
 
   checkoutTotal.textContent = "Wholesale";
 
@@ -1604,19 +1604,19 @@ document.querySelector("#place-order").addEventListener("click", () => {
   const phone = document.querySelector("#customer-phone").value.trim();
   const address = document.querySelector("#customer-address").value.trim();
 
-  if (!name || !phone || !address) {
-   showCustomAlert();
+  if (!name || !phone || !address) {  
+   showCustomAlert();    
     return;
   }  
-  
+
 
   /* =========================
      PROFESSIONAL WHATSAPP ORDER
   ========================= */
 
-  const whatsappNumber = "251978839272";
+  const whatsappNumber = "251978839272";  
 
-  let message = `Hello Kitokito Market,
+  let message = `Hello Kitokito Market,    
 
 I would like to place a wholesale order.
 
