@@ -1714,12 +1714,13 @@ document.querySelector("#close-wishlist").addEventListener("click", () => {
 /* =========================
    CLOSE PANELS BY CLICKING OUTSIDE
 ========================= */
+/* =========================
+   CLOSE PANELS BY CLICKING OUTSIDE
+========================= */
 
 document.addEventListener("click", (event) => {
 
-   document.addEventListener("click", (event) => {
-
-    // Do not close panels when clicking inside panel actions
+    // Do not close panels when clicking panel action buttons
     if (
         event.target.closest(".add-cart-btn") ||
         event.target.closest(".cart-delete-btn") ||
@@ -1739,7 +1740,6 @@ document.addEventListener("click", (event) => {
         cartPanel.classList.remove("show");
     }
 
-
     /* CHECKOUT */
     const checkoutButton = document.querySelector(".checkout-btn");
 
@@ -1750,7 +1750,6 @@ document.addEventListener("click", (event) => {
     ) {
         checkoutPanel.classList.remove("show");
     }
-
 
     /* WISHLIST */
     const wishlistButton = document.querySelector(".wishlist-nav-btn");
@@ -1764,7 +1763,6 @@ document.addEventListener("click", (event) => {
     }
 
 });
-
 /* Add / Remove Wishlist */
 
 function toggleWishlist(product) {
