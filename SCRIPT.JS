@@ -1717,9 +1717,16 @@ document.querySelector("#close-wishlist").addEventListener("click", () => {
 
 document.addEventListener("click", (event) => {
 
-      if (event.target.closest(".add-cart-btn")) {
-    return;
-}
+   document.addEventListener("click", (event) => {
+
+    // Do not close panels when clicking inside panel actions
+    if (
+        event.target.closest(".add-cart-btn") ||
+        event.target.closest(".cart-delete-btn") ||
+        event.target.closest(".wishlist-delete-btn")
+    ) {
+        return;
+    }
 
     /* CART */
     const cartButton = document.querySelector(".cart-btn");
