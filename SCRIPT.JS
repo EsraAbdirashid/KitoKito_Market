@@ -1813,12 +1813,13 @@ function updateWishlist() {
                 </div>
 
 
-                <button
-                    onclick="removeFromWishlist(${index})"
-                    type="button"
-                >
-                    <i class="fa-solid fa-trash"></i>
-                </button>
+               <button
+    type="button"
+    class="wishlist-delete-btn"
+    onclick="removeFromWishlist(${index})"
+>
+    <i class="fa-solid fa-trash"></i>
+</button>
 
             </div>
 
