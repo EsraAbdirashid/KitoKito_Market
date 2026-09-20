@@ -1539,7 +1539,7 @@ const checkoutTotal = document.querySelector("#checkout-total");
 
 document.querySelector(".checkout-btn").addEventListener("click", () => {
   if (cart.length === 0) {
-   
+   showCustomAlert("Your Cart is empty");
     return;
   }
 
