@@ -208,7 +208,7 @@ const productsData = {
     },
 
     {
-      name: "Home Accessories",
+      name: "Home Lights",
       image: "images/home-access.jpeg",
     },
 
@@ -274,7 +274,7 @@ const productsData = {
     },
 
     {
-      name: "Car Accessory",
+      name: "Car tires",
       image: "images/100pcs.jpg.jpeg",
     },
   ],
@@ -1503,12 +1503,6 @@ function updateCart() {
   });
 
   cartCount.textContent = cart.length;
-
-  /*
-       Since the product price is now "Wholesale"
-       instead of a numeric price, the cart total
-       will display Wholesale.
-    */
 
   cartTotal.textContent = cart.length > 0 ? "Wholesale" : "$0.00";
 }
