@@ -667,7 +667,7 @@ const individualProducts = {
 
   "Home Accessories": [
     {
-      name: "Home Accessories",
+      name: "Home Lights",
       image: "images/home-access.jpeg",
       price: "Wholesale",
       MOQ: 50,
@@ -779,7 +779,7 @@ const individualProducts = {
 
   "Car Accessory": [
     {
-      name: "Car Accessory",
+      name: "Car tires",
       image: "images/100pcs.jpg.jpeg",
       price: "Wholesale",
       MOQ: 100,
