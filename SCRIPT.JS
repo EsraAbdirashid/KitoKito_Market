@@ -665,7 +665,7 @@ const individualProducts = {
     },
   ],
 
-  "Home Accessories": [
+  "Home Lights": [
     {
       name: "Home Lights",
       image: "images/home-access.jpeg",
@@ -777,7 +777,7 @@ const individualProducts = {
     },
   ],
 
-  "Car Accessory": [
+  "Car tires": [
     {
       name: "Car tires",
       image: "images/100pcs.jpg.jpeg",
@@ -1064,7 +1064,7 @@ const individualProducts = {
 "Laptops": [
   {
     name: "Laptops",
-    image: "images/electronics/LAPTOPS 10pcs",
+    image: "images/electronics/LAPTOPS 10pcs.jpg",
     price: "Wholesale",
     MOQ: 10,
    
